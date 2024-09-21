@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Arrays;
 
-class Solution {
+class Solution1 {
     public int[] twoSum(int[] nums, int target) {
         // Create a HashMap to store the visited numbers and their indices
         HashMap<Integer, Integer> visitedValueIndex = new HashMap<>();
@@ -24,7 +24,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
 
         // Example test case
         int[] nums = {2, 7, 11, 15};
