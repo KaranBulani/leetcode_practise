@@ -1,3 +1,7 @@
+'''
+Time Complexity: O(strs)
+Space Complexity: O(distinct anagrams of strs) => O(strs)
+'''
 from collections import defaultdict
 
 class Solution:

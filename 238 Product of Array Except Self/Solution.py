@@ -1,3 +1,8 @@
+'''
+Time Complexity: O(2n) for left and right
+Space Complexity: O(3n) for space left, right and res
+'''
+
 class Solution:
     def productExceptSelf(self, nums: list[int]) -> list[int]:
         left,right = [1],[1]
@@ -8,12 +13,11 @@ class Solution:
         res = []
         for i in range(len(nums)):
             res.append(left[i]*right[i])
-
         return  res
 
 if __name__ == "__main__":
     solution = Solution()
     nums = [1,2,3,4]  # Example input
     nums1 = [-1,1,0,-3,3]
-    result = solution.productExceptSelf(nums1)
+    result = solution.productExceptSelf(nums)
     print(result)

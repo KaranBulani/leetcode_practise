@@ -1,5 +1,12 @@
+'''
+Time Complexity: O(2n) where n is words or len of char in all words
+                 words for encoding
+                 len of char for decoding
+Space Complexity: O(2n) where n is words or len of char in all words
+                  len of char for encoding
+                  words for decoding
+'''
 class Solution:
-
     def encode(self, strs: list[str]) -> str:
         encoded = ''
         for word in strs:

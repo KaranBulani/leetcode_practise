@@ -1,3 +1,7 @@
+'''
+Time Complexity => S + T + distinct S char => S + T
+Space Complexity => Distinct S + Distinct T (both dictionary)
+'''
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):

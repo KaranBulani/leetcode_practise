@@ -1,3 +1,9 @@
+'''
+Time Complexity => Sorting(SlogS + TlogT)
+Space Complexity => Extra space which merge sort takes O(2S) + O(2T)
+                 => 2S: 1 for right and 1 for left
+'''
+
 class Solution:
     def merge(self, stringArr: list[str], start: int, mid: int, end: int):
         L = stringArr[start: mid + 1] #mid + 1 to include mid

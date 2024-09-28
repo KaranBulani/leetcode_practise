@@ -1,3 +1,15 @@
+'''
+Time complexity: O(3n + k) which is O(n + k) but k is always less than n, we can just say O(n)
+                 O(n) for count
+                 O(n) for empty count_bucket
+                 O(distinct n) which is O(n) for inserting count_dict to count_bucket
+                 O(k) to add in res
+Space complexity: O(2n + res) which is O(n + res) but res is always less than n, we can just say O(n)
+                  O(n) for count
+                  O(n) for empty count_bucket
+                  res which we are returning
+'''
+
 class Solution:
     def topKFrequent(self, nums: list[int], k: int) -> list[int]:
         count_dict = {}

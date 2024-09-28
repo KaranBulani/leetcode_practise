@@ -1,3 +1,7 @@
+'''
+O(n) space and time
+'''
+
 class Solution:
     def containsDuplicate(self, nums: list[int]) -> bool:
         num_values = set()
