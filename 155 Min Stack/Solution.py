@@ -1,3 +1,8 @@
+'''
+Time Complexity: All are O(1) push, pop, top, getMin
+Space Complexity: O(2n) for 2 stacks/Lists
+'''
+
 class MinStack:
 
     def __init__(self):
