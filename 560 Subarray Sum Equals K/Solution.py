@@ -13,6 +13,9 @@ class Solution:
                 if current_sum == k:
                     res += 1
         return res
+
+Time Complexity: O(N^)
+Space Complexity: O(N)
 '''
 class Solution:
     def subarraySum(self, nums: list[int], k: int) -> int:
