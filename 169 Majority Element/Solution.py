@@ -1,6 +1,7 @@
 '''
 Time Complexity: O(N)
 Space Complexity: O(1)
+
 def majorityElement(self, nums: List[int]) -> int:
     count, res = 0, 0
     for num in nums:
