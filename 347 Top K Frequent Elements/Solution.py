@@ -16,20 +16,25 @@ class Solution:
         for num in nums:
             count_dict[num] = 1 + count_dict.get(num, 0)
 
+        # Bucket where index = frequency, and value = list of numbers with that frequency
         count_bucket = [[] for _ in range(len(nums)) ]
-
         for key, value in count_dict.items():
             count_bucket[value - 1].append(key) ##when all 1 then count will be n but list goes from 0..n-1 hence v-1
 
         res = []
 
         for i in range(len(nums) - 1, -1, -1):
-            # this if is not needed as if count_bucket[i] is empty
-            # then for loop 2 line below anyways won't execute
+
+            # No need to explicitly check if count_bucket[i] is empty.
+            # The inner for loop will simply skip over empty lists.
             if not count_bucket[i]:
                 continue
             for value in count_bucket[i]:
-                res.append(value)# can use count_bucket[i].pop() instead of value but if count is same then does it even matter?
+
+                # You could also use count_bucket[i].pop() here,
+                # but since all values at this frequency level are equally frequent,
+                # the order doesn't matter. Appending directly is cleaner and non-destructive.
+                res.append(value)
                 if len(res) == k:
                     return res
 
