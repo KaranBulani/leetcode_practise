@@ -1,6 +1,11 @@
 '''
 Time Complexity: O(n) As going through entire list
 Space Complexity: O(n) due to stack. but each operand reduces the stack size. However, the space usage is still proportional to the length of the input, which is n.
+
+a = -5
+b = 2
+print(-5 // 2)       # Output: -3 (floor division rounds down)
+print(int(-5 / 2))   # Output: -2 (truncates toward 0) Which question wants
 '''
 
 class Solution:
