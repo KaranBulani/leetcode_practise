@@ -21,7 +21,32 @@ I missed:
 5. The final result should be the join of the entire stack, not just the top value:
        result = "".join(stack)
    Top Value works for inputs like 3[a2[c]], but joining handles cases like 3[a]2[c].
+
+RECURSIVE SOLUTION
+class Solution:
+    def decodeString(self, s: str) -> str:
+        def dfs(i):
+            res = ""
+            k = 0
+            while i < len(s):
+                if s[i].isdigit():
+                    k = k * 10 + int(s[i])  # support multi-digit numbers
+                elif s[i] == '[':
+                    i, decoded = dfs(i + 1)
+                    res += k * decoded
+                    k = 0
+                elif s[i] == ']':
+                    return i, res
+                else:
+                    res += s[i]
+                i += 1
+            return res
+
+        # if dfs returns (i, result) we only want the result
+        result = dfs(0)
+        return result if isinstance(result, str) else result[1]
 '''
+
 class Solution:
     def decodeString(self, s: str) -> str:
         stack = []
