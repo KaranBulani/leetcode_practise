@@ -22,7 +22,7 @@ I missed:
        result = "".join(stack)
    Top Value works for inputs like 3[a2[c]], but joining handles cases like 3[a]2[c].
 
-RECURSIVE SOLUTION
+RECURSIVE SOLUTION (too much headache)
 class Solution:
     def decodeString(self, s: str) -> str:
         def dfs(i):
