@@ -2,8 +2,6 @@
 Time Complexity: O(n) (go through)
 Space Complexity: O(n) for stack
 '''
-
-
 class Solution:
     def largestRectangleArea(self, heights: list[int]) -> int:
         # Initialize the maximum area to 0
