@@ -1,7 +1,4 @@
 '''
-Time Complexity: O(2n) (for count then for res)
-Space Complexity: O(3n) for res, countDict, visited_dict
-
 I implemented: Solution shared here https://youtu.be/j313ttNJjo0?si=CgBxO_8m6HQhJCXC
 
 ANOTHER SOLUTION
@@ -28,6 +25,9 @@ Instead of ___ above code has ___ :
 Instead of Code checking for ___ it check ___
     dict has value true/false , value is present in set or not
     count is positive or not , is this the last_occurence or not
+
+Time Complexity: O(2n) (for count then for res)
+Space Complexity: O(3n) for res, countDict, visited_dict
 '''
 
 class Solution:
