@@ -21,7 +21,6 @@ Dry run on `[4, 0, 5, 0, 0, 6, 7]`:
    * `nums[R]=7` → swap with `nums[L]` → `[4, 5, 6, 7, 0, 0, 0]` → `L=4, R=7`.
 
 7. End: `R` reaches `len(nums)`, loop stops, final array is `[4, 5, 6, 7, 0, 0, 0]`.
-
 All zeros have moved to the end, and non-zero elements retained their original relative order.
 
 Time Complexity: O(n) (go through)
@@ -33,6 +32,15 @@ class Solution:
 
         if len(nums) <= 1:
             return
+
+        # 1. Both L and R start at index 0.
+        # 2. If all elements are non‑zero, L and R move in lockstep.
+        # 3. When L, R hits a zero, L stays put & R keeps moving.
+        # 4. As soon as R finds a non 0, swap nums[L] (still at 0) and nums[R] (at non 0), then advance both.
+        # 5. After the first swap, every subsequent action happens on non 0 R, hopping over 0s on its way.
+        # 6. Also after swap current L pointing to 0, will now point non 0 value.
+        # 7. But we will increment L, R making L point to 0 which R left in its way.
+        # 8. So you never need to check nums[L] explicitly.
 
         L, R = 0, 0
         while R < len(nums):
