@@ -1,25 +1,47 @@
 '''
 Good explanation - https://youtu.be/PNJoyRaIW7U?si=wj72WL1oza6CN6KN
 
+Dry run on `[4, 0, 5, 0, 0, 6, 7]`:
+
+1. Start: `L=0, R=0`, array = `[4, 0, 5, 0, 0, 6, 7]`
+   * `nums[R]=4` is non-zero → swap with itself → `L=1, R=1`.
+
+2. Step: `L=1, R=1`, array = `[4, 0, 5, 0, 0, 6, 7]`
+   * `nums[R]=0` → do nothing → `L=1, R=2`.
+
+3. Step: `L=1, R=2`, array = `[4, 0, 5, 0, 0, 6, 7]`
+   * `nums[R]=5` → swap with `nums[L]` → `[4, 5, 0, 0, 0, 6, 7]` → `L=2, R=3`.
+
+4. Steps: `R=3,4` both zeros → just advance R.
+
+5. Step: `L=2, R=5`, array = `[4, 5, 0, 0, 0, 6, 7]`
+   * `nums[R]=6` → swap with `nums[L]` → `[4, 5, 6, 0, 0, 0, 7]` → `L=3, R=6`.
+
+6. Step: `L=3, R=6`, array = `[4, 5, 6, 0, 0, 0, 7]`
+   * `nums[R]=7` → swap with `nums[L]` → `[4, 5, 6, 7, 0, 0, 0]` → `L=4, R=7`.
+
+7. End: `R` reaches `len(nums)`, loop stops, final array is `[4, 5, 6, 7, 0, 0, 0]`.
+
+All zeros have moved to the end, and non-zero elements retained their original relative order.
+
 Time Complexity: O(n) (go through)
 Space Complexity: O(1) for L, R
 '''
 
 class Solution:
     def moveZeroes(self, nums: list[int]) -> None:
-        """
-        Do not return anything, modify nums in-place instead.
-        """
+
         if len(nums) <= 1:
             return
 
         L, R = 0, 0
         while R < len(nums):
-            # whenever we see a non-zero at R, swap it to the next L position
+            # If the current element at R is non-zero, we need to move it to index L.
             if nums[R] != 0:
                 nums[L], nums[R] = nums[R], nums[L]
+                # After placing a non-zero at L, move L forward so the next non-zero goes to the next slot.
                 L += 1
-            # always advance R
+            # Always advance R to continue scanning.
             R += 1
 
 if __name__ == "__main__":
