@@ -60,8 +60,8 @@ if __name__ == "__main__":
         }
     ]
 
-    for i, tc in enumerate(tests, 1):
-        nums_copy = tc["input"][:]  # copy so we can inspect post-call
+    for i, tc in enumerate(tests):
+        nums_copy = tc["input"]  # copy so we can inspect post-call
         k = solution.removeDuplicates(nums_copy)
         print(f"Test {i}:")
         print(f" Input: {tc['input']}")
