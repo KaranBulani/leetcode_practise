@@ -1,6 +1,11 @@
 '''
-Time Complexity: O(nlogn) (sort) + O(n^2) A* N(of L,R)
-Space Complexity: O(1) for L, R
+Time Complexity:  O(nlogn)       (sort)
+                + O(n^2)        N(for A)* N(for L,R)
+                : O(n^2)
+
+Space Complexity: O(n) for sort
+                + O(1) for L, R
+                : O(n)
 '''
 
 class Solution:
