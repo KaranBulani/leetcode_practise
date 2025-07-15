@@ -71,7 +71,7 @@ if __name__ == "__main__":
         [[-2, 0, 2], [-2, 1, 1]]
     ]
 
-    for i, (nums, exp) in enumerate(zip(test_cases, expected), 1):
+    for i, (nums, exp) in enumerate(zip(test_cases, expected)):
         result = solution.threeSum(nums)
         print(f"Test case {i}:")
         print(f"  Input:    {nums}")
