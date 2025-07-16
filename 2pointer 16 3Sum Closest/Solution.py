@@ -6,13 +6,29 @@ Time Complexity:  O(nlogn)       (sort)
 Space Complexity: O(n) for sort
                 + O(1) for L, R
                 : O(n)
-
 '''
-
 class Solution:
     def threeSumClosest(self, nums: list[int], target: int) -> int:
-        # Your implementation goes here
-        pass
+        nums.sort()
+        closest_sum = float('inf')
+
+        for A in range(len(nums) - 2): # -2 as last 2 will be for L, R
+            L, R = A + 1, len(nums) - 1
+
+            while L < R:
+                current_sum = nums[A] + nums[L] + nums[R]
+
+                # Update closest_sum if this sum is closer
+                if abs(current_sum - target) < abs(closest_sum - target):
+                    closest_sum = current_sum
+
+                if current_sum < target:
+                    L += 1
+                elif current_sum > target:
+                    R -= 1
+                else:
+                    return current_sum  # Exact match
+        return closest_sum
 
 if __name__ == "__main__":
     solution = Solution()
@@ -33,7 +49,11 @@ if __name__ == "__main__":
         },
 
         # Additional edge cases
-
+        {
+            "nums": [10,20,30,40,50,60,70,80,90],
+            "target": 1,
+            "expected": 60,
+        },
         # 1. Minimum length array (3 elements)
         {
             "nums": [1, 1, 1],
@@ -80,6 +100,6 @@ if __name__ == "__main__":
         },
     ]
 
-    for i, case in enumerate(cases, 1):
+    for i, case in enumerate(cases):
         result = solution.threeSumClosest(case["nums"], case["target"])
         print(f"Test case {i}: result = {result}, expected = {case['expected']}")
