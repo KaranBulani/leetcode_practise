@@ -4,15 +4,23 @@ Space Complexity: O(1)       (for L,R)
 '''
 
 class Solution:
-    def maxArea(self, height: list[int]) -> int:
-        mostWater = float('-INF')
-        L, R = 0, len(height) - 1
+    def maxArea(self, height: List[int]) -> int:
+        mostWater = float('-inf')  # Initialize to negative infinity to track the maximum area
+        L, R = 0, len(height) - 1  # Start with the widest possible container
+
         while L < R:
-            mostWater = max(mostWater,min(height[L], height[R]) * (R - L))
+            # Calculate the current area using the shorter line and the current width
+            currentArea = min(height[L], height[R]) * (R - L)
+            # Update mostWater if the current area is greater
+            mostWater = max(mostWater, currentArea)
+
+            # Move the pointer pointing to the shorter line inward
             if height[L] < height[R]:
                 L += 1
+            # If Both are equal then moving any is fine here we chose R
             else:
                 R -= 1
+
         return mostWater
 
 if __name__ == "__main__":
