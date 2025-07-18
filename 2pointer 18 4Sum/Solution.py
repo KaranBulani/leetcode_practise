@@ -1,16 +1,66 @@
 '''
-Time Complexity:  O(nlogn)       (sort)
-                + O(n^2)        N(for A)* N(for L,R)
-                : O(n^2)
+Time Complexity:  O(n^3)       (2 for loop and 1 for L,R)
+                  O(nlogn)      for sort
 
-Space Complexity: O(n) for sort
-                + O(1) for L, R
-                : O(n)
+                  O(n^k-1)      Where k is kSum
+
+Space Complexity: O(k)          for quad as it has at max k lenth
+                + O(k)          for recursive calls
+                + O(1)          for L, K
+                : O(k)
+                We don't count result
 '''
 
 class Solution:
     def fourSum(self, nums: list[int], target: int) -> list[list[int]]:
-        pass
+
+        #No need to add this in kSum fn parameter as it's anyway available to it.
+        res, quad = [], []
+        nums.sort()
+
+        def kSum(k: int, start: int, target: int):
+            # If need to pick more than two numbers, reduce the problem
+            if k != 2:
+                # Stop at len(nums) - k + 1 to leave enough room for the remaining k−1 picks
+                # Don't touch last 3 values if k is 4
+                for i in range(start, len(nums) - k + 1):
+                    # Skip duplicates at the same position: if this value is same as the previous at this level, ignore it
+                    if i > start and nums[i] == nums[i - 1]:
+                        continue
+                    # Choose nums[i] as part of the current combination
+                    quad.append(nums[i])
+
+                    # Recurse to pick the remaining k−1 numbers, adjusting start and target
+                    # in 2nd parameter we do i+1 not start+1
+                    kSum(k - 1, i + 1, target - nums[i])
+                    # Backtrack: remove the last choice before the next iteration
+                    quad.pop()
+                # Once we've handled k > 2, we don't want to run the two-pointer logic below
+                return
+
+            # Base case: when k == 2, below section exactly like LC -> 15. Sum
+            L, R = start, len(nums) - 1
+            while L < R:
+                twoSum = nums[L] + nums[R]
+                if twoSum > target:
+                    R -= 1
+                elif twoSum < target:
+                    L += 1
+                else:
+                    res.append(quad + [nums[L], nums[R]])
+
+                    # Move left pointer past duplicates
+                    L += 1
+                    while L < R and nums[L] == nums[L - 1]:
+                        L += 1
+
+                    # Move right pointer past duplicates
+                    R -= 1
+                    while L < R and nums[R] == nums[R + 1]:
+                        R -= 1
+
+        kSum(4, 0, target)
+        return res
 
 if __name__ == "__main__":
     sol = Solution()

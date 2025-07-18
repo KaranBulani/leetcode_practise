@@ -7,7 +7,7 @@ class Solution:
         L, R = 0, len(numbers) - 1
         #right will shift leftwards to reduce total
         #left will shift rightwards to increase total
-        #will work as asc order, exactly 1 soln
+        #will work as asc order, exactly 1 soln, for dup value will have to increment like in 15. 3Sum
         while L < R:
             curSum = numbers[L] + numbers[R]
             if curSum == target:
