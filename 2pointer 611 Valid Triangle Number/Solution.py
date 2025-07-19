@@ -1,17 +1,32 @@
 '''
 Time Complexity:  O(nlogn)       (sort)
-                + O(n^2)        N(for A)* N(for L,R)
+                + O(n^2)        N(for i)* N(for L,R)
                 : O(n^2)
 
-Space Complexity: O(n) for sort
-                + O(1) for L, R
-                : O(n)
+Space Complexity: O(1) for L, R
+                : O(1)
+Note: No space complexity for sorting
 '''
 
 class Solution:
     def triangleNumber(self, nums: list[int]) -> int:
-        # Your implementation here
-        pass
+        nums.sort()
+        res = 0
+
+        # Start from the third element and fix the largest side of the triangle
+        # Such that there are at least two elements to consider before index 'i'
+        for i in range(2, len(nums)):
+
+            L, R = 0, i - 1
+            while L < R:
+                # Check if the sum of the two smaller sides is greater than the largest side
+                # If yes, it means all elements from L to R-1 can pair with nums[R] to form valid triangles
+                if nums[L] + nums[R] > nums[i]:
+                    res += (R - L)  # Count all such combinations
+                    R -= 1  # Move the right pointer left to check for more pairs
+                else:
+                    L += 1  # If the sum is not greater, move the left pointer right
+        return res
 
 if __name__ == "__main__":
     solution = Solution()
