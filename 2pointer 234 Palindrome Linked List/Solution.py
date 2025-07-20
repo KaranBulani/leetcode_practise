@@ -45,10 +45,10 @@ class Solution:
         # find middle (slow)
 
         # for even → slow will be on 2nd half → fast at None
-            # [1] → [2] → [3] → [3](slow) → [2] → [1] → None(fast)
+        # [1] → [2] → [3] → [3](slow) → [2] → [1] → None(fast)
 
         # for odd → slow will be at middle → fast at last
-            # [1] → [2] → [3](slow) → [2] → [1](fast) → None
+        # [1] → [2] → [3](slow) → [2] → [1](fast) → None
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next
@@ -64,7 +64,7 @@ class Solution:
             slow.next = prev
             prev = slow
             slow = tmp
-        #AFTER
+        # AFTER
         # for even          None
         #                    ↑
         # [1] → [2] → [3] → [3] ← [2] ← [1](prev)         None
