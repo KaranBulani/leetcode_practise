@@ -1,17 +1,29 @@
 '''
-Time Complexity:  O(nlogn)       (sort)
-                + O(n^2)        N(for A)* N(for L,R)
-                : O(n^2)
+Time Complexity:  O(nlogn)          (sort)
+                + O(n)              (for 2 pointer scan)
 
-Space Complexity: O(n) for sort
-                + O(1) for L, R
-                : O(n)
+Space Complexity: O(1) for L, R
 '''
 
 class Solution:
     def numRescueBoats(self, people: list[int], limit: int) -> int:
-        # Your implementation here
-        pass
+        # Sort the array so we can efficiently pair lightest with heaviest
+        people.sort()
+        L, R = 0, len(people) - 1
+        boats = 0
+
+        # A. Pair lightest and heaviest if possible.
+        # B. If pairing fails, the heaviest still boards alone.
+        # C. Include any unpaired middle person, then adjust pointers thereby breaking the loop.
+
+        # Continue until all people have been assigned to boats
+        while L <= R:
+            if people[L] + people[R] <= limit:
+                L += 1  # Move to the next lightest person
+            R -= 1  # Move to the next heaviest person
+            boats += 1  # One more boat is utilized
+
+        return boats
 
 if __name__ == "__main__":
     solution = Solution()
@@ -29,7 +41,7 @@ if __name__ == "__main__":
         ([1, 1, 1, 1], 2, 2),          # pairs of two
         ([2, 2, 2, 2], 3, 4),          # nobody can pair, all alone
         ([1, 2, 2, 3], 3, 3),          # mix of pairable and not
-        ([1, 1, 2, 2, 3, 3], 4, 4),    # optimal pairing across weights
+        ([1, 1, 2, 2, 3, 3], 4, 3),    # optimal pairing across weights
         ([5, 1, 4, 2], 6, 2),          # boats: (5,1), (4,2)
     ]
 
