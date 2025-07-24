@@ -1,35 +1,23 @@
 '''
-Time Complexity:  O(nlogn)          (sort)
-                + O(n)              (for 2 pointer scan)
-
-Space Complexity: O(1) for L, R
-
-121. Best Time to Buy and Sell Stock
-
-You are given an array prices where prices[i] is the price of a given stock on the ith day.
-You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
-Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-
-Example 1:
-Input: prices = [7,1,5,3,6,4]
-Output: 5
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
-
-Example 2:
-Input: prices = [7,6,4,3,1]
-Output: 0
-Explanation: In this case, no transactions are done and the max profit = 0.
-
-Constraints:
-1 <= prices.length <= 10^5
-0 <= prices[i] <= 10^4
-
+Time Complexity:  O(n)              (for sliding window)
+Space Complexity: O(1)              (for window L, R)
 '''
 
 class Solution:
     def maxProfit(self, prices: list[int]) -> int:
-        pass
+        totalProfit = 0
+        # L will represent the index of the lowest price (best day to buy) seen so far
+        L = 0
+        # Iterate through each day R as a potential selling day
+        for R in range(len(prices)):
+            # If current price is lower than price at L, update L to be this day
+            # since buying at a cheaper price could yield higher profit later
+            if prices[R] < prices[L]:
+                L = R
+            # Calculate profit by selling on day R after buying on day L
+            # and update totalProfit if this profit is greater than previous max
+            totalProfit = max(totalProfit, prices[R] - prices[L])
+        return totalProfit
 
 if __name__ == "__main__":
     solution = Solution()
