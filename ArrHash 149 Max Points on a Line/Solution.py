@@ -1,29 +1,44 @@
 '''
-Time Complexity:  O(n)              (for sliding window)
-Space Complexity: O(1)              (for Variables, indexes)
+Time Complexity:  O(n^2)            (for 2 for loop)
+Space Complexity: O(n)              (for count dictionary in the worst case every point from p1 has a distinct slope)
 
-149. Max Points on a Line
+Instead of --> count = {}
+           --> There’s no restriction or hint to Python or to IDEs/type checkers (like mypy) about what types the keys/values should be.
 
-Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane, return the maximum number of points that lie on the same straight line.
-
-Example 1:
-Input: points = [[1,1],[2,2],[3,3]]
-Output: 3
-
-Example 2:
-Input: points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
-Output: 4
-Constraints:
-
-1 <= points.length <= 300
-points[i].length == 2
--10^4 <= xi, yi <= 10^4
-All the points are unique.
+Can use    --> count: dict[float, int] = {}
+           --> It doesn't enforce the type at runtime (Python doesn't throw an error), but tools like mypy will catch misuse during static analysis.
 '''
 
 class Solution:
-    def maxPoints(self, points: List[List[int]]) -> int:
-        pass
+    def maxPoints(self, points: list[list[int]]) -> int:
+        # If there's at least one point, the minimum max on a line is 1
+        res = 1
+
+        # Iterate over each point p1 as the “anchor”
+        for i in range(len(points)):
+            p1 = points[i]
+            # For each anchor, use a hashmap to count how many other points
+            # share the same slope relative to p1
+            count = {}
+
+            # Compare to every subsequent point p2
+            for j in range(i + 1, len(points)):
+                p2 = points[j]
+
+                # If x-coordinates are the same, it’s a vertical line → slope = ∞
+                if p1[0] == p2[0]:
+                    slope = float("inf")
+                else:
+                    # Compute slope = Δy / Δx
+                    slope = (p2[1] - p1[1]) / (p2[0] - p1[0])
+
+                # Increment the number of points seen at this slope from p1
+                count[slope] = 1 + count.get(slope, 0)
+
+                # +1 to include the anchor point itself
+                res = max(res, count[slope] + 1)
+
+        return res
 
 if __name__ == "__main__":
     solution = Solution()
