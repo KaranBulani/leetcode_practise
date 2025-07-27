@@ -54,8 +54,24 @@ class Solution:
 
 ####################################################################################################
 
-
 ✅ 3. Two-Pass Counters (Time: O(n), Space: O(1))
+
+📘 Example: s = "(()"
+
+   🔁 First Pass (Left → Right):
+   i = 0, char = ( → left = 1
+   i = 1, char = ( → left = 2
+   i = 2, char = ) → right = 1
+   → Not equal → no valid substring yet
+   ⛔ Done → No max found
+
+   🔁 Second Pass (Right → Left):
+   i = 2, char = ) → right = 1
+   i = 1, char = ( → left = 1 → left == right → ✅ max_len = 2
+
+💡 Why Two Passes?
+   Single left-to-right pass misses valid substrings starting late but unmatched early (e.g., "(()"). Right-to-left pass balances those out.
+
 '''
 
 class Solution:
