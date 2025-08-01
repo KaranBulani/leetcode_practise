@@ -44,7 +44,6 @@ Space Complexity: O(n + m)              two dictionaries countS and countT
 class Solution:
     def findAnagrams(self, s: str, p: str) -> list[int]:
         res = []
-        ns, np = len(s), len(p)
         if len(p) > len(s): return res
 
         # Build target frequency map and count distinct letters needed
