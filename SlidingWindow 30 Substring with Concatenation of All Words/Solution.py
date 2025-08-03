@@ -1,48 +1,55 @@
 '''
-Time Complexity:  O(n)              (for sliding window)
-Space Complexity: O(1)              (for Variables, indexes)
-
-30. Substring with Concatenation of All Words
-
-You are given a string s and an array of strings words. All the strings of words are of the same length.
-A concatenated string is a string that exactly contains all the strings of any permutation of words concatenated.
-For example, if words = ["ab","cd","ef"], then "abcdef", "abefcd", "cdabef", "cdefab", "efabcd", and "efcdab" are all concatenated strings. "acdbef" is not a concatenated string because it is not the concatenation of any permutation of words.
-Return an array of the starting indices of all the concatenated substrings in s. You can return the answer in any order.
-
-Example 1:
-Input: s = "barfoothefoobarman", words = ["foo","bar"]
-Output: [0,9]
-Explanation:
-The substring starting at 0 is "barfoo". It is the concatenation of ["bar","foo"] which is a permutation of words.
-The substring starting at 9 is "foobar". It is the concatenation of ["foo","bar"] which is a permutation of words.
-
-Example 2:
-Input: s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
-Output: []
-Explanation:
-There is no concatenated substring.
-
-Example 3:
-Input: s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
-Output: [6,9,12]
-Explanation:
-The substring starting at 6 is "foobarthe". It is the concatenation of ["foo","bar","the"].
-The substring starting at 9 is "barthefoo". It is the concatenation of ["bar","the","foo"].
-The substring starting at 12 is "thefoobar". It is the concatenation of ["the","foo","bar"].
-
-Constraints:
-1 <= s.length <= 10^4
-1 <= words.length <= 5000
-1 <= words[i].length <= 30
-s and words[i] consist of lowercase English letters.
+Time Complexity:  O(N * W)
+                  *  N is the length of string s
+                  *  W is the number of words
+Space Complexity: O(W)              (for  hash maps)
 '''
 
 from typing import List
+from collections import Counter
 
 class Solution:
     def findSubstring(self, s: str, words: List[str]) -> List[int]:
-        # Implementation goes here
-        pass
+
+        word_len = len(words[0])                # All words are of the same length
+        word_count = len(words)                 # Total number of words
+
+        word_freq = Counter(words)              # Frequency of each word in the list
+        res = []
+
+        # We only need to start from 0 to word_len - 1 to cover all window alignments
+        for i in range(word_len):
+            L = i                               # Start of the sliding window
+            R = i                               # End of the sliding window
+            window_words = Counter()            # Word frequency in the current window
+            words_used = 0                      # Count of valid words used in the window
+
+            while R + word_len <= len(s):
+                # Extract word from current position
+                word = s[R:R + word_len]
+                R += word_len
+
+                if word in word_freq:
+                    window_words[word] += 1
+                    words_used += 1
+
+                    # If word used more than required, shrink window from left
+                    while window_words[word] > word_freq[word]:
+                        left_word = s[L:L + word_len]
+                        window_words[left_word] -= 1
+                        L += word_len
+                        words_used -= 1
+
+                    # If window contains exactly all the words
+                    if words_used == word_count:
+                        res.append(L)
+
+                else:
+                    # Invalid word found, reset window
+                    window_words.clear()
+                    words_used = 0
+                    L = R
+        return res
 
 if __name__ == "__main__":
     solution = Solution()
