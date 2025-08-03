@@ -2,6 +2,7 @@
 Time Complexity:  O(n)              (for cur_sum)
 Space Complexity: O(1)              (for deque)
 '''
+
 import collections
 from typing import List
 
