@@ -3,7 +3,6 @@ Time Complexity:  O(logn)              (for binary search)
 Space Complexity: O(1)              (for Variables, indexes)
 '''
 
-
 class Solution:
     def search(self, nums: list[int], target: int) -> int:
         low, high  = 0, len(nums) - 1
