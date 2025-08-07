@@ -7,7 +7,7 @@ class Solution:
     def searchMatrix(self, matrix: list[list[int]], target: int) -> bool:
         ROWS, COLS = len(matrix) - 1, len(matrix[0]) - 1
 
-        #Get which row to search for target
+        #Get which row might have target
         low, high = 0, ROWS
         mid = 0
         while low <= high:
