@@ -24,7 +24,7 @@ class Solution:
         # Set binary search boundaries:
         # Minimum speed is 1 (slowest she can eat)
         # Maximum speed is max(piles) (fastest needed, eating one whole pile per hour)
-        low, high = 0, max(piles)
+        low, high = 1, max(piles)
         res = high
 
         while low <= high:
