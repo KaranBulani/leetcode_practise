@@ -8,7 +8,6 @@ Space Complexity: O(1)                  (for Variables, indexes)
 '''
 import math
 
-
 class Solution:
     def minEatingSpeed(self, piles: list[int], h: int) -> int:
 
