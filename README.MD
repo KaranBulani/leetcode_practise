@@ -1,8 +1,5 @@
 # Binary Search Notes:
 
-With this we cannot do both mid + 1 and mid - 1
-Rather keep                 mid + 1 and mid
-
 ---
 
 ### 🔑 Notes for **162. Find Peak Element**
@@ -23,5 +20,4 @@ Rather keep                 mid + 1 and mid
    * Now as loop won't run when both low high are equal. 
    * We should increment decrement low high such that no value gets skipped.
    * So it would be `low = mid + 1` and `high = mid`, rather than `low = mid + 1` and `high = mid - 1`.
-
 ---
