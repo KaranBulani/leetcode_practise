@@ -3,7 +3,7 @@
 ####################################### ITERATIVE & RECURSIVE ######################################
 ####################################################################################################
 
-Same Time Complexity
+Same for both
 
 Time Complexity:  O(n)              	(for LinkedList Nodes)
 Space Complexity: O(n)              	(for LinkedList Nodes)
