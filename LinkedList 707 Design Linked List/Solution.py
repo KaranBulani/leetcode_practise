@@ -129,7 +129,6 @@ class MyLinkedList:
         newNode.next = prev.next
         prev.next = newNode
 
-
     def deleteAtIndex(self, index: int) -> None:
         if index < 0 or index >= self.size:
             return
@@ -141,7 +140,6 @@ class MyLinkedList:
         for _ in range(index):
             prev = prev.next
         prev.next = prev.next.next
-
 
 if __name__ == "__main__":
     myLinkedList = MyLinkedList()
