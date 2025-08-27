@@ -1,5 +1,5 @@
 '''
-Time Complexity:  O(n)              	(for BinarySearch)
+Time Complexity:  O(n)              	(for Traversing through)
 Space Complexity: O(1)              	(for Variables, indexes)
 '''
 
