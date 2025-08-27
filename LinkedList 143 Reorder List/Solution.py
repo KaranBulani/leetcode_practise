@@ -1,28 +1,6 @@
 '''
-Time Complexity:  O(logn)              	(for BinarySearch)
+Time Complexity:  O(n)              	(for BinarySearch)
 Space Complexity: O(1)              	(for Variables, indexes)
-
-	143. Reorder List
-
-	You are given the head of a singly linked-list. The list can be represented as:
-
-	L0 → L1 → … → Ln - 1 → Ln
-	Reorder the list to be on the following form:
-
-	L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
-	You may not modify the values in the list's nodes. Only nodes themselves may be changed.
-
-	Example 1:
-	Input: head = [1,2,3,4]
-	Output: [1,4,2,3]
-
-	Example 2:
-	Input: head = [1,2,3,4,5]
-	Output: [1,5,2,4,3]
-
-	Constraints:
-	The number of nodes in the list is in the range [1, 5 * 104].
-	1 <= Node.val <= 1000
 '''
 
 from typing import Optional
@@ -102,27 +80,27 @@ if __name__ == "__main__":
     solution.reorderList(head)
     print("Test 2:", linked_list_to_list(head))  # Expected: [1,5,2,4,3]
 
-    # # Edge Case 1: Single element
-    # head = build_linked_list([1])
-    # solution.reorderList(head)
-    # print("Test 3:", linked_list_to_list(head))  # Expected: [1]
-#
-    # # Edge Case 2: Two elements
-    # head = build_linked_list([1,2])
-    # solution.reorderList(head)
-    # print("Test 4:", linked_list_to_list(head))  # Expected: [1,2]
-#
-    # # Edge Case 3: Three elements
-    # head = build_linked_list([1,2,3])
-    # solution.reorderList(head)
-    # print("Test 5:", linked_list_to_list(head))  # Expected: [1,3,2]
-#
-    # # Edge Case 4: Even number of nodes (6 elements)
-    # head = build_linked_list([10,20,30,40,50,60])
-    # solution.reorderList(head)
-    # print("Test 6:", linked_list_to_list(head))  # Expected: [10,60,20,50,30,40]
-#
-    # # Edge Case 5: Odd number of nodes (7 elements)
-    # head = build_linked_list([1,2,3,4,5,6,7])
-    # solution.reorderList(head)
-    # print("Test 7:", linked_list_to_list(head))  # Expected: [1,7,2,6,3,5,4]
+    # Edge Case 1: Single element
+    head = build_linked_list([1])
+    solution.reorderList(head)
+    print("Test 3:", linked_list_to_list(head))  # Expected: [1]
+
+    # Edge Case 2: Two elements
+    head = build_linked_list([1,2])
+    solution.reorderList(head)
+    print("Test 4:", linked_list_to_list(head))  # Expected: [1,2]
+
+    # Edge Case 3: Three elements
+    head = build_linked_list([1,2,3])
+    solution.reorderList(head)
+    print("Test 5:", linked_list_to_list(head))  # Expected: [1,3,2]
+
+    # Edge Case 4: Even number of nodes (6 elements)
+    head = build_linked_list([10,20,30,40,50,60])
+    solution.reorderList(head)
+    print("Test 6:", linked_list_to_list(head))  # Expected: [10,60,20,50,30,40]
+
+    # Edge Case 5: Odd number of nodes (7 elements)
+    head = build_linked_list([1,2,3,4,5,6,7])
+    solution.reorderList(head)
+    print("Test 7:", linked_list_to_list(head))  # Expected: [1,7,2,6,3,5,4]
