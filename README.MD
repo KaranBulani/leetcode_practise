@@ -2,7 +2,7 @@
 
 ---
 
-1. **Euclid's Algorithm for GCD** [LC 1071](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201071%20Greatest%20Common%20Divisor%20of%20Strings/Solution.py)
+1. **Euclid's Algorithm for GCD** [LC 1071](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201071%20Greatest%20Common%20Divisor%20of%20Strings/Solution.py#L7)
    * The **GCD** of two integers is the largest number that divides both of them without leaving a remainder.
    * Suppose you want the GCD of two numbers `a` and `b` (with `a > b`):
      1. Divide `a` by `b`, and get the remainder `r`.
@@ -13,14 +13,14 @@
      2. Replace `a` with `b`, and `b` with `r`.
      3. Repeat until `r = 0`.
      4. When `r = 0`, the GCD is the last nonzero divisor (the current `b`). 
-     5. Find GCD(48, 18):
-        * Step 1: $48 ÷ 18 = 2$ remainder **12**
-        * Step 2: Now find GCD(18, 12)
-        * Step 3: $18 ÷ 12 = 1$ remainder **6**
-        * Step 4: Now find GCD(12, 6)
-        * Step 5: $12 ÷ 6 = 2$ remainder **0**
+   * Find GCD(48, 18):
+      * Step 1: $48 ÷ 18 = 2$ remainder **12**
+      * Step 2: Now find GCD(18, 12)
+      * Step 3: $18 ÷ 12 = 1$ remainder **6**
+      * Step 4: Now find GCD(12, 6)
+      * Step 5: $12 ÷ 6 = 2$ remainder **0**
         
-        ✅ Last nonzero divisor is 6 → **GCD(48, 18) = 6**
+      ✅ Last nonzero divisor is 6 → **GCD(48, 18) = 6**
 
 ---
 
@@ -87,7 +87,7 @@
 
 4. **Slow and fast pointer like [here](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%20141%20Linked%20List%20Cycle/Solution.py).**
 
-5. **Doubly LinkedList usage of head and tail [LC 707](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%20707%20Design%20Linked%20List/Solution.py).**
+5. **Doubly LinkedList usage of head and tail [LC 707](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%20707%20Design%20Linked%20List/Solution.py)** without head tail **[LC 1472](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%201472%20Design%20Browser%20History/Solution.py).** 
 
 6. 
 
