@@ -34,8 +34,6 @@ class Solution:
             l2 = l2.next if l2 else None
         return dummy.next
 
-
-
 # Helper function to build linked list from Python list
 def build_linked_list(values):
     dummy = ListNode()
