@@ -36,7 +36,6 @@ class Solution:
 Time Complexity:  O(n)                  (for reversing)
 Space Complexity: O(1)                  (for pointers)
 '''
-from typing import Optional
 
 # Helper functions
 class ListNode:
