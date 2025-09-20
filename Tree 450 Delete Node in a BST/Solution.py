@@ -13,7 +13,6 @@ class TreeNode:
         self.left = left
         self.right = right
 
-
 class Solution:
     def minValueNode(self, root):
         curr = root
@@ -42,7 +41,6 @@ class Solution:
 
         return root
 
-
 # Helper: Build tree from list (level order)
 def build_tree(values):
     if not values:
@@ -62,7 +60,6 @@ def build_tree(values):
         i += 1
     return root
 
-
 # Helper: Convert tree back to list (level order)
 def tree_to_list(root):
     if not root:
@@ -80,7 +77,6 @@ def tree_to_list(root):
     while result and result[-1] is None:
         result.pop()
     return result
-
 
 if __name__ == "__main__":
     solution = Solution()
