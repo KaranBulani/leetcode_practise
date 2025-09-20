@@ -6,7 +6,6 @@ Space Complexity: O(h)               	(for recursive stack)
 from collections import deque
 from typing import Optional
 
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
