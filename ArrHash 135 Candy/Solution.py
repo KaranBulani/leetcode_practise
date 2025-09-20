@@ -4,7 +4,7 @@ Space Complexity: O(n)               	(for candies)
 '''
 
 class Solution:
-    def candy(self, ratings: List[int]) -> int:
+    def candy(self, ratings: list[int]) -> int:
         n = len(ratings)
         candies = [1] * n
 
@@ -69,9 +69,14 @@ if __name__ == "__main__":
     # Edge Case 8:
     ratings = [1, 3, 2, 2, 1]
     result = solution.candy(ratings)
-    print(f"Edge Case 7 result: {result}")  # Expected output: 7
+    print(f"Edge Case 8 result: {result}")  # Expected output: 7
 
     # Edge Case 9:
     ratings = [29, 51, 87, 87, 72, 12]
     result = solution.candy(ratings)
-    print(f"Edge Case 7 result: {result}")  # Expected output: 12
+    print(f"Edge Case 9 result: {result}")  # Expected output: 12
+
+    # Edge Case 9:
+    ratings = [1,3,4,5,2]
+    result = solution.candy(ratings)
+    print(f"Edge Case 9 result: {result}")  # Expected output: 11
