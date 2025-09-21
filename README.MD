@@ -101,10 +101,63 @@
 # Tree Notes:
 
 ---
+1. **Tree Node Structure**.
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
-1. **Basic Tree Operations**
+    def __repr__(self):
+        # Default: <__main__.TreeNode object at 0x0000020A0DB0AC50>
 
+        # If you want to see the whole tree recursively (careful with big trees), you can do this:
+        # TreeNode(val=10, left=TreeNode(val=5, left=None, right=None), right=TreeNode(val=15, left=None, right=None))
+        return f"TreeNode(val={self.val}, left={repr(self.left)}, right={repr(self.right)})"
+
+        # Show value and existence of children for debugging
+        # TreeNode(val=10, left=5, right=15)
+        return f"TreeNode(val={self.val}, left={self.left.val if self.left else None}, right={self.right.val if self.right else None})"
+```
+
+2. **Basic Tree Operations**
    * Insert in a BST [LC 701](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20701%20Insert%20into%20a%20Binary%20Search%20Tree/Solution.py), Delete in a BST [LC 450](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20450%20Delete%20Node%20in%20a%20BST/Solution.py).
 
+3. **Depth First Search**
+
+    <img src="z_images/img.png" alt="description of your image" width="400" height="325">
+
+   * Inorder - [2,3,4,5,6,7]
+       ```python
+       def inorder(root):
+           if not root:
+               return
+           inorder(root.left)
+           print(root.val)
+           inorder(root.right)
+       ```
+     Swap left,right calls in inorder() to print in descending/reverse order.
+
+   * Preorder - [4,3,2,6,5,7]
+       ```python
+       def preorder(root):
+           if not root:
+               return
+           print(root.val)
+           preorder(root.left)
+           preorder(root.right)
+       ```
+   * Postorder - [2,3,5,7,6,4]
+       ```python
+       def postorder(root):
+           if not root:
+               return
+           postorder(root.left)
+           postorder(root.right)
+           print(root.val)
+       ```
+
+4. 
 
 ---
