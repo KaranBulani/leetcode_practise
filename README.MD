@@ -158,6 +158,6 @@ class TreeNode:
            print(root.val)
        ```
 
-4. 
+4. How inorder and preorder list relate with each other. [LC 105](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/Solution.py)
 
 ---
