@@ -128,7 +128,7 @@ class TreeNode:
 
     <img src="z_images/img.png" alt="description of your image" width="400" height="325">
 
-   * Inorder - [2,3,4,5,6,7]
+   * ###### **Inorder** - [2,3,4,5,6,7]
        ```python
        def inorder(root):
            if not root:
@@ -159,7 +159,7 @@ class TreeNode:
 
            return res
        ```
-   * Preorder - [4,3,2,6,5,7]
+   * ###### **Preorder** - [4,3,2,6,5,7]
        ```python
        def preorder(root):
            if not root:
@@ -188,7 +188,7 @@ class TreeNode:
        
            return res
        ```
-   * Postorder - [2,3,5,7,6,4]
+   * ###### **Postorder** - [2,3,5,7,6,4]
        ```python
        def postorder(root):
            if not root:
