@@ -157,7 +157,46 @@ class TreeNode:
            postorder(root.right)
            print(root.val)
        ```
+4. **Breadth First Search**
+   * Level Order - [4,3,6,2,5,7]
+		```python
+		from collections import deque
 
-4. How inorder and preorder list relate with each other. [LC 105](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/Solution.py)
+		def bfs(root):
+			# Initialize a queue to keep track of nodes during level-order traversal
+			queue = deque()
+			
+			res = [] # final result (list of levels)
+			
+			# If the root is not None, add it to the queue
+			if root:
+				queue.append(root)
+			
+			# Continue until the queue is empty
+			while len(queue) > 0:
+				level = [] # store values of nodes at the current level
+				
+				# Iterate over all nodes currently in the queue (current level)
+				for _ in range(len(queue)):
+					# Remove node from the front 
+					curr = queue.popleft()
+					# Add its value to the current level
+					level.append(curr.val)
+					
+					# If the node has a left child, add it to the queue
+					if curr.left:
+						queue.append(curr.left)
+					# If the node has a right child, add it to the queue
+					if curr.right:
+						queue.append(curr.right)
+				
+				# Append the current level's values to the result
+				res.append(level)
+			
+			# Return the list of levels (level-order traversal result)
+			return res
+		```
+  
+5. How inorder and preorder list relate with each other. [LC 105](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/Solution.py)
 
 ---
