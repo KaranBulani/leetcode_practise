@@ -138,7 +138,27 @@ class TreeNode:
            inorder(root.right)
        ```
      Swap left,right calls in inorder() to print in descending/reverse order.
+   * Iterative implementation
+       ```python
+       def inorder_iterative(root):
+           stack, res = [], []
+           curr = root
 
+           while stack or curr:
+               # Reach the leftmost node
+               while curr:
+                   stack.append(curr)
+                   curr = curr.left
+               
+               # Backtrack and visit node
+               curr = stack.pop()
+               res.append(curr.val)
+
+               # Visit right subtree
+               curr = curr.right
+
+           return res
+       ```
    * Preorder - [4,3,2,6,5,7]
        ```python
        def preorder(root):
@@ -148,6 +168,26 @@ class TreeNode:
            preorder(root.left)
            preorder(root.right)
        ```
+   * Iterative implementation
+       ```python
+       def preorder_iterative(root):
+           if not root:
+               return []
+       
+           stack, res = [root], []
+       
+           while stack:
+               node = stack.pop()
+               res.append(node.val)  # Visit root first
+       
+               # Push right first so left is processed first
+               if node.right:
+                   stack.append(node.right)
+               if node.left:
+                   stack.append(node.left)
+       
+           return res
+       ```
    * Postorder - [2,3,5,7,6,4]
        ```python
        def postorder(root):
@@ -156,6 +196,49 @@ class TreeNode:
            postorder(root.left)
            postorder(root.right)
            print(root.val)
+       ```
+   * Iterative implementation
+       ```python
+       def postorder_iterative_two_stacks(root):
+           if not root:
+               return []
+       
+           stack1, stack2, res = [root], [], []
+       
+           while stack1:
+               node = stack1.pop()
+               stack2.append(node)
+       
+               if node.left:
+                   stack1.append(node.left)
+               if node.right:
+                   stack1.append(node.right)
+       
+           while stack2:
+               res.append(stack2.pop().val)
+       
+           return res
+       ```
+   * Method B: One Stack (efficient)
+       ```python
+       def postorder_iterative(root):
+           stack, res = [], []
+           last_visited = None
+           curr = root
+       
+           while stack or curr:
+               if curr:
+                   stack.append(curr)
+                   curr = curr.left
+               else:
+                   peek = stack[-1]
+                   if peek.right and last_visited != peek.right:
+                       curr = peek.right
+                   else:
+                       res.append(peek.val)
+                       last_visited = stack.pop()
+       
+           return res
        ```
 4. **Breadth First Search**
    * Level Order - [4,3,6,2,5,7]
