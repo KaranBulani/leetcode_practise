@@ -25,7 +25,7 @@ class Solution:
 ####################################################################################################
 
 Time complexity:  O(root -> LCA)			path for root to LCA.
-Space complexity: O(h)						recursion stack uses space proportional to the tree height h.
+Space complexity: O(root -> LCA)			recursion stack uses space proportional to root -> LCA.
 '''
 # Definition for a binary tree node.
 class TreeNode:
