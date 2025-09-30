@@ -1,5 +1,5 @@
 '''
-Time complexity:  O(root -> LCA)			path for root to LCA.
+Time complexity:  O(n)			            Visiting each node.
 Space complexity: O(h)						recursion stack uses space proportional to the tree height h.
 '''
 from typing import Optional
