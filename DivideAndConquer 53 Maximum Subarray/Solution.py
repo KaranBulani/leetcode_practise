@@ -40,8 +40,6 @@ class Solution:
 Time complexity:  O(nlogn)				Each level splits array in half (log n levels) and combines in O(n).
 Space complexity: O(logn)				recursion stack.
 '''
-
-
 class Solution:
     def maxSubArray(self, nums):
         def helper(nums, left, right):
