@@ -21,6 +21,16 @@
       * Step 5: $12 ÷ 6 = 2$ remainder **0**
         
       ✅ Last nonzero divisor is 6 → **GCD(48, 18) = 6**
+2. **Kadane's Algorithm**: find the maximum sum of a contiguous subarray in an array of integers (which can contain both positive and negative numbers).
+   * [LC 53](https://github.com/KaranBulani/leetcode_practise/blob/python/DivideAndConquer%2053%20Maximum%20Subarray/Solution.py) Normal Kadane's.
+   * [LC 918](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20918%20Maximum%20Sum%20Circular%20Subarray/Solution.py) Circular Kadane's Algorithm.
+
+3. **Sieve of Eratosthenes**: — The algorithm works by **eliminating multiples** of each prime number starting from 2. [LC 204](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20204%20Count%20Primes/Solution.py):
+   * Create a list of boolean values `is_prime[0..n]` initialized to `True`.
+   * Set `is_prime[0]` and `is_prime[1]` to `False`, because 0 and 1 are not prime.
+   * For each number `i` from 2 to √n:
+      * If `is_prime[i]` is `True`, mark **all multiples of `i`** (i.e., `i*i`, `i*i+i`, `i*i+2i`, ...) as `False`.
+   * After the loop, all indexes `i` such that `is_prime[i]` is `True` are prime numbers.
 
 ---
 
