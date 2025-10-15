@@ -32,6 +32,9 @@
       * If `is_prime[i]` is `True`, mark **all multiples of `i`** (i.e., `i*i`, `i*i+i`, `i*i+2i`, ...) as `False`.
    * After the loop, all indexes `i` such that `is_prime[i]` is `True` are prime numbers.
 
+4. **PrefixSums**: Draw the solution to understand if prefix sums would work or not
+   * Like [304. Range Sum Query 2D - Immutable](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20304%20Range%20Sum%20Query%202D%20-%20Immutable/Solution.py)
+   * 
 ---
 
 # Binary Search Notes:
