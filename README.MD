@@ -34,7 +34,7 @@
 
 4. **PrefixSums**: Draw the solution to understand if prefix sums would work or not
    * Like [304. Range Sum Query 2D - Immutable](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20304%20Range%20Sum%20Query%202D%20-%20Immutable/Solution.py)
-   * 
+   * We can keep {0:1} as base case [LC 560](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20560%20Subarray%20Sum%20Equals%20K/Solution.py), [LC 437](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20437%20Path%20Sum%20III/Solution.py).
 ---
 
 # Binary Search Notes:
@@ -303,7 +303,7 @@ class TreeNode:
 5. Not everytime you need to create DFS function. [LC 100](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20100%20Same%20Tree/Solution.py), [LC 572](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20572%20Subtree%20of%20Another%20Tree/Solution.py)
 6. Space, time complexity of iterative and recursive Solution can be different. [LC 235](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20235%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree/Solution.py)
 7. How Inorder and PreOrder solution can be different. [LC 98](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%2098%20Validate%20Binary%20Search%20Tree/Solution.py) 
-8. Serialize and deserialize using preorder. [LC 297](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20297%20Serialize%20and%20Deserialize%20Binary%20Tree/Solution.py)
+8. Serialize and deserialize using preorder. Normal Tree [LC 297](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20297%20Serialize%20and%20Deserialize%20Binary%20Tree/Solution.py) vs BST [LC 449](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20449%20Serialize%20and%20Deserialize%20BST/Solution.py)
 9. How to handle list of list in tree recursion stack. [LC 113](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20113%20Path%20Sum%20II/Solution.py) 
 10. Backtracking on Tree [LC 437](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20437%20Path%20Sum%20III/Solution.py) 
 11. Count number of nodes in tree in O(logn) not O(n) [LC 222](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20222%20Count%20Complete%20Tree%20Nodes/Solution.py)
