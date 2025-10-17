@@ -9,6 +9,13 @@ then return True
 -> prefix(j) % k = prefix(i-1) % k
 -> basically we want to find same remainder and find difference when same remainder is repeated
 
+Note: over here differences between index which is J - I + 1
+      but I is over here + I - 1
+
+      -> J - ( +I - 1) - 1
+      -> J - I +1 -1
+      -> J - I
+
 Time complexity:  O(n)						Traversing nums
 Space complexity: O(n)						remainder_index
 '''
