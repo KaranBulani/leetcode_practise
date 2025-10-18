@@ -2,6 +2,9 @@
 Time complexity:  O(nlogn)						because of sorting
 Space complexity: O(n)							nodes list
 '''
+from typing import Optional
+from collections import defaultdict
+
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -10,7 +13,7 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def verticalTraversal(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def verticalTraversal(self, root: Optional[TreeNode]) -> list[list[int]]:
         nodes = []  # (col, row, val)
 
         def dfs(curr: Optional[TreeNode], row: int, col: int):
