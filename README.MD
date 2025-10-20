@@ -319,3 +319,15 @@ class TreeNode:
 2. Height of tree using DFS, BFS  [LC 104](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20104%20Maximum%20Depth%20of%20Binary%20Tree/Solution.py)
 
 ---
+# Backtracking:
+
+---
+1. Exploring all possible combinations or paths that can be formed from a given set or structure, and you accumulate a sum along the way. 
+   1. The recursion (or backtracking) builds the sum incrementally, **exploring both inclusion and exclusion possibilities**. 
+   2. Each “sum” corresponds to one complete path of decisions (include/exclude, go left/right, etc.). 
+   3. You don’t revisit nodes or edges — it’s choice-based, not connection-based.
+   
+**SUMS**
+1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
+2. Decision whether to include or exclude a number in a subset. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
+3. Decision whether to include or exclude a number considering a targetSum [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py)
