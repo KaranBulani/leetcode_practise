@@ -15,20 +15,20 @@ class Solution:
     def subsets(self, nums: list[int]) -> list[list[int]]:
         subSet, currSet = [], []
 
-        def dfs(i: int, currSet: list):
+        def backtrack(i: int, currSet: list):
             if i >= len(nums):
                 subSet.append(currSet.copy())
                 return
 
             # decision to include nums[i]
             currSet.append(nums[i])
-            dfs(i + 1, currSet)
+            backtrack(i + 1, currSet)
 
             # decision to NOT include nums[i]
             currSet.pop()
-            dfs(i + 1, currSet)
+            backtrack(i + 1, currSet)
 
-        dfs(0, currSet)
+        backtrack(0, currSet)
         return subSet
 
 ####################################################################################################
