@@ -104,7 +104,65 @@ class Solution:
 
         backtracking(0)
         return res
+'''
+[] <── backtrack(0, []) ──> Initial Call
+│
+├── i=0 ── [1] <── backtrack(1, [1]) ──> For loop call 1st
+│          │
+│          ├── i=1 ── [1,2] <── backtrack(2, [1,2]) ──> For loop call 2nd
+│          │           │
+│          │           ├── i=2 ── [1,2,2] <── backtrack(3, [1,2,2]) ──> skip duplicate handled after return
+│          │           │            │
+│          │           │            ├── i=3 ── [1,2,2,3] <── backtrack(4, [1,2,2,3])
+│          │           │            │            └── (Returns)
+│          │           │            └── (Returns)
+│          │           │
+│          │           ├── i=3 ── [1,2,3] <── backtrack(4, [1,2,3])
+│          │           │            └── (Returns)
+│          │           └── (Returns)
+│          │
+│          ├── i=2 (skip duplicate 2)  ←── skip this because nums[2] == nums[1]
+│          │
+│          ├── i=3 ── [1,3] <── backtrack(4, [1,3])
+│          │            └── (Returns)
+│          └── (Returns)
+│
+├── i=1 ── [2] <── backtrack(2, [2]) ──> For loop call 2nd
+│          │
+│          ├── i=2 ── [2,2] <── backtrack(3, [2,2])
+│          │           │
+│          │           ├── i=3 ── [2,2,3] <── backtrack(4, [2,2,3])
+│          │           │            └── (Returns)
+│          │           └── (Returns)
+│          │
+│          ├── i=3 ── [2,3] <── backtrack(4, [2,3])
+│          │           └── (Returns)
+│          └── (Returns)
+│
+├── i=2 (skip duplicate 2)  ←── skip because nums[2] == nums[1]
+│
+└── i=3 ── [3] <── backtrack(4, [3])
+             └── (Returns)
+'''
 
+class Solution:
+    def subsetsWithDup(self, nums: list[int]) -> list[list[int]]:
+        res = []
+        nums.sort()  # Step 1: sort to handle duplicates
+
+        def backtrack(start, path):
+            res.append(path[:])  # add a copy of the current subset
+
+            for i in range(start, len(nums)):
+                # Step 2: skip duplicates on the same recursion level
+                if i > start and nums[i] == nums[i - 1]:
+                    continue
+                path.append(nums[i])
+                backtrack(i + 1, path)
+                path.pop()
+
+        backtrack(0, [])
+        return res
 
 if __name__ == "__main__":
     solution = Solution()
