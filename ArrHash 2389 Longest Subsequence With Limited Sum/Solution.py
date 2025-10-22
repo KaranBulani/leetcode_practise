@@ -7,7 +7,7 @@ Time complexity:  O(n log n + n + q log n)
 Space complexity: O(n+m)						n for prefixSum, m for res
 '''
 class Solution:
-    def answerQueries(self, nums: List[int], queries: List[int]) -> List[int]:
+    def answerQueries(self, nums: list[int], queries: list[int]) -> list[int]:
         nums.sort()
 
         prefixSum = [0]
@@ -33,3 +33,39 @@ class Solution:
 
 
 if __name__ == "__main__":
+    solution = Solution()
+
+    # Example 1 (from problem)
+    nums = [4, 5, 2, 1]
+    queries = [3, 10, 21]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?]
+
+    # Example 2 (from problem)
+    nums = [2, 3, 4, 5]
+    queries = [1]
+    print(solution.answerQueries(nums, queries))  # Expected: [?]
+
+    # Edge Case 1: All numbers same
+    nums = [5, 5, 5, 5]
+    queries = [5, 10, 20]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?]
+
+    # Edge Case 2: Very small nums and queries
+    nums = [1]
+    queries = [0, 1, 2]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?]
+
+    # Edge Case 3: Increasing numbers
+    nums = [1, 2, 3, 4, 5]
+    queries = [5, 7, 15]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?]
+
+    # Edge Case 4: Large query (greater than total sum)
+    nums = [10, 20, 30]
+    queries = [5, 60, 1000]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?]
+
+    # Edge Case 5: Mixed random
+    nums = [7, 2, 5, 10, 8]
+    queries = [10, 15, 20, 25]
+    print(solution.answerQueries(nums, queries))  # Expected: [?, ?, ?, ?]
