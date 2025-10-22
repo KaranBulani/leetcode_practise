@@ -15,6 +15,7 @@ class Solution:
     def subsets(self, nums: list[int]) -> list[list[int]]:
         subSet, currSet = [], []
 
+        #it will still work without currSet as its global for backtrack
         def backtrack(i: int, currSet: list):
             if i >= len(nums):
                 subSet.append(currSet.copy())
