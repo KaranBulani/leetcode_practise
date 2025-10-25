@@ -46,7 +46,7 @@ Space Complexity: O(n)              (for HashMap)
 
 '''
 class Solution:
-    def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
+    def subarraysWithKDistinct(self, nums: list[int], k: int) -> int:
 
         def atMost(n) -> int:
             freq = {}
