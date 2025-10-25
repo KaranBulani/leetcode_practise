@@ -1,7 +1,7 @@
 '''
-Time Complexity:  O(n)              (for sliding window)
-Space Complexity: O(n)              (for HashMap)
-'''
+####################################################################################################
+############################################ 3 pointer #############################################
+####################################################################################################
 
 from collections import defaultdict
 from typing import List
@@ -38,6 +38,39 @@ class Solution:
 
         return res
 
+####################################################################################################
+####################################################################################################
+
+Time Complexity:  O(n)              (for sliding window)
+Space Complexity: O(n)              (for HashMap)
+
+'''
+class Solution:
+    def subarraysWithKDistinct(self, nums: List[int], k: int) -> int:
+
+        def atMost(n) -> int:
+            freq = {}
+            left = 0
+            res = 0
+            for right, num in enumerate(nums):
+                freq[num] = 1 + freq.get(num, 0)
+
+                # distinct character if greater than n then start shifting left
+                while len(freq) > n:
+                    freq[nums[left]] -= 1
+                    if freq[nums[left]] == 0:
+                        del freq[nums[left]]
+                    left += 1
+
+                # all subarrays ending at right and starting between left…right are valid
+                # Example => [1] || L,R = 0 || res = 1
+                # Example => [1,2] || L = 0, R = 1 || res += 1-0+1 => 1(prev) + 2(curr)
+                res += right - left + 1
+            return res
+
+        # exactly  K  distinct = at  most  K  distinct − at  most  (K-1)  distinct
+        return atMost(k) - atMost(k - 1)
+    
 if __name__ == "__main__":
     solution = Solution()
 
