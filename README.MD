@@ -62,6 +62,26 @@
    * We should increment decrement low high such that no value gets skipped.
    * So it would be `low = mid + 1` and `high = mid`, rather than `low = mid + 1` and `high = mid - 1`.
 ---
+# 2 pointer/Sliding window:
+
+---
+Key Criteria for Two Pointers/Sliding Window:
+1. Rule 1 (Validity of Wider Scope):  
+   If a larger window (wider scope) is valid, all smaller sub-windows within it must also be valid.  
+   - Example (Longest Substring Without Repeats):  
+     If the substring `s[i...j]` is valid (no duplicates), then `s[i...k]` (where `k < j`) is also valid. This allows efficient shrinking of the window from the left (`i++`) when duplicates are found.
+2. Rule 2 (Invalidity of Narrower Scope):  
+   If a smaller window (narrower scope) is invalid, all larger windows containing it must also be invalid.  
+   - Example:  
+     If `s[i...j]` has duplicates, then `s[i...j+1]` (expanded window) will still have duplicates. This ensures we can discard invalid windows early.
+
+Sums:
+1. For [992](https://github.com/KaranBulani/leetcode_practise/blob/python/SlidingWindow%20992%20Subarrays%20with%20K%20Different%20Integers/Solution.py). `Subarrays with K Different Integers`
+   * It doesn't follow any typical rules:
+   * Rule 1 fails. For`nums = [1,2,1,2,3], k = 3` This`1,2,1,2,3` is valid but `1,2,1,2` is invalid.
+   * Rule 2 fails. For`nums = [1,2,1,2,3], k = 3` This`1,2,1,2` is invalid but `1,2,1,2,3` is valid.
+   * Reframe sum as: `exactly K distinct = at most K distinct − at most(K-1) distinct` and both follow 2 rules.
+---
 # Linked List Notes:
 
 ---
