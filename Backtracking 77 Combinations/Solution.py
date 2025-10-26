@@ -38,7 +38,7 @@ Space complexity: O(k) + O(k * C(n,k))									Recursion Depth O(k)
 																		output list stores C(n,k) combinations, each of length k
 '''
 class Solution:
-    def combine(self, n: int, k: int) -> List[List[int]]:
+    def combine(self, n: int, k: int) -> list[list[int]]:
         totalCombination, currCombination = [], []
 
         def backtrack(curr):
