@@ -37,6 +37,7 @@
    * We can keep {0:1} as base case [LC 560](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20560%20Subarray%20Sum%20Equals%20K/Solution.py), [LC 437](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20437%20Path%20Sum%20III/Solution.py).
    * Might need to do some algebra instead of drawing with some base case [LC 523](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20523%20Continuous%20Subarray%20Sum/Solution.py), [LC 974](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20974%20Subarray%20Sums%20Divisible%20by%20K/Solution.py) or Algebra post some input manipulation [LC 1248](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201248%20Count%20Number%20of%20Nice%20Subarrays/Solution.py).
    * For positive numbers, the prefix sum is always increasing, allowing binary search. [LC 2389](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%202389%20Longest%20Subsequence%20With%20Limited%20Sum/Solution.py)
+   * Base case as {0:-1} and some input manipulation [LC 525](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20525%20Contiguous%20Array/Solution.py)
 ---
 
 # Binary Search Notes:
