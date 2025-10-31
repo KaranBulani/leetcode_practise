@@ -48,12 +48,13 @@ class Solution:
         prefix = [0]
         for x in nums:
             prefix.append(prefix[-1] + x)
-        print(nums, firstLen, secondLen)
-        print(prefix)
+        #print(prefix)
+        #print(nums, firstLen, secondLen)
         def helper(F: int, S: int) -> int:
             max1st = 0
             res = 0
             for i in range(F + S, len(nums) + 1):
+                #print("i: ",i," 1st: ", prefix[i - S] - prefix[i - S - F]," 2nd: ", prefix[i] - prefix[i - S])
                 max1st = max(max1st, prefix[i - S] - prefix[i - S - F])
                 curr2nd = prefix[i] - prefix[i - S]
                 res = max(res, max1st + curr2nd)
@@ -64,13 +65,6 @@ class Solution:
 
 if __name__ == "__main__":
     solution = Solution()
-
-    # Example 0 (from question)
-    nums = [0, 6, 5, 2, 2, 5, 1, 9, 4]
-    firstLen = 6
-    secondLen = 3
-    result = solution.maxSumTwoNoOverlap(nums, firstLen, secondLen)
-    print(result)  # Expected: 20
 
     # Example 1 (from question)
     nums = [0, 6, 5, 2, 2, 5, 1, 9, 4]
