@@ -351,7 +351,7 @@ class TreeNode:
 <img src="z_images/BITSum.png" alt="description of your image" width="400" height="325">
 
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
-1. Good for Prefix Sum with regular updates.
+1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
 ---
 # Backtracking:
 
