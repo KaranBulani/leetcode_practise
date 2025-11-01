@@ -343,7 +343,15 @@ class TreeNode:
 **BOTH**
 1. Use of PreOrder DFS, queue in BFS for inverting a Binary Tree. [LC 226](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20226%20Invert%20Binary%20Tree/Solution.py)
 2. Height of tree using DFS, BFS  [LC 104](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20104%20Maximum%20Depth%20of%20Binary%20Tree/Solution.py)
+---
 
+## Fenwick Tree (Binary Indexed Tree - BIT) Notes:
+
+---
+<img src="z_images/BITSum.png" alt="description of your image" width="400" height="325">
+
+Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
+1. Good for Prefix Sum with regular updates.
 ---
 # Backtracking:
 
