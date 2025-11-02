@@ -361,12 +361,69 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    2. Each “sum” corresponds to one complete path of decisions (include/exclude, go left/right, etc.). 
    3. You don’t revisit nodes or edges — it’s choice-based, not connection-based.
 2. Types of Sums:
-   1. DFS: Take or Not Take with input having duplicates or not. Refer [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py) for flowchart.
-   2. BFS: Go through each nums (`For Loop`) and choose. Refer [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py) for flowchart.
-   3. 
+
+   1. Subset (`DFS - Recursive` & `BFS - Recursive`): Take or Not Take with input having duplicates or not. Refer [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py) for flowchart.
    
+       _A subset is any selection of elements (possibly none or all) from a set, without caring about order._
+       
+       * ✅ _Order doesn’t matter (so we dont include results which have same number but different order)_
+       * ✅ _Can include empty set_
+       * ❌ _No repetition_
+       
+       _Example:
+       Given `{1, 2, 3}`, possible subsets are:_
+       ```
+       [ ], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]
+       ```
+       ➡️ _Number of subsets for `n` elements = `2^n`_
+   
+   2. Combination (`DFS - Recursive` & `BFS - Iterative + Recursive`): Go through each nums (`For Loop`) and choose. Refer [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py) for flowchart.
+
+       _A combination is choosing `r` elements without caring about order, but of fixed size._
+       
+       * ✅ _Order doesn’t matter_
+       * ❌ _No repetition_
+       * ⚖️ _Fixed size (r elements)_
+       
+       _Example:
+       Given `{1, 2, 3}`, 2-combinations are:_
+       
+       ```
+       [1,2], [1,3], [2,3]
+       ```
+       
+       ➡️ _Number of combinations = nCr = n! / (r!(n−r)!)_
+
+   3. Permutation(`DFS - Recursive` & `BFS - Iterative + Recursive` & `Iterative (recursively and not recursively)`): Create permutations given distinct numbers. Refer for all four [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py)
+    
+       _A permutation is choosing `r` elements where order matters._
+       
+       * ✅ _Order matters_
+       * ❌ _No repetition_
+       * ⚖️ _Fixed size (r elements)_
+       
+       _Example:
+       Given `{1, 2, 3}`, 2-permutations are:_
+       
+       ```
+       [1,2], [2,1], [1,3], [3,1], [2,3], [3,2]
+       ```
+       
+       ➡️ _Number of permutations = nPr = n! / (n−r)!_
+
+
+3. Think of it like this:
+
+     | Action      | What it means                                  |
+     | ----------- |------------------------------------------------|
+     | Subset      | Pick any boxes you like, order doesn’t matter. |
+     | Combination | Pick exactly r boxes, order doesn’t matter.    |
+     | Permutation | Pick exactly r boxes, order does matter.       |
+
+
 **SUMS**
 1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
 2. Decision whether to include or exclude a number in a subset. When no duplicates [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py), When there exists duplicates [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) Note: Additional `i > start` filter while skipping dups.
 3. Decision whether to include or exclude a number considering a targetSum [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py)
 4. Decision whether to include or exclude a number considering limit of length. [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py), For loop recursion rather than normal DFS.
+5. Create all permutation of distinct numbers [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py)
