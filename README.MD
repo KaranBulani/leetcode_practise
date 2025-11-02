@@ -360,6 +360,10 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    1. The recursion (or backtracking) builds the sum incrementally, **exploring both inclusion and exclusion possibilities**. 
    2. Each “sum” corresponds to one complete path of decisions (include/exclude, go left/right, etc.). 
    3. You don’t revisit nodes or edges — it’s choice-based, not connection-based.
+2. Types of Sums:
+   1. DFS: Take or Not Take with input having duplicates or not. Refer [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py) for flowchart.
+   2. BFS: Go through each nums (`For Loop`) and choose. Refer [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py) for flowchart.
+   3. 
    
 **SUMS**
 1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
