@@ -6,10 +6,9 @@
    * The **GCD** of two integers is the largest number that divides both of them without leaving a remainder.
    * Suppose you want the GCD of two numbers `a` and `b` (with `a > b`):
      1. Divide `a` by `b`, and get the remainder `r`.
-        That is:
-        $$
-        a = b \cdot q + r \quad \text{where } 0 \leq r < b
-        $$
+        That is: 
+        `a = b * q + r  where  0 <= r < b`
+        
      2. Replace `a` with `b`, and `b` with `r`.
      3. Repeat until `r = 0`.
      4. When `r = 0`, the GCD is the last nonzero divisor (the current `b`). 
@@ -46,6 +45,8 @@
 # Binary Search Notes:
 
 ---
+1. Binary Search can be used to search value in a sorted array. 
+2. Or to test a range of solutions where all values less than equal a number works but greater than number doesn't work or vice-versa. 
 
 ### 🔑 Notes for **162. Find Peak Element**
 
