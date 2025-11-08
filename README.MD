@@ -20,7 +20,14 @@
       * Step 5: $12 ÷ 6 = 2$ remainder **0**
         
       ✅ Last nonzero divisor is 6 → **GCD(48, 18) = 6**
-2. **Kadane's Algorithm**: find the maximum sum of a contiguous subarray in an array of integers (which can contain both positive and negative numbers).
+2. **Lowest Common Multiple**:
+   * `LCM(a,b) * GCD(a,b) = a * b`
+   * Example:`a = 12, b = 18`
+   * `GCD(12, 18) = 6, LCM(12, 18) = 36`
+   * `GCD(12, 18) * LCM(12, 18) = a*b`
+   * `6 * 36 = 12 * 18`
+   * `216 = 216`
+3. **Kadane's Algorithm**: find the maximum sum of a contiguous subarray in an array of integers (which can contain both positive and negative numbers).
    * [LC 53](https://github.com/KaranBulani/leetcode_practise/blob/python/DivideAndConquer%2053%20Maximum%20Subarray/Solution.py) Normal Kadane's.
    * [LC 918](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20918%20Maximum%20Sum%20Circular%20Subarray/Solution.py) Circular Kadane's Algorithm.
 
