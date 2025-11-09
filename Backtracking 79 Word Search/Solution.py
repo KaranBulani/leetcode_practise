@@ -4,7 +4,7 @@
 ####################################################################################################
 
 class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+    def exist(self, board: list[list[str]], word: str) -> bool:
         row, col = len(board), len(board[0])
         used = [[False] * col for _ in range(row)]
         self.res = False
@@ -67,7 +67,7 @@ Space complexity: O(L) + O(mn)  		 						For Update, get_sum
 '''
 
 class Solution:
-    def exist(self, board: List[List[str]], word: str) -> bool:
+    def exist(self, board: list[list[str]], word: str) -> bool:
         row, col = len(board), len(board[0])
         used = [[False] * col for _ in range(row)]
         self.res = False
