@@ -436,5 +436,6 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 4. Decision whether to include or exclude a number considering limit of length. [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py), For loop recursion rather than normal DFS.
 5. Create all permutation of distinct numbers [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py) & dups number [LC 47](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2047%20Permutations%20II/Solution.py) Check comments, Didnt implement all ways to solve
 6. Find word, start backtracking through each char then move ↑↓→← maintaining backtracking function. [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py)
-7. Use of multiple sets etc to backtrack [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
-8. Stopped adding more as it felt useless.
+7. Use of multiple sets to backtrack [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
+8. MINDFUCK SUM - Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py)
+9. Stopped adding more as it felt useless.
