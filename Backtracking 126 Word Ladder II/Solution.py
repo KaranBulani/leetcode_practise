@@ -1,6 +1,41 @@
 '''
-Time complexity:  O(n!) 					because for each row, you can choose up to N columns (minus constraints).
-Space complexity: O(n^2) + O(n) 			for board + recursion stack
+
+✅ Problem Summary
+We must transform beginWord → endWord using only words from wordList,
+changing one letter at a time, and we must return all shortest transformation sequences.
+This is NOT just finding one shortest path…
+We must return all shortest paths → this is why we need a graph + DFS.
+
+✅ High-Level Strategy
+1. Convert list to a set for O(1) lookup
+2. Use BFS to:
+    Build a map:
+        parents[word] = list of words that can reach it in shortest path
+    Stop BFS when we reach endWord
+    Ensure we only explore shortest paths (layer-by-layer)
+3. Use DFS to backtrack from endWord → beginWord
+    Using the parents map
+    Collect all valid sequences
+
+🔥 Why BFS + DFS?
+    BFS ensures shortest distance
+    DFS enumerates all paths inside the shortest graph built by BFS
+
+| Component      | Time          | Space         |
+| -------------- | ------------- | ------------- |
+| Neighbor check | O(N²)         | —             |
+
+Time:   For every word visited, we scan all words in the wordSet. One-edit check takes O(L) (constant).
+        O(N) words × O(N) comparisons each × O(L)
+
+| BFS            | O(N²)         | O(N)          |
+| Parents graph  | —             | O(N²)         |
+| Backtracking   | O(S)          | O(S)          |
+| **Total**      | **O(N² + S)** | **O(N² + S)** |
+
+Quite confusing so skipped details
+https://chatgpt.com/c/6918039d-ef00-8322-8b9a-5f39369b9630
+
 '''
 from collections import defaultdict, deque
 
