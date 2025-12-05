@@ -439,4 +439,5 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 7. Use of multiple sets to backtrack [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
 8. MIND FUCK SUMS - Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py)
 9. MIND FUCK SUMS - Converted input to a graph using BFS, then on that graph implemented DFS [LC 126](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20126%20Word%20Ladder%20II/Solution.py)
-10. Stopped adding more as it felt useless.
+10. Some good sums where pre processing is done [LC 301](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20301%20Remove%20Invalid%20Parentheses/Solution.py), [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
+11. Stopped adding more as it felt useless.
