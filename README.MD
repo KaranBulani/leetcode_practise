@@ -370,7 +370,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    3. You don’t revisit nodes or edges — it’s choice-based, not connection-based.
 2. Types of Sums:
 
-   1. Subset (`DFS - Recursive` & `BFS - Recursive`): Take or Not Take with input having duplicates or not. Refer [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py) for flowchart.
+   1. Subset (`DFS - Recursive` & `BFS - Recursive`): Take or Not Take with input having duplicates or not.
    
        _A subset is any selection of elements (possibly none or all) from a set, without caring about order._
        
@@ -378,12 +378,9 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        * ✅ _Can include empty set_
        * ❌ _No repetition_
        
-       _Example:
-       Given `{1, 2, 3}`, possible subsets are:_
-       ```
-       [ ], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]
-       ```
-       ➡️ _Number of subsets for `n` elements = `2^n`_
+       _Example:_
+       1. Given an integer array nums of unique elements, return all possible subsets. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
+       2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) Note: Additional `i > start` filter while skipping dups in `for loop` solution implementation.
    
    2. Combination (`DFS - Recursive` & `BFS - Iterative + Recursive`): Go through each nums (`For Loop`) and choose. Refer [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py) for flowchart.
 
@@ -431,7 +428,6 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 
 **SUMS**
 1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
-2. Decision whether to include or exclude a number in a subset. When no duplicates [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py), When there exists duplicates [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) Note: Additional `i > start` filter while skipping dups.
 3. Decision whether to include or exclude a number considering a targetSum [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py)
 4. Decision whether to include or exclude a number considering limit of length. [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py), For loop recursion rather than normal DFS.
 5. Create all permutation of distinct numbers [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py) & dups number [LC 47](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2047%20Permutations%20II/Solution.py) Check comments, Didnt implement all ways to solve
