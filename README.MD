@@ -380,7 +380,9 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        
        _Example:_
        1. Given an integer array nums of unique elements, return all possible subsets. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
-       2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) Note: Additional `i > start` filter while skipping dups in `for loop` solution implementation.
+       2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) 
+          * **In the DFS-style implementation (first solution):** We skip **all consecutive duplicates of the current element** when exploring the *exclude* branch. This ensures that once we decide **not** to include a value, we also skip every identical value that follows at deeper recursion levels.
+          * **In the BFS/for-loop-style backtracking (second solution):** We skip duplicates **only at the same recursion level** using the condition `i > start and nums[i] == nums[i - 1]`.  This prevents choosing the same number twice *within a single loop iteration level*, but still allows duplicates to be chosen in deeper levels when valid.Note: In DFS implementation we skip all dups of current element while in BFS we skip dups at same level and Additional `i > start` filter while skipping dups in `for loop` solution implementation.
    
    2. Combination (`DFS - Recursive` & `BFS - Iterative + Recursive`): Go through each nums (`For Loop`) and choose. Refer [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py) for flowchart.
 
