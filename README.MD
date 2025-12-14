@@ -377,12 +377,13 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        * ✅ _Order doesn’t matter (so we dont include results which have same number but different order)_
        * ✅ _Can include empty set_
        * ❌ _No repetition_
-       
-       _Example:_
-       1. Given an integer array nums of unique elements, return all possible subsets. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
-       2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) 
-          * **In the DFS-style implementation (first solution):** We skip **all consecutive duplicates of the current element** when exploring the *exclude* branch. This ensures that once we decide **not** to include a value, we also skip every identical value that follows at deeper recursion levels.
-          * **In the BFS/for-loop-style backtracking (second solution):** We skip duplicates **only at the same recursion level** using the condition `i > start and nums[i] == nums[i - 1]`.  This prevents choosing the same number twice *within a single loop iteration level*, but still allows duplicates to be chosen in deeper levels when valid.Note: In DFS implementation we skip all dups of current element while in BFS we skip dups at same level and Additional `i > start` filter while skipping dups in `for loop` solution implementation.
+   * For nums = [1,2,3]  `[], [1], [2], [3], [1,2], [1,3], [2,3], [1,2,3]`
+
+     _Example:_
+     1. Given an integer array nums of unique elements, return all possible subsets. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
+     2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) 
+        * **In the DFS-style implementation (first solution):** We skip **all consecutive duplicates of the current element** when exploring the *exclude* branch. This ensures that once we decide **not** to include a value, we also skip every identical value that follows at deeper recursion levels.
+        * **In the BFS/for-loop-style backtracking (second solution):** We skip duplicates **only at the same recursion level** using the condition `i > start and nums[i] == nums[i - 1]`.  This prevents choosing the same number twice *within a single loop iteration level*, but still allows duplicates to be chosen in deeper levels when valid.Note: In DFS implementation we skip all dups of current element while in BFS we skip dups at same level and Additional `i > start` filter while skipping dups in `for loop` solution implementation.
    
    2. Combination (`DFS - Recursive` & `BFS - Iterative + Recursive`): Go through each nums (`For Loop`) and choose. 
 
@@ -391,30 +392,32 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        * ✅ _Order doesn’t matter_
        * ❌ _No repetition_
        * ⚖️ _Fixed size (r elements)_
-       
+   * For nums = [1,2,3]
+       ```
+       Combinations of size 2: [1,2], [1,3], [2,3]
+       Combinations of size 3: [1,2,3]
+       ```
        _Example:_
        1. Given two integers `n` and `k`, return all possible combinations of `k` numbers chosen from the range `[1, n]`. [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py)
        2. Given an array of **distinct** integers `candidates` and a target integer `target`, return a list of all _**unique combinations**_ of `candidates` where the chosen numbers sum to `target`.[LC 39](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2039%20Combination%20Sum/Solution.py)
-      3. Given an array of `candidate` numbers (which may contain duplicates) and a `target` value, return all unique combinations where the numbers sum to the target. Each `candidate` may be used at most once, and the result must not contain duplicate combinations. [LC 40]()
-       
-       
+       3. Given an array of `candidate` numbers (which may contain duplicates) and a `target` value, return all unique combinations where the numbers sum to the target. Each `candidate` may be used at most once, and the result must not contain duplicate combinations. [LC 40](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2040%20Combination%20Sum%20II/Solution.py)
 
-   3. Permutation(`DFS - Recursive` & `BFS - Iterative + Recursive` & `Iterative (recursively and not recursively)`): Create permutations given distinct numbers. Refer for all four [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py)
+   3. Permutation(`DFS - Recursive` & `BFS - Iterative + Recursive` & `Iterative (recursively and not recursively)`).
     
-       _A permutation is choosing `r` elements where order matters._
+       _A permutation is choosing `r` elements where order matters. ➡️ Number of permutations = nPr = n! / (n−r)!_
        
        * ✅ _Order matters_
        * ❌ _No repetition_
        * ⚖️ _Fixed size (r elements)_
-       
-       _Example:
-       Given `{1, 2, 3}`, 2-permutations are:_
-       
+   * For nums = [1,2,3]  
        ```
-       [1,2], [2,1], [1,3], [3,1], [2,3], [3,2]
+       [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]
        ```
+       _Example:_
+       1. Given an array nums of distinct integers, return all the possible permutations. [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py) Check all variation.
+       2. Given a collection of numbers, `nums`, that might contain duplicates, return all possible unique permutations _**in any order**_. [LC 47](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2047%20Permutations%20II/Solution.py) 2 methods: Used[] vs Hash Map solution.
        
-       ➡️ _Number of permutations = nPr = n! / (n−r)!_
+       
 
 
 3. Think of it like this:
@@ -429,10 +432,8 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 **SUMS**
 1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
 3. Decision whether to include or exclude a number considering a targetSum [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py)
-5. Create all permutation of distinct numbers [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py) & dups number [LC 47](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2047%20Permutations%20II/Solution.py) Check comments, Didnt implement all ways to solve
 6. Find word, start backtracking through each char then move ↑↓→← maintaining backtracking function. [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py)
 7. Use of multiple sets to backtrack [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
 8. MIND FUCK SUMS - Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py)
 9. MIND FUCK SUMS - Converted input to a graph using BFS, then on that graph implemented DFS [LC 126](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20126%20Word%20Ladder%20II/Solution.py)
 10. Some good sums where preprocessing is done [LC 301](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20301%20Remove%20Invalid%20Parentheses/Solution.py), [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
-11. Stopped adding more as it felt useless.
