@@ -383,7 +383,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
      1. Given an integer array nums of unique elements, return all possible subsets. [LC 78](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2078%20Subsets/Solution.py)
      2. Given an integer array nums that may contain duplicates, return all possible subsets. [LC 90](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2090%20Subsets%20II/Solution.py) 
         * **In the DFS-style implementation (first solution):** We skip **all consecutive duplicates of the current element** when exploring the *exclude* branch. This ensures that once we decide **not** to include a value, we also skip every identical value that follows at deeper recursion levels.
-        * **In the BFS/for-loop-style backtracking (second solution):** We skip duplicates **only at the same recursion level** using the condition `i > start and nums[i] == nums[i - 1]`.  This prevents choosing the same number twice *within a single loop iteration level*, but still allows duplicates to be chosen in deeper levels when valid.Note: In DFS implementation we skip all dups of current element while in BFS we skip dups at same level and Additional `i > start` filter while skipping dups in `for loop` solution implementation.
+        * **In the BFS/for-loop-style backtracking (second solution):** We skip duplicates **only at the same recursion level** using the condition `i > start and nums[i] == nums[i - 1]`.  This prevents choosing the same number twice *within a single loop iteration level*, but still allows duplicates to be chosen in deeper levels when valid. Note: In DFS implementation **we skip all dups of current element** while excluding. In BFS **we skip dups at same level** while starting a new tree branch. Additional `i > start` filter while skipping dups in `for loop` solution implementation.
      3. Given a string s, you can transform every letter individually to be lowercase or uppercase to create another string. [LC 784](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20784%20Letter%20Case%20Permutation/Solution.py). Above we either pick a number or skip a number, Here we either uppercase or lowercase a character.
    
    2. Combination (`DFS - Recursive` & `BFS - Iterative + Recursive`): Go through each nums (`For Loop`) and choose. 
@@ -402,6 +402,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        1. Given two integers `n` and `k`, return all possible combinations of `k` numbers chosen from the range `[1, n]`. [LC 77](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2077%20Combinations/Solution.py)
        2. Given an array of **distinct** integers `candidates` and a target integer `target`, return a list of all _**unique combinations**_ of `candidates` where the chosen numbers sum to `target`.[LC 39](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2039%20Combination%20Sum/Solution.py)
        3. Given an array of `candidate` numbers (which may contain duplicates) and a `target` value, return all unique combinations where the numbers sum to the target. Each `candidate` may be used at most once, and the result must not contain duplicate combinations. [LC 40](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2040%20Combination%20Sum%20II/Solution.py)
+       4. Return all unique quadruplets in nums whose sum equals target. This is optimized [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py). **Note:** Solution like [LC 40](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2040%20Combination%20Sum%20II/Solution.py) can work here if not failure happening due to TLE.
 
    3. Permutation(`DFS - Recursive` & `BFS - Iterative + Recursive` & `Iterative (recursively and not recursively)`).
     
@@ -430,11 +431,3 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
      | Permutation | Pick exactly r boxes, order does matter.       |
 
 
-**SUMS**
-1. Decision whether to take `(` or to not take `(`. [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py)
-3. Decision whether to include or exclude a number considering a targetSum [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py)
-6. Find word, start backtracking through each char then move ↑↓→← maintaining backtracking function. [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py)
-7. Use of multiple sets to backtrack [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
-8. MIND FUCK SUMS - Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py)
-9. MIND FUCK SUMS - Converted input to a graph using BFS, then on that graph implemented DFS [LC 126](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20126%20Word%20Ladder%20II/Solution.py)
-10. Some good sums where preprocessing is done [LC 301](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20301%20Remove%20Invalid%20Parentheses/Solution.py), [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
