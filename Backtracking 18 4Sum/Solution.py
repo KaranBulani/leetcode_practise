@@ -1,4 +1,33 @@
 '''
+====================================================================================================================
+                                        SOLUTION WHICH HITS TLE
+====================================================================================================================
+class Solution:
+    def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
+        res = []
+        nums.sort()
+
+        def backtrack(start: int, currPath: List[int], curr_sum: int):
+            if len(currPath) == 4:
+                if curr_sum == target:
+                    res.append(currPath.copy())
+                    return
+
+            if start >= len(nums):
+                return
+
+            for i in range(start, len(nums)):
+                if i > start and nums[i] == nums[i-1]:
+                    continue
+                currPath.append(nums[i])
+                backtrack(i+1, currPath, curr_sum + nums[i])
+                currPath.pop()
+
+        backtrack(0, [], 0)
+        return res
+
+====================================================================================================================
+
 Time Complexity:  O(n^3)       (2 for loop and 1 for L,R)
                   O(nlogn)      for sort
 
