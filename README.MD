@@ -407,6 +407,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        2. Given an array of **distinct** integers `candidates` and a target integer `target`, return a list of all _**unique combinations**_ of `candidates` where the chosen numbers sum to `target`.[LC 39](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2039%20Combination%20Sum/Solution.py)
        3. Given an array of `candidate` numbers (which may contain duplicates) and a `target` value, return all unique combinations where the numbers sum to the target. Each `candidate` may be used at most once, and the result must not contain duplicate combinations. [LC 40](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2040%20Combination%20Sum%20II/Solution.py)
        4. Return all unique quadruplets in nums whose sum equals target. This is optimized [LC 18](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2018%204Sum/Solution.py). **Note:** Solution like [LC 40](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2040%20Combination%20Sum%20II/Solution.py) can work here if not failure happening due to TLE.
+       5. Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. [LC 17](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2017%20Letter%20Combinations%20of%20a%20Phone%20Number/Solution.py)
 
    3. Permutation(`DFS - Recursive` & `BFS - Iterative + Recursive` & `Iterative (recursively and not recursively)`).
     
@@ -436,5 +437,9 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    
       _Example:_
       * Given an `m x n` grid of characters `board` and a string `word`, return `true` _if `word` exists in the grid._ [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py). Start backtracking through each char then move `↑ ↓ → ←` maintaining backtracking function.
-      * Place `n` queens on an `n x n` chessboard such that no two queens attack each other. [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py)
+      * Place `n` queens on an `n x n` chessboard such that no two queens attack each other. [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py) Use of multiple sets to backtrack, We dont check if row is getting attacked or not.
+      
+      _Sums where Preprocessing is done:_
+      * Solve a Sudoku puzzle by filling the empty cells. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py). Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function.
+      * Return the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once. [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
    2. 
