@@ -437,7 +437,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    
       _Example:_
       * Given an `m x n` grid of characters `board` and a string `word`, return `true` _if `word` exists in the grid._ [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py). Start backtracking through each char then move `↑ ↓ → ←` maintaining backtracking function.
-      * Place `n` queens on an `n x n` chessboard such that no two queens attack each other. [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py) Use of multiple sets to backtrack, We dont check if row is getting attacked or not.
+      * Place `n` queens on an `n x n` chessboard such that no two queens attack each other. [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py) Use of multiple sets to backtrack, We don't check if row is getting attacked or not.
       
       _Sums where Preprocessing is done:_
       * Solve a Sudoku puzzle by filling the empty cells. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py). Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function.
@@ -446,3 +446,15 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    
       _Example:_
       * Given a string `s`, partition `s` such that every **substring** of the partition is a **palindrome**. Return _all possible palindrome partitioning of `s`._ [LC 131](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20131%20Palindrome%20Partitioning/Solution.py) How one `end` becomes next's `start`.
+   3. Decision Tree (Include / Exclude): Backtracking where we build a valid structure step by step. Decision Tree with pruning(balance rules).
+   
+      _Example:_
+      * Given `n` pairs of parentheses, write a function to _generate all combinations of well-formed parentheses._ [LC 22](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2022%20Generate%20Parentheses/Solution.py) Decision whether to take `(` or to not take `(`.
+      
+      _Sums where Preprocessing is done:_
+      * Given a string `s` with parentheses and letters, remove the minimum number of parentheses to make it valid and return all unique valid results. [LC 301](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20301%20Remove%20Invalid%20Parentheses/Solution.py)
+   4. Expression Building: Problems that require recursively constructing expressions, evaluating partial results, or testing all operator/factor placements.
+   
+      _Example:_
+      * 
+   
