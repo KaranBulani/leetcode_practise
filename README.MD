@@ -442,4 +442,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
       _Sums where Preprocessing is done:_
       * Solve a Sudoku puzzle by filling the empty cells. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py). Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function.
       * Return the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once. [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
-   2. 
+   2. Palindrome Partitioning Pattern/ String Partitioning: You partition the string into valid pieces.
+   
+      _Example:_
+      * Given a string `s`, partition `s` such that every **substring** of the partition is a **palindrome**. Return _all possible palindrome partitioning of `s`._ [LC 131](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20131%20Palindrome%20Partitioning/Solution.py) How one `end` becomes next's `start`.
