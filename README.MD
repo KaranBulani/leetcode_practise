@@ -47,7 +47,7 @@
    * Scanning window (`Not Expanding/Shrinking like Sliding Window`) on PrefixSum. Headache Sum [LC 1031](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201031%20Maximum%20Sum%20of%20Two%20Non-Overlapping%20Subarrays/Solution.py) Can say rule of sliding window works here:
      * If a window `[a, b)` is valid, then shrinking it while maintaining non-overlap or size limits keeps it valid (until a constraint breaks).
      * Once a window violates a constraint (e.g., overlap or size), extending doesn’t make previous configurations valid again.
-6. Matrix Rotations:
+6. **Matrix Rotations**: _ALWAYS DRAW IT_.
    * 90 = transpose + reverse row 
    * 180 = reverse row + reverse column 
    * 270 = transpose + reverse col 
