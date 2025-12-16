@@ -1,4 +1,10 @@
 '''
+aab
+|   \     \
+a   aa    aab
+a   b
+b
+
 Diagram: https://leetcode.com/problems/palindrome-partitioning/description/comments/2320577/
 
 Time complexity:  O(n * 2^n)                                2^n states if all str same then all subset is palindrome
