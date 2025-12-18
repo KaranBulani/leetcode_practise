@@ -448,6 +448,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
       _Example:_
       * Given a string `s`, partition `s` such that every **substring** of the partition is a **palindrome**. Return _all possible palindrome partitioning of `s`._ [LC 131](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20131%20Palindrome%20Partitioning/Solution.py) How one `end` becomes next's `start`.
       * Given a string `s` containing only digits, return all possible valid IP addresses that can be formed by inserting dots into `s`. [LC 93](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2093%20Restore%20IP%20Addresses/Solution.py) How one `end` becomes next's `start`.
+      * Given a string `num` that contains only digits and an integer `target`, return _**all possibilities** to insert the binary operators `'+'`, `'-'`, and/or `'*'` between the digits of `num` so that the resultant expression evaluates to the `target` value._ [LC 282](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20282%20Expression%20Add%20Operators/Solution.py). How one `end` becomes next's `start`. How we skip leading `0`'s be keep just `0`.
    3. Decision Tree (Include / Exclude): Backtracking where we build a valid structure step by step. Decision Tree with pruning(balance rules).
    
       _Example:_
@@ -458,5 +459,5 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    4. Expression Building: Problems that require recursively constructing expressions, evaluating partial results, or testing all operator/factor placements.
    
       _Example:_
-      * Given a string `num` that contains only digits and an integer `target`, return _**all possibilities** to insert the binary operators `'+'`, `'-'`, and/or `'*'` between the digits of `num` so that the resultant expression evaluates to the `target` value._ [LC 282](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20282%20Expression%20Add%20Operators/Solution.py).
+      * 
    
