@@ -37,20 +37,20 @@ class Solution:
                     res.append(expr)
                 return
 
-            for i in range(start, len(num)):
+            for end in range(start, len(num)):
                 # avoid leading zero numbers, but keep only "0"
-                if num[start] == "0" and i > start:
+                if num[start] == "0" and end > start:
                     break
 
-                number = int(num[start:i+1])
+                number = int(num[start:end+1])
                 s = str(number)
 
                 if start == 0:
-                    dfs(i+1, number, number, s)
+                    dfs(end+1, number, number, s)
                 else:
-                    dfs(i+1, (curr_val - prev) + (prev * number), prev * number, expr + "*" + s)
-                    dfs(i+1, curr_val + number, number, expr + "+" + s)
-                    dfs(i+1, curr_val - number, -number, expr + "-" + s)
+                    dfs(end+1, (curr_val - prev) + (prev * number), prev * number, expr + "*" + s)
+                    dfs(end+1, curr_val + number, number, expr + "+" + s)
+                    dfs(end+1, curr_val - number, -number, expr + "-" + s)
 
         dfs(0, 0, 0, "")
         return res
