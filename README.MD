@@ -48,9 +48,10 @@
      * If a window `[a, b)` is valid, then shrinking it while maintaining non-overlap or size limits keeps it valid (until a constraint breaks).
      * Once a window violates a constraint (e.g., overlap or size), extending doesn’t make previous configurations valid again.
 6. **Matrix Rotations**: _ALWAYS DRAW IT_.
-   * 90 = transpose + reverse row 
-   * 180 = reverse row + reverse column 
-   * 270 = transpose + reverse col 
+   * 90 = transpose + reverse row.
+   * 180 = reverse row + reverse column.
+   * 270 = transpose + reverse col.
+   * For sums with constant space constraints / For sums where we need to use matrix itself for storage, Try introducing more states like [LC 289](https://leetcode.com/problems/game-of-life/description/) or introduce some temp variables [LC 73](https://leetcode.com/problems/set-matrix-zeroes/description/).
 ---
 
 # Binary Search Notes:
@@ -446,6 +447,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    
       _Example:_
       * Given a string `s`, partition `s` such that every **substring** of the partition is a **palindrome**. Return _all possible palindrome partitioning of `s`._ [LC 131](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20131%20Palindrome%20Partitioning/Solution.py) How one `end` becomes next's `start`.
+      * Given a string `s` containing only digits, return all possible valid IP addresses that can be formed by inserting dots into `s`. [LC 93](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2093%20Restore%20IP%20Addresses/Solution.py) How one `end` becomes next's `start`.
    3. Decision Tree (Include / Exclude): Backtracking where we build a valid structure step by step. Decision Tree with pruning(balance rules).
    
       _Example:_
@@ -456,5 +458,5 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    4. Expression Building: Problems that require recursively constructing expressions, evaluating partial results, or testing all operator/factor placements.
    
       _Example:_
-      * 
+      * Given a string `num` that contains only digits and an integer `target`, return _**all possibilities** to insert the binary operators `'+'`, `'-'`, and/or `'*'` between the digits of `num` so that the resultant expression evaluates to the `target` value._ [LC 282](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20282%20Expression%20Add%20Operators/Solution.py).
    
