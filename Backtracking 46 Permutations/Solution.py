@@ -171,8 +171,21 @@ class Solution:
         return res
 
 Time: O(n × n!)
+    n!
+     * Number of permutations = nPr = n! / (n−r)!
+       3P3 = 3!
+       But n! counts how many complete permutations exist, NOT how much work is done to build them.
+    n
+     * To build each permutation:
+       We need to make n recursive decisions.
+    So it can be said that for each n! permutation we had to go through n steps, making it O(n * n!)
 
-Space: O(n × n!) worst case (stack + output)
+Space: O(n × n!)
+    n x n!
+     * Storing n! permutations.
+     * Each permutation has n elements.
+    n
+     * Recursion Stack
 '''
 
 class Solution:
