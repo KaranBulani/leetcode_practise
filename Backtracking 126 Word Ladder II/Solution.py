@@ -187,3 +187,41 @@ if __name__ == "__main__":
     print(result)
     # Expected:
     # [["aaa","aab","abb","bbb"]]
+'''
+IF IT WAS EXISTENCE OF A PATH RATHER THAN SHORTEST PATH
+
+class Solution:
+    def findOneLadder(self, beginWord, endWord, wordList):
+        wordSet = set(wordList)
+        path = [beginWord]
+
+        def one_edit(w1, w2):
+            diff = 0
+            for a, b in zip(w1, w2):
+                if a != b:
+                    diff += 1
+                    if diff > 1:
+                        return False
+            return diff == 1
+
+        def dfs(word):
+            if word == endWord:
+                return True
+
+            for nxt in list(wordSet):
+                if one_edit(word, nxt):
+                    wordSet.remove(nxt)   # mark visited
+                    path.append(nxt)
+
+                    if dfs(nxt):
+                        return True
+
+                    path.pop()
+                    wordSet.add(nxt)     # backtrack
+
+            return False
+
+        if dfs(beginWord):
+            return path
+        return []
+'''

@@ -460,4 +460,9 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
    
       _Example:_
       * Given an array `cards` of 4 integers (each in `[1, 9]`), determine if you can form an expression using **all four numbers exactly once**, the operators `+ - * /`, and parentheses, such that the expression evaluates to **24**. Return `true` if possible, otherwise `false`. [LC 679](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20679%2024%20Game/Solution.py)
-   
+      * Given two words, `beginWord` and `endWord`, and a dictionary `wordList`, return all the shortest transformation sequences from `beginWord` to `endWord`, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words `[beginWord, s1, s2, ..., sk]`. [LC 126](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20126%20Word%20Ladder%20II/Solution.py) `MIND FUCK SUM` Converted input to a graph using BFS, then on that graph implemented DFS. 
+      
+        _Note: This is shortest path, not existence of a path (This solution is also mentioned in the same link)_
+      * 
+
+
