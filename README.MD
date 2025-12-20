@@ -424,7 +424,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
        _Example:_
        1. Given an array nums of distinct integers, return all the possible permutations. [LC 46](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2046%20Permutations/Solution.py) Check all variation.
        2. Given a collection of numbers, `nums`, that might contain duplicates, return all possible unique permutations _**in any order**_. [LC 47](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2047%20Permutations%20II/Solution.py) 2 methods: Used[] vs Hash Map solution.
-       3. Given an integer array nums, return _the number of permutations of `nums` that are **squareful** (sum of every pair of adjacent elements is a **perfect square** )._ [LC 996]()
+       3. Given an integer array nums, return _the number of permutations of `nums` that are **squareful** (sum of every pair of adjacent elements is a **perfect square** )._ [LC 996](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20996%20Number%20of%20Squareful%20Arrays/Solution.py)
 
 3. Think of it like this:
 

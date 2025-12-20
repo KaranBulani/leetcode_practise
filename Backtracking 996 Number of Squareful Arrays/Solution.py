@@ -12,23 +12,23 @@ So it can be said that for each n! permutation we had to go through n steps, mak
 
 Space complexity: O(n * n!)
 
-    Recursion stack
-    * Depth = n
-    * → O(n)
+Recursion stack
+* Depth = n
+  → O(n)
 
-    currPath
-    * Size up to n
-    * → O(n)
+currPath
+* Size up to n
+  → O(n)
 
-    numCounter
-    * Stores up to n distinct elements
-    * → O(n)
+numCounter
+* Stores up to n distinct elements
+  → O(n)
 
-    res
-    * You store all valid squareful permutations
-    * Worst case: all permutations are valid
-    * Number of permutations = n!
-    * Each permutation costs O(n) space
+res
+* You store all valid squareful permutations
+  Worst case: all permutations are valid
+  Number of permutations = n!
+  Each permutation costs O(n) space
 '''
 import math
 from typing import List
