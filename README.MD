@@ -356,6 +356,57 @@ class TreeNode:
 **BOTH**
 1. Use of PreOrder DFS, queue in BFS for inverting a Binary Tree. [LC 226](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20226%20Invert%20Binary%20Tree/Solution.py)
 2. Height of tree using DFS, BFS  [LC 104](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20104%20Maximum%20Depth%20of%20Binary%20Tree/Solution.py)
+
+---
+
+# Trie Notes:
+
+---
+1. A **Trie** (pronounced *“try”*) is a **tree-based data structure** used to **store and search strings efficiently**, especially when working with **prefixes**. Each node represents a **character**, and paths from the root form words.
+
+    <img src="z_images/Trie.png" alt="description of your image" width="325" height="325">
+
+2. Suppose we insert these words: `apple, app, apply`
+   * All words share the prefix **"app"**. The Trie stores this prefix **once**, then branches out
+   * Each node has:
+     * children (next characters)
+     * a flag like `isEndOfWord`
+
+    Example path:
+    ```
+    root → a → p → p → l → e
+                       ↳ y
+    ```
+3. Purpose of a Trie
+
+   A Trie is designed to **optimize string operations**, mainly:
+   * Fast Word Search: Check if a word exists
+     Time complexity: **O(L)** where L = length of the word 
+   * Prefix Checking: Check if any word starts with a given prefix
+     Perfect for **autocomplete**
+   * Memory Efficiency for Shared Prefixes: Common prefixes are stored only once
+     Very efficient for large dictionaries
+   
+   🚀 Common Use Cases
+   * **Autocomplete / Search Suggestions**
+   * **Spell Checkers**
+   * **Dictionary Implementations**
+   * **IP routing (longest prefix match)**
+   * **Word games (Boggle, Scrabble solvers)**
+4. ⚡ Why Not Use a HashSet?
+
+    | Operation           | HashSet         | Trie           |
+    | ------------------- |-----------------|----------------|
+    | Search word         | O(1) avg        | O(L)           |
+    | Prefix search       | ❌ Not possible | ✅ Efficient   |
+    | Autocomplete        | ❌              | ✅             |
+    | Lexicographic order | ❌              | ✅             |
+    👉 Trie wins whenever prefixes matter
+
+_Examples:_
+* Implement the Trie class. [LC 208]().
+* 
+
 ---
 
 ## Fenwick Tree (Binary Indexed Tree - BIT) Notes:
