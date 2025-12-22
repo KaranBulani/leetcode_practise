@@ -404,8 +404,8 @@ class TreeNode:
     👉 Trie wins whenever prefixes matter
 
 _Examples:_
-* Implement the Trie class. [LC 208]().
-* 
+* Implement the Trie class. [LC 208](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20208%20Implement%20Trie%20Prefix%20Tree/Solution.py) There is no branching so simple for-loop for searching is enough.
+* Implement Trie but with custom Search [LC 211](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20211%20Design%20Add%20and%20Search%20Words%20Data%20Structure/Solution.py). There is branching so for-loop searching wont work and Recursive-DFS backtracking solution would work.
 
 ---
 
