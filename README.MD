@@ -406,6 +406,7 @@ class TreeNode:
 _Examples:_
 * Implement the Trie class. [LC 208](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20208%20Implement%20Trie%20Prefix%20Tree/Solution.py) There is no branching so simple for-loop for searching is enough.
 * Implement Trie but with custom Search [LC 211](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20211%20Design%20Add%20and%20Search%20Words%20Data%20Structure/Solution.py). There is branching so for-loop searching wont work and Recursive-DFS backtracking solution would work.
+* Given an `m x n` board of characters and a list of strings `words`, return _all words on the board._ Almost like [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py) but enhancement/preprocessing using Trie [LC 212](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20212%20Word%20Search%20II/Solution.py). Over here we move in `↑ ↓ → ←` but before exploring new state we verify with Trie.
 
 ---
 
@@ -493,6 +494,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
       * Place `n` queens on an `n x n` chessboard such that no two queens attack each other. [LC 51](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2051%20N%20Queens/Solution.py) Use of multiple sets to backtrack, We don't check if row is getting attacked or not.
       
       _Sums where Preprocessing is done:_
+      * Given an `m x n` board of characters and a list of strings `words`, return _all words on the board._ Almost like [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py) but enhancement/preprocessing using Trie [LC 212](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20212%20Word%20Search%20II/Solution.py). Over here we move in `↑ ↓ → ←` but before exploring new state we verify with Trie 
       * Solve a Sudoku puzzle by filling the empty cells. [LC 37](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2037%20Sudoku%20Solver/Solution.py). Multiple sets with unique way to identify which set to insert to and unique way to call backtrack function.
       * Return the number of 4-directional walks from the starting square to the ending square, that walk over every non-obstacle square exactly once. [LC 980](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20980%20Unique%20Paths%20III/Solution.py)
    2. Palindrome Partitioning Pattern/ String Partitioning: You partition the string into valid pieces.
