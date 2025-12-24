@@ -3,12 +3,16 @@
 
 Time
 * Trie build: O(sum(len(words)))
-* DFS: O(m × n × 4^L) worst case
+                +
+* DFS: O(m × n × 3^L) worst case #
+    3^L because only at 1st char we can go 4 direction, but for rest its 3 per char
   (practically much less due to pruning)
 
 Space
 * Trie: O(sum(len(words)))
+             +
 * DFS recursion stack: O(L)
+             +
 * Board reused (in-place marking)
 '''
 from typing import List
