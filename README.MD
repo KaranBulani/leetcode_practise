@@ -412,6 +412,26 @@ class TreeNode:
     root → a → p → p → l → e
                        ↳ y
     ```
+   Sample Trie Constructors:
+    ```python
+    # LC 211, 208
+    class TrieNode:
+        def __init__(self):
+            self.children = {}
+            self.isEndOfWord = False
+    
+    # LC 212
+    class TrieNode:
+        def __init__(self):
+            self.children = {}
+            self.word = None
+    		
+    # LC 1268
+    class TrieNode:
+        def __init__(self):
+            self.children = {}
+            self.suggestions = []
+    ```
 3. Purpose of a Trie
 
    A Trie is designed to **optimize string operations**, mainly:
@@ -442,6 +462,7 @@ _Examples:_
 * Implement the Trie class. [LC 208](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20208%20Implement%20Trie%20Prefix%20Tree/Solution.py) There is no branching so simple for-loop for searching is enough.
 * Implement Trie but with custom Search [LC 211](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20211%20Design%20Add%20and%20Search%20Words%20Data%20Structure/Solution.py). There is branching so for-loop searching wont work and Recursive-DFS backtracking solution would work.
 * Given an `m x n` board of characters and a list of strings `words`, return _all words on the board._ Almost like [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py) but enhancement/preprocessing using Trie [LC 212](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20212%20Word%20Search%20II/Solution.py). Over here we move in `↑ ↓ → ←` but before exploring new state we verify with Trie.
+* Design a system that suggests at most three product names from `products` after each character of `searchWord` is typed. [LC 1268](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%201268%20Search%20Suggestions%20System/Solution.py)
 
 ---
 
