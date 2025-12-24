@@ -53,17 +53,19 @@ class Solution:
 ############################ ChatGPT Solution (Clubbed Used & direction ############################
 ####################################################################################################
 
-Time complexity:  O(m × n × 4^L)						 		For each board we start backtrack
+Time complexity:  O(m × n × 3^L)						 		For each board we start backtrack
 
-4^L because?
- * You can move in up to 4 directions — up, down, left, right.
- * Then from each of those directions, again up to 4 choices, and so on…
- * So, the number of possible recursive paths grows exponentially, like a tree branching 4 ways at each level.
- * That’s why:
-   T(L) = 4 * 4 * 4 * 4 .... (L times) = 4^L
- * Each recursive level adds up to 4 branches → exponential growth.
+    1. Starting points
+       * You may start DFS from every cell in the board: m × n
 
-Space complexity: O(L) + O(mn)  		 						For Update, get_sum
+    2. DFS branching
+       * From each cell, you can explore up to 4 directions.
+       * After the first move, you cannot go back to the previous cell, so branching is effectively ≤ 3.
+
+    3. Depth of recursion
+       * Maximum depth = L (length of the word)
+
+Space complexity: O(L) + O(mn)  		 						For Recursive Stack, used Array
 '''
 
 class Solution:
