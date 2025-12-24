@@ -59,7 +59,42 @@
 ---
 1. Binary Search can be used to search value in a sorted array. 
 2. Or to test a range of solutions where all values less than equal a number works but greater than number doesn't work or vice-versa. 
-
+3. Follow Either Pattern and don't mix it.
+    ```python
+    # Exact Element Search
+    L, R = 0, n - 1 # Both are valid indices
+    # If R is a real index → use <=
+    while L <= R:
+        mid = (L + R) // 2
+        
+        if condition:
+            L = mid + 1   # mid already checked
+        else:
+            R = mid - 1 # Note: Mid - 1
+    
+    # Most Prefer This
+    # Insertion position / lower bound / first true
+    L, R = 0, n # R is not a valid indices
+    # If R is outside → use <
+    while L < R:
+        mid = (L + R) // 2
+        
+        if condition:
+            L = mid + 1
+        else:
+            R = mid # Note: Just Mid
+    ```
+    Problems with Mixing
+    ```python
+    # right is not a valid index
+    # <= assumes it is
+    left, right = 0, len(arr)
+    while left <= right:
+    
+    # You’ll skip checking the last element
+    left, right = 0, len(arr) - 1
+    while left < right:
+    ```
 ### 🔑 Notes for **162. Find Peak Element**
 
 1. **Binary search intuition**
