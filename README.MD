@@ -470,8 +470,8 @@ _Examples:_
 * Implement Trie but with custom Search [LC 211](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20211%20Design%20Add%20and%20Search%20Words%20Data%20Structure/Solution.py). There is branching so for-loop searching wont work and Recursive-DFS backtracking solution would work.
 * Given an `m x n` board of characters and a list of strings `words`, return _all words on the board._ Almost like [LC 79](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%2079%20Word%20Search/Solution.py) but enhancement/preprocessing using Trie [LC 212](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20212%20Word%20Search%20II/Solution.py). Over here we move in `↑ ↓ → ←` but before exploring new state we verify with Trie.
 * Design a system that suggests at most three product names from `products` after each character of `searchWord` is typed. [LC 1268](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%201268%20Search%20Suggestions%20System/Solution.py)
-* Design a special dictionary that searches the words in it by a prefix and a suffix. [LC 745]() Convert `prefix + suffix` search into **single prefix search** using `suffix + '#' + word`.
-
+* Design a special dictionary that searches the words in it by a prefix and a suffix. [LC 745](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20745%20Prefix%20and%20Suffix%20Search/Solution.py) Convert `prefix + suffix` search into **single prefix search** using `suffix + '#' + word`.
+* Given an integer array `nums`, return the maximum result of `nums[i] XOR nums[j]`, where `0 <= i <= j < n`. [LC 421](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20421%20Maximum%20XOR%20of%20Two%20Numbers%20in%20an%20Array/Solution.py) Create Trie bitwise for each number. Then how `greedy` leads to solution by fixing 1 number.
 ---
 
 ## Fenwick Tree (Binary Indexed Tree - BIT) Notes:
