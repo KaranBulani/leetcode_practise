@@ -41,6 +41,46 @@ and space is primarily for wordSet
 ###############################################################################################################
 ###############################################################################################################
 
+Notation
+* Let N = number of words in dictionary (≤ 100)
+* Let L = maximum word length (≤ 100)
+* Alphabet size = 26
+
+buildDict Complexity
+
+Time Complexity
+For each word, you insert all its characters into the Trie.
+* Each word takes O(L)
+* Total words = N
+O(N * L)
+
+Space Complexity
+Trie stores:
+* One node per unique prefix character
+* Worst case: all words are completely different
+Total nodes ≤ sum of lengths of all words
+O(N * L)
+
+search Complexity (Key Part)
+
+How DFS behaves
+* DFS traverses the Trie character by character
+* At each index, it tries all children (up to 26)
+* But only one mismatch (diff) is allowed
+* Once diff > 1, recursion stops early (pruning)
+
+Worst-Case Time Complexity (Search)
+In the worst case:
+* Trie is full
+* Mismatch happens late or near the end
+* DFS explores all branches for one mismatch
+
+Upper bound:
+* Depth = L
+* Branching factor = 26
+* Only 1 level can branch fully due to mismatch constraint
+So worst-case search time:
+O(26 * L)
 '''
 from typing import List
 
