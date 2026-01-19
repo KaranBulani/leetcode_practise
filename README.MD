@@ -485,6 +485,9 @@ _Clever String manipulation_
 * Design a special dictionary that searches the words in it by a prefix and a suffix. [LC 745](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20745%20Prefix%20and%20Suffix%20Search/Solution.py) Convert `prefix + suffix` search into **single prefix search** using `suffix + '#' + word`.
 * Design an algorithm that accepts a stream of characters and checks if a suffix of these characters is a string of a given array of strings words. [LC 1032](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%201032%20Stream%20of%20Characters/Solution.py) Insert word in reverse order and maintain a queue for word stream.
 * (TOUGH) Form Palindrome Pairs [LC 336](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20336%20Palindrome%20Pairs/Solution.py). Insert word in Trie in reversed order storing `End of Word` & if remaining reversed word is palindrome or not by storing indices, then once again traverse words char by char in normal order. 
+
+_DP + DFS + String manipulation_
+* Given an array of strings words (without duplicates), return all the concatenated words in the given list of words. [LC 472](https://github.com/KaranBulani/leetcode_practise/blob/python/Trie%20472%20Concatenated%20Words/Solution.py) DP memoization of Trie using start indexes or DP Memozation of Array fixing End index and variable start index.
 ---
 
 ## Fenwick Tree (Binary Indexed Tree - BIT) Notes:
