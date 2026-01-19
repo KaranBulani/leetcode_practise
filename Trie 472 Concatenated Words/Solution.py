@@ -39,6 +39,16 @@ class Solution:
 | **Overall** | **`O(N × L²)`** | **`O(S)`** |
 
 ####################################################################################################
+Why Trie Is Faster
+
+| Aspect             | Without Trie        | With Trie           |
+| ------------------ | ------------------- | ------------------- |
+| Substring checking | All possible splits | Only valid prefixes |
+| DP states          | `L`                 | `L`                 |
+| Work per state     | `O(L)`              | `O(1)` (Trie step)  |
+| Per-word cost      | `O(L²)`             | `O(L)`              |
+| Total cost         | `O(N × L²)`         | `O(T)`              |
+
 ####################################################################################################
 Time Complexity:
     Sorting: N logN
