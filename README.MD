@@ -498,6 +498,113 @@ _DP + DFS + String manipulation_
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
 1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
 ---
+
+## Union Find (Disjoint sets):
+
+---
+Union-Find is a data structure that helps you efficiently:
+1. Check if two elements belong to the same group
+2. Merge two groups
+Think of it as managing **connected components**.
+
+### Core Operations
+
+1️⃣ **Find(x)**: Returns the **representative (parent)** of the set that `x` belongs to. If two elements have the same representative → they are in the same set.
+
+2️⃣ **Union(x, y)**: Merges the sets containing `x` and `y`.
+
+### Basic Idea (Intuition)
+
+Imagine each element starts as its **own parent**:
+```
+0   1   2   3   4
+```
+After some unions:
+```
+0 → 1 → 2
+3 → 4
+```
+
+Now:
+* `{0,1,2}` is one group
+* `{3,4}` is another
+
+### Naive Implementation (Slow ❌)
+
+```python
+parent = [i for i in range(n)]
+
+def find(x):
+    while parent[x] != x:
+        x = parent[x]
+    return x
+
+def union(x, y):
+    px = find(x)
+    py = find(y)
+    parent[px] = py
+```
+
+⛔ Problem: Can become a **long chain → O(N)** per operation.
+
+### Optimized Union-Find
+
+Two optimizations make it **almost O(1)**:
+
+🔹 1. Path Compression (in Find) - Flatten the tree while finding parent.
+```python
+def find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+    return parent[x]
+```
+🔹 2. Union by Rank / Size Attach - the **smaller tree under the larger tree**.
+
+```python
+parent = [i for i in range(n)]
+rank = [0] * n
+
+def union(x, y):
+    px = find(x)
+    py = find(y)
+
+    if px == py:
+        return
+
+    if rank[px] < rank[py]:
+        parent[px] = py
+    elif rank[px] > rank[py]:
+        parent[py] = px
+    else:
+        parent[py] = px
+        rank[px] += 1
+```
+
+### Time Complexity 
+
+| Operation | Complexity |
+| --------- | ---------- |
+| Find      | `O(α(N))`  |
+| Union     | `O(α(N))`  |
+
+Where **α(N)** = Inverse Ackermann function
+👉 Grows so slowly that for all practical inputs: **≈ constant time**
+
+### When do we use it?
+Whenever the problem involves:
+* Connectivity
+* Grouping elements dynamically
+* Detecting cycles
+
+**Classic use cases:**
+* Graph connectivity
+* Cycle detection in undirected graphs
+* Kruskal’s MST
+* Number of connected components
+* Dynamic friend / network problems
+
+
+---
 # Backtracking:
 
 ---
