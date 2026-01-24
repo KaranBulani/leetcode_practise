@@ -547,7 +547,9 @@ def union(x, y):
 
 ⛔ Problem: Can become a **long chain → O(N)** per operation.
 
-### Optimized Union-Find
+### Optimized Union-Find 
+
+#### _Array implementation_
 
 Two optimizations make it **almost O(1)**:
 
@@ -563,6 +565,37 @@ def find(x):
 ```python
 parent = [i for i in range(n)]
 rank = [0] * n
+
+def union(x, y):
+    px = find(x)
+    py = find(y)
+
+    if px == py:
+        return
+
+    if rank[px] < rank[py]:
+        parent[px] = py
+    elif rank[px] > rank[py]:
+        parent[py] = px
+    else:
+        parent[py] = px
+        rank[px] += 1
+```
+#### _HashMap Implementation - Initialization (Lazy) - Works with Strings_
+_Note: How `find` & `union` function are same._
+```python
+parent = {}
+rank = {}
+
+def find(x):
+    if x not in parent:
+        parent[x] = x
+        rank[x] = 0
+
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+
+    return parent[x]
 
 def union(x, y):
     px = find(x)
