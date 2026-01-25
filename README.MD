@@ -511,7 +511,7 @@ Think of it as managing **connected components**.
 
 1️⃣ **Find(x)**: Returns the **representative (parent)** of the set that `x` belongs to. If two elements have the same representative → they are in the same set.
 
-2️⃣ **Union(x, y)**: Merges the sets containing `x` and `y`.
+2️⃣ **Union(x, y)**: Merges the sets containing `x` and `y` considering rank.
 
 ### Basic Idea (Intuition)
 
@@ -581,6 +581,13 @@ def union(x, y):
         parent[py] = px
         rank[px] += 1
 ```
+_At the end:_ 
+```python
+For edges = [[1, 2], [2, 3], [3, 4], [1, 4], [1, 5]]
+ * self.parent will be = {1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+ * self.rank will be = {1: 1, 2: 0, 3: 0, 4: 0, 5: 0}
+```
+
 #### _HashMap Implementation - Initialization (Lazy) - Works with Strings_
 _Note: How `find` & `union` function are same._
 ```python
