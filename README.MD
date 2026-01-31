@@ -646,8 +646,7 @@ Whenever the problem involves:
 _Examples:_
 1. Count connected components, pure vanilla UnionFind [LC 323](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20323%20Number%20of%20Connected%20Components%20in%20an%20Undirected%20Graph/Solution.py) 
 2. Return an edge that can be removed so that the resulting graph is a tree of n nodes. [LC 684](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20684%20Redundant%20Connection/Solution.py) If an edge while addition has same parents then that edge is the result.
-2. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation.
-3. 
+3. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation. 
 ---
 # Backtracking:
 
