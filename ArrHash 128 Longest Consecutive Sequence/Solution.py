@@ -1,4 +1,46 @@
 '''
+
+class UnionFind:
+    def __init__(self, nums):
+        self.parent = {}
+        self.size = {}
+        for n in nums:
+            self.parent[n] = n
+            self.size[n] = 1
+
+    def find(self, x):
+        if self.parent[x] != x:
+            self.parent[x] = self.find(self.parent[x])  # path compression
+        return self.parent[x]
+
+    def union(self, x, y):
+        px, py = self.find(x), self.find(y)
+        if px == py:
+            return
+        # union by size
+        if self.size[px] < self.size[py]:
+            px, py = py, px
+        self.parent[py] = px
+        self.size[px] += self.size[py]
+
+
+class Solution:
+    def longestConsecutive(self, nums):
+        if not nums:
+            return 0
+
+        nums = set(nums)  # remove duplicates
+        uf = UnionFind(nums)
+
+        for n in nums:
+            if n + 1 in nums:
+                uf.union(n, n + 1)
+
+        return max(uf.size[uf.find(n)] for n in nums)
+
+####################################################################################################
+####################################################################################################
+
 Time Complexity: O(n) as going through each nums
 Space Complexity: O(n) because of the nums_set
 '''
