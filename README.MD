@@ -167,7 +167,15 @@ Sums:
      val
      ```
 
-2. **dummy node purpose**
+2. `head` is nothing but 1st node and acts as a reference variable:
+    ```python
+       a = 10 # "a" stores reference to integer object.
+       head = ListNode(1) # "head" stores reference to a ListNode object. 
+       print(type(head)) # <class '__main__.ListNode'>
+       print(head) #<__main__.ListNode object at 0x...>
+
+    ```
+3. **dummy node purpose**
    * Read [comment](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%2019%20Remove%20Nth%20Node%20From%20End%20of%20List/Solution.py#L18) to understand purpose of dummy node & also [here](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%202%20Add%20Two%20Numbers/Solution.py).
 
 
