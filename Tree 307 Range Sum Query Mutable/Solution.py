@@ -1,19 +1,49 @@
 '''
 ####################################################################################################
-
-get_parent
-To get parent ➔ x - (x & -x) ➔ where x & -x is LSB (Least Significant Bit) of x.
-1) 2's complement(invert bits then add 1) to get minus of index.
+get_parent: always decreasing index so - subtraction, keep lower limit of size greater than 0
+To get parent ➔ x - (x & -x) ➔ where x & -x result is LSSB (Least Significant Set Bit i.e. just rightmost 1) of x.
+1) 2's complement (invert bits then add 1) to get minus of index i.e. "-x".
 2) AND result with index
 3) Subtract that from index
-So we are just removing LSB of x from x || 1010(10), 1100(12) - LSB = 1000(8) || So, parent of 10,12 is 8
 
-get_next
-To get next:
+x = 10 (1010)
+    x - (x & -x)
+    1010 - (1010 & 0110)
+    1010 - 0010(LSSB) ➔ 10 -2
+    1000(8)
+
+x = 12 (1100)
+    x - (x & -x)
+    1100 - (1100 & 0110)
+    1100 - 0100(LSSB) ➔ 12 - 4
+    1000(8)
+
+So we are just removing LSB (Right most set bit) of x from x || 1010(10), 1100(12) - LSB = 1000(8) || So, parent of 10,12 is 8
+
+####################################################################################################
+
+get_next: always increasing index so + addition, keep upper limit of size less than n
+
+To get next ➔ x + (x & -x) ➔ where x & -x result is LSSB (Least Significant Set Bit i.e. just rightmost 1) of x.
 1) 2's complement of get minus of index
 2) AND this with index
 3) Add it to index
+
+x = 6 (110)
+    x + (x & -x)
+    110 + (110 & 010)
+    110 + 010(LSSB)  ➔ 6 + 2
+    1000(8)
+
+x = 7 (111)
+    x + (x & -x)
+    111 + (111 & 001)
+    111 + 001(LSSB)  ➔ 7 + 1
+    1000(8)
+
 Adding LSB of x to x || 110(6) + 10(2) = 1000(8) || 111(7) + 1(1) = 1000(8) || So, next of 6,7 is 8
+
+####################################################################################################
 
 get_sum
 Start from index+1. If you want prefix sum 0 to index ➔ Keep adding value of parent till you reach 0
@@ -24,46 +54,43 @@ Space complexity: O(n)		 			For Update, get_sum
 '''
 
 class Fenwick:
-    def __init__(self, arr: list[int]):
-        self.n = len(arr)
-        self.nums = [0] + arr  # 1-based
-        self.BITtree = [0] * (self.n + 1)  # 1-based
+    def __init__(self, nums: List[int]):
+        self.arr = [0] + nums
+        self.n = len(self.arr)
+        self.BITtree = [0] * self.n
 
-        for i, num in enumerate(arr):
-            self.add(i, num)
+        for i in range(1, len(self.arr)):
+            self.add(i, self.arr[i])
 
-    def add(self, index: int, amount) -> None:
-        index += 1  # 0-index ➔ 1-based
-        while index <= self.n:
-            self.BITtree[index] += amount
+    def add(self, index: int, delta: int) -> None:
+        while index < self.n:
+            self.BITtree[index] += delta
             index = self.get_next(index)
 
-    def get_sum(self, index: int) -> int:
-        sum = 0
-        index += 1  # 0-index ➔ 1-based
+    def getSum(self, index: int) -> int:
+        total = 0
         while index > 0:
-            sum += self.BITtree[index]
+            total += self.BITtree[index]
             index = self.get_parent(index)
-        return sum
+        return total
 
-    def get_parent(self, index: int) -> int: \
-            return index - (index & -index)
+    def get_parent(self, index: int) -> int:
+        return index - (index & -index)
 
     def get_next(self, index: int) -> int:
         return index + (index & -index)
 
 class NumArray:
-    def __init__(self, nums: list[int]):
+    def __init__(self, nums: List[int]):
         self.obj = Fenwick(nums)
 
     def update(self, index: int, val: int) -> None:
-        delta = val - self.obj.nums[index + 1]
-        self.obj.nums[index + 1] = val  # keep nums updated
-        self.obj.add(index, delta)
+        delta = val - self.obj.arr[index + 1]
+        self.obj.add(index + 1, delta)
+        self.obj.arr[index + 1] = val
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.obj.get_sum(right) - self.obj.get_sum(left - 1)
-
+        return self.obj.getSum(right + 1) - self.obj.getSum(left)
 
 if __name__ == "__main__":
     # Example 1: From problem statement

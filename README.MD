@@ -220,6 +220,7 @@ class TreeNode:
 2. **Basic Tree Operations**
    * Insert in a BST [LC 701](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20701%20Insert%20into%20a%20Binary%20Search%20Tree/Solution.py), Delete in a BST [LC 450](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20450%20Delete%20Node%20in%20a%20BST/Solution.py).
    * Remember difference between `Binary Tree`[LC 236](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20236%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Tree/Solution.py) vs `Binary Search Tree` [LC 235](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20235%20Lowest%20Common%20Ancestor%20of%20a%20Binary%20Search%20Tree/Solution.py).
+     * In BST value at right is more and at left is less.
 
 3. **Depth First Search**
 
@@ -504,7 +505,8 @@ _DP + DFS + String manipulation_
 <img src="z_images/BITSum.png" alt="description of your image" width="400" height="325">
 
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
-1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
+1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py) For Notes checkout comment
+2. Each node of tree stores sum of values, `get_parent` `x - (x & -x)` for calculating sum and `get_next` `x + (x & -x)` for building array.
 ---
 
 ## Union Find (Disjoint sets):
