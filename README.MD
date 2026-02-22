@@ -507,6 +507,28 @@ _DP + DFS + String manipulation_
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
 1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py) For Notes checkout comment
 2. Each node of tree stores sum of values, `get_parent` `x - (x & -x)` for calculating sum and `get_next` `x + (x & -x)` for building array.
+```python
+    Segment Tree → needs associative 
+    Fenwick Tree → needs associative + invertible
+    
+    Assosiative: (a ∘ b) ∘ c = a ∘ (b ∘ c)
+    (2 + 3) + 4 = 2 + (3 + 4) Both = 9, So addition is associative.
+    min( min(5, 2), 6) = min(5, min(2, 6) ) Both = 2, So min is associative.
+    (5 − 3) − 2 != 5 − (3 − 2) 2 ≠ 4, So subtraction is NOT associative. 
+    
+    Invertible: a ∘ b = c there exists an operation to get back a using c and b. 
+    Addition (Invertible):     a + b = c We can recover: a = c − b So addition has inverse = subtraction.
+    Minimum (NOT Invertible):  min(a, b) = 2 Can you recover a? No. 
+    min(2, 10) = 2
+    min(2, 3) = 2
+    min(2, 1000) = 2 
+    You cannot know what was removed. So, min has no inverse.
+```
+---
+## Segment Tree:
+
+---
+1. 
 ---
 
 ## Union Find (Disjoint sets):
