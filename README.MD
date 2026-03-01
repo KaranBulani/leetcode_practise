@@ -505,7 +505,7 @@ _DP + DFS + String manipulation_
 <img src="z_images/BITSum.png" alt="description of your image" width="400" height="325">
 
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
-1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20307%20Range%20Sum%20Query%20Mutable/Solution.py) For Notes checkout comment
+1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/FenwickTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py) For Notes checkout comment
 2. Each node of tree stores sum of values, `get_parent` `x - (x & -x)` for calculating sum and `get_next` `x + (x & -x)` for building array.
 ```python
     Segment Tree → needs associative 
@@ -528,7 +528,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 ## Segment Tree:
 
 ---
-1. 
+1. Segment Tree explanation: [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
 ---
 
 ## Union Find (Disjoint sets):
