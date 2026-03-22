@@ -529,6 +529,11 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 
 ---
 1. Segment Tree explanation: [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
+```python
+Left = 2i + 1
+Right = 2i + 2
+Parent = (i-1)//2
+```
 ---
 
 ## Union Find (Disjoint sets):
