@@ -82,7 +82,7 @@
         if condition:
             L = mid + 1
         else:
-            R = mid # Note: Just Mid
+            R = mid # Note: Just Mid, if Mid was valid it would've ended earlier but as it didn't, we make it mid and not mid-1 as mid-1 can still be valid and R is not considered going forward
     ```
     Problems with Mixing
     ```python
@@ -529,6 +529,7 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 
 ---
 1. Segment Tree explanation: [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
+2. Lazy Segment Tree [LC 729](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20729%20My%20Calendar%20I/Solution.py)
 ```python
 Left = 2i + 1
 Right = 2i + 2
