@@ -786,6 +786,11 @@ _Examples:_
       * Given two words, `beginWord` and `endWord`, and a dictionary `wordList`, return all the shortest transformation sequences from `beginWord` to `endWord`, or an empty list if no such sequence exists. Each sequence should be returned as a list of the words `[beginWord, s1, s2, ..., sk]`. [LC 126](https://github.com/KaranBulani/leetcode_practise/blob/python/Backtracking%20126%20Word%20Ladder%20II/Solution.py) `MIND FUCK SUM` Converted input to a graph using BFS, then on that graph implemented DFS. 
       
         _Note: This is shortest path, not existence of a path (This solution is also mentioned in the same link)_
-      * 
+---
+# DP:
 
+---
+Top Down Memoization + Bottom Up Tabulation
+1. Fibonacci Type Sum [LC 70](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2070%20Climbing%20Stairs/Solution.py)
+2. 
 
