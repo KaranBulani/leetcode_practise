@@ -790,7 +790,9 @@ _Examples:_
 # DP:
 
 ---
-Top Down Memoization + Bottom Up Tabulation
+### 1D DP
+
+### _Top Down Memoization + Bottom Up Tabulation_
 1. Fibonacci Type Sum [LC 70](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2070%20Climbing%20Stairs/Solution.py)
-2. 
+2. All approaches [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py).
 
