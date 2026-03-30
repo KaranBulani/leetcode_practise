@@ -60,6 +60,24 @@ class Solution:
 
         return dfs(len(cost) - 1)
 
+                                        OR JUST DO LIKE THIS
+
+class Solution:
+    def minCostClimbingStairs(self, cost):
+        memo = {}
+
+        def dfs(i):
+            if i <= 1:
+                return cost[i]
+            if i in memo:
+                return memo[i]
+
+            memo[i] = cost[i] + min(dfs(i-1), dfs(i-2))
+            return memo[i]
+
+        n = len(cost)
+        return min(dfs(n-1), dfs(n-2))
+
 ####################################################################################################
 Bottom-Up + Tabulation
 
