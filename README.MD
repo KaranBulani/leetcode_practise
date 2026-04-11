@@ -790,9 +790,395 @@ _Examples:_
 # DP:
 
 ---
-### 1D DP
+## How to know DP is applicable here:
 
+---
+🧠 Why DP doesn’t come to mind (your exact issue)
+
+What you described:
+
+> “I start trying combinations / alternatives and get stuck in brute force”
+
+That’s actually **perfect** — because DP is literally:
+
+👉 *Optimizing brute force recursion*
+
+So the issue is NOT that you don’t know DP. The issue is:
+
+👉 You’re not recognizing that your brute force is **recomputing the same thing**
+
+---
+🔍 The mental trigger for DP
+
+Whenever you see a problem, ask this:
+
+❓ “If I try all possibilities, will I recompute the same subproblem again?”
+
+If YES → 🚨 **DP problem**
+
+---
+🧩 Step-by-step recognition framework
+
+Use this every time:
+
+---
+1. Can I define the problem in terms of choices?
+
+Example (House Robber):
+* At index `i`, I have 2 choices:
+  * rob → go to `i+2`
+  * skip → go to `i+1`
+
+👉 If problem = *sequence of choices* → strong DP candidate
+
+---
+2. Does the problem ask for optimization?
+
+Look for keywords:
+* max / min / count / ways
+
+👉 Optimization + choices = **DP almost always**
+
+---
+3. Can I write a recursive relation?
+
+Try forcing yourself:
+```
+f(i) = best answer starting from index i
+```
+
+If you can express:
+```
+f(i) = max(
+    nums[i] + f(i+2),
+    f(i+1)
+)
+```
+👉 BOOM — this is DP
+
+---
+4. Will recursion repeat work?
+
+Draw a small recursion tree:
+
+For House Robber:
+```
+f(0)
+ ├── f(2)
+ │    ├── f(4)
+ │    └── f(3)
+ └── f(1)
+      ├── f(3)  <-- repeated!
+      └── f(2)  <-- repeated!
+```
+👉 Same states → repeated work → DP
+
+---
+🚨 Why you’re defaulting to brute force
+
+You’re doing this:
+> “Try combinations”
+
+That means you’re thinking:
+
+👉 *subsets / permutations mindset*
+
+Instead, switch to:
+
+👉 *state transition mindset*
+
+---
+🔄 Shift your thinking (this is the key)
+
+❌ Wrong mindset (what you're doing)
+
+“Let me try all combinations of houses”
+
+✅ Correct DP mindset
+
+“At each index, what’s the best I can do?”
+
+---
+🧠 Golden DP template (burn this in your brain)
+
+Whenever stuck, force this:
+```
+1. Define state:
+   f(i) = answer starting from i
+
+2. Define choices:
+   take / not take
+
+3. Write recurrence:
+   f(i) = best of choices
+
+4. Add memoization
+```
+
+---
+🧪 Quick test: DP or NOT?
+
+Ask these 5 questions:
+
+| Question                            | If YES         |
+| ----------------------------------- | -------------- |
+| Is it optimization (max/min/count)? | → DP likely    |
+| Do I have choices at each step?     | → DP likely    |
+| Can I define a state like f(i)?     | → DP likely    |
+| Will recursion repeat states?       | → DP confirmed |
+| Is greedy failing?                  | → DP likely    |
+
+---
+⚡ Compare with NON-DP problems
+
+❌ Binary Search
+* No overlapping subproblems
+* No repeated work
+
+❌ Two Pointers
+* Linear progression
+* No branching choices
+
+❌ Sliding Window
+* Expanding/shrinking window
+* No recursion
+
+👉 These don’t have **branching + overlap**
+
+---
+🧠 The real trick (most important)
+
+Next time you solve:
+
+👉 **DON’T jump to DP immediately**
+
+Instead:
+1. Write brute force recursion
+2. Draw recursion tree (small input)
+3. Spot repetition
+
+👉 That’s when DP should “click”
+
+---
+🔥 Practice trick (this will fix your issue fast)
+
+For next 10 problems:
+* ALWAYS start with recursion
+* Even if you know DP
+
+Then ask:
+> “Which calls are repeating?”
+
+👉 That moment = DP intuition
+
+---
+🎯 Final takeaway
+
+You don’t “recognize DP” at the start.
+
+👉 You **discover DP after writing recursion**
+
+---
+## How to convert top down approach to bottom up tabulation
+
+---
+🧠 1. Identify the DP state
+
+In top-down (memoization), you usually have:
+```python
+def dfs(i, ...):
+    if base_case:
+        return value
+    if memo[i] exists:
+        return memo[i]
+    
+    memo[i] = recurrence
+    return memo[i]
+```
+👉 Your **DP state = function parameters**
+
+---
+🧮 2. Write the recurrence clearly
+
+Example:
+
+```python
+dp[i] = max(dp[i-1], nums[i] + dp[i-2])
+```
+
+👉 This is the *most important step*
+
+If you can’t write recurrence → you can’t tabulate
+
+---
+📦 3. Decide table structure
+
+From parameters:
+
+| Top-down param | Bottom-up table |
+| -------------- | --------------- |
+| `i`            | `dp[i]`         |
+| `i, j`         | `dp[i][j]`      |
+
+---
+🚦 4. Handle base cases FIRST
+
+Whatever base case in recursion → initialize in table
+
+Example:
+
+```python
+if i == 0: return nums[0]
+```
+
+becomes:
+
+```python
+dp[0] = nums[0]
+```
+
+---
+🔄 5. Decide iteration order
+
+You must compute states **before they are needed**
+
+Ask:
+> "What does dp[i] depend on?"
+
+Example:
+* depends on `i-1`, `i-2`
+
+  👉 Then iterate forward
+
+```python
+for i in range(2, n):
+```
+---
+🧱 6. Fill the table
+
+Convert recursion → loop
+
+---
+🔥 Example: House Robber 
+
+🧠 Top-down
+
+```python
+def dfs(i):
+    if i >= n:
+        return 0
+    
+    if i in memo:
+        return memo[i]
+    
+    rob = nums[i] + dfs(i+2)
+    skip = dfs(i+1)
+    
+    memo[i] = max(rob, skip)
+    return memo[i]
+```
+---
+🔁 Convert to Bottom-up
+
+Step 1: State
+
+`dfs(i)` → `dp[i]`
+
+---
+Step 2: Meaning
+
+`dp[i] = max money from index i → end`
+
+---
+Step 3: Base case
+
+```python
+dp[n] = 0
+dp[n+1] = 0
+```
+---
+Step 4: Direction
+
+`dp[i]` Depends on `i+1`, `i+2`
+
+👉 go **backwards**
+
+---
+Step 5: Code
+
+```python
+n = len(nums)
+dp = [0] * (n + 2)
+
+for i in range(n - 1, -1, -1):
+    rob = nums[i] + dp[i + 2]
+    skip = dp[i + 1]
+    dp[i] = max(rob, skip)
+
+return dp[0]
+```
+
+---
+⚡ Think:
+
+✅ "What does dp[i] represent?"
+
+Once you define meaning clearly → tabulation becomes mechanical
+
+---
+🧩 Patterns You’ll See Often
+
+1. Forward DP
+
+```python
+dp[i] depends on dp[i-1]
+```
+
+→ loop from `0 → n`
+
+---
+2. Backward DP
+
+```python
+dp[i] depends on dp[i+1]
+```
+
+→ loop from `n-1 → 0`
+
+---
+3. 2D DP
+
+```python
+dp[i][j] depends on dp[i-1][j], dp[i][j-1]
+```
+
+→ nested loops
+
+---
+🚨 Common Mistakes
+
+* ❌ Wrong loop direction
+  * ❌ Missing base case initialization
+  * ❌ Using recursion logic directly without redefining meaning
+  * ❌ Not allocating extra space (`n+1`, `n+2`)
+
+---
+💡 Final Mental Model
+
+Whenever you see recursion:
+1. Replace function → array
+2. Replace calls → indices
+3. Replace return → assignment
+4. Replace call stack → loop order
+
+---
+## 1D DP
+
+---
+### Examples
 ### _Top Down Memoization + Bottom Up Tabulation_
 1. Fibonacci Type Sum [LC 70](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2070%20Climbing%20Stairs/Solution.py)
-2. All approaches [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
-
+2. All approaches 
+   1. House Robber I [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), House Robber II [LC 213](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20213%20House%20Robber%20II/Solution.py).
+   2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
+3. 
