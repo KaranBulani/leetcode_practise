@@ -1181,4 +1181,9 @@ Whenever you see recursion:
 2. All approaches 
    1. House Robber I [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), House Robber II [LC 213](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20213%20House%20Robber%20II/Solution.py).
    2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
-3. 
+---
+## 2D DP
+
+---
+### Examples
+1. Palindrome Type Sums (Tabular) - Longest Palindromic Substring [LC 5](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%20n%20DP%205%20Longest%20Palindromic%20Substring/Solution.py), Palindromic Substrings [LC 647](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%20n%20DP%20647%20Palindromic%20Substrings/Solution.py)
