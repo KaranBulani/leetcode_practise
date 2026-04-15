@@ -89,7 +89,6 @@ class Solution:
         return res
 
 ####################################################################################################
-
 Time & Space Complexity
 
 Time
@@ -100,6 +99,20 @@ Space
 
 ####################################################################################################
 ####################################################################################################
+                                        2 POINTER METHOD
+
+Important observation
+ * A palindrome is defined by its center
+ * From a center, we can expand outward
+
+Core Idea
+ * Instead of checking all substrings:
+ * ➡️ Fix a center and expand outward
+
+Generalization
+For every index i, we consider:
+ * Odd length palindrome → center = i
+ * Even length palindrome → center = (i, i+1)
 
 Time Complexity
     For each index → expand up to O(n)
