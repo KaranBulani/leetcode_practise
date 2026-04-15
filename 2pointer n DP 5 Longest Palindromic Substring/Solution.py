@@ -25,14 +25,11 @@ Base cases:
 Transition:
 dp[i][j] = (s[i] == s[j]) AND dp[i+1][j-1]
 
-Filling order (VERY IMPORTANT)
-* We must fill from bottom to top, start from bottom right
-* Because dp[i][j] depends on dp[i+1][j-1]
-* we eventually populate top right part of table
-
-👉 Loop:
-i from n-1 → 0
-j from i → n-1
+Order of Filling DP
+⚠️ Important: We need dp[i+1][j-1] before computing dp[i][j]
+👉 So:
+    Iterate i backward
+    Iterate j forward
 
 ####################################################################################################
 
