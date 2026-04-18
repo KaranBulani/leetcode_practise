@@ -66,6 +66,12 @@ For every index i, we consider:
  * Odd length palindrome → center = i
  * Even length palindrome → center = (i, i+1)
 
+⏱ Complexity
+    Time: O(n²)
+    Space: O(1)
+'''
+
+
 class Solution:
     def countSubstrings(self, s: str) -> int:
 
@@ -84,15 +90,6 @@ class Solution:
             expand_n_count(i, i+1)
 
         return total
-
-⏱ Complexity
-    Time: O(n²)
-    Space: O(1)
-'''
-
-
-class Solution:
-    def countSubstrings(self, s: str) -> int:
 
 
 if __name__ == "__main__":

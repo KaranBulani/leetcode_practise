@@ -97,7 +97,7 @@
 ### Key Ideas
 
 -   DP = caching decisions
--   Compute each state once
+-   Compute each state once, state should be bool if it's a `Yes/No` decision, or complex datatype like `int` if needed.
 -   Minimize parameters
 -   Optimize transitions
 

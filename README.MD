@@ -1186,4 +1186,9 @@ Whenever you see recursion:
 
 ---
 ### Examples
-1. Palindrome Type Sums (Tabular) - Longest Palindromic Substring [LC 5](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%20n%20DP%205%20Longest%20Palindromic%20Substring/Solution.py), Palindromic Substrings [LC 647](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%20n%20DP%20647%20Palindromic%20Substrings/Solution.py)
+1. Palindrome Type Sums (Tabular) - 
+   1. Where DP is represented with `BOOL` values. 
+      * Longest Palindromic Substring [LC 5](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%205%20Longest%20Palindromic%20Substring/Solution.py), Palindromic Substrings [LC 647](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20647%20Palindromic%20Substrings/Solution.py)
+   2. Where DP is represented with `int` values. 
+      * [LC 516]()
+   3. 
