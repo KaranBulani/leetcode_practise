@@ -1177,7 +1177,7 @@ Whenever you see recursion:
 ---
 ### Examples
 ### _Top Down Memoization + Bottom Up Tabulation_
-1. Fibonacci Type Sum [LC 70](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2070%20Climbing%20Stairs/Solution.py)
+1. Fibonacci Type Sum [LC 70](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2070%20Climbing%20Stairs/Solution.py), [LC 91 Decode Ways](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2091%20Decode%20Ways/Solution.py)
 2. All approaches 
    1. House Robber I [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), House Robber II [LC 213](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20213%20House%20Robber%20II/Solution.py).
    2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
