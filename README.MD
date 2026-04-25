@@ -1181,6 +1181,7 @@ Whenever you see recursion:
 2. All approaches 
    1. House Robber I [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), House Robber II [LC 213](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20213%20House%20Robber%20II/Solution.py).
    2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
+   3. Coin Change [LC 322](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20322%20Coin%20Change/Solution.py).
 ---
 ## 2D DP
 
