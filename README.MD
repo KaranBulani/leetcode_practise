@@ -1183,6 +1183,7 @@ Whenever you see recursion:
    2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
    3. Coin Change [LC 322](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20322%20Coin%20Change/Solution.py).
    4. Maximum Product Subarray [LC 152](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20152%20Maximum%20Product%20Subarray/Solution.py).
+   5. Trie/Set + DP, Word Break. [LC 139](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20139%20Word%20Break/Solution.py)
 ---
 ## 2D DP
 
