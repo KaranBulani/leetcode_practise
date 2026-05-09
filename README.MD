@@ -1059,7 +1059,7 @@ because:
 > 
 > → choose nothing
 
-This `1` acts like a multiplicative identity for counting.
+This act as contribution of one COMPLETE valid path
 
 Example:
 
