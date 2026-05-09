@@ -1037,6 +1037,118 @@ becomes:
 dp[0] = nums[0]
 ```
 
+#### Various pattern of base cases:
+
+_Pattern 1: Counting Ways Problems_
+
+In problems like:
+* Combination Sum IV
+* Coin Change II
+* Target Sum
+
+`dp[i]` usually means:
+> “number of ways to form amount i”
+
+Then:
+```python
+dp[0] = 1
+```
+
+because:
+> there is ONE way to make amount 0
+> 
+> → choose nothing
+
+This `1` acts like a multiplicative identity for counting.
+
+Example:
+
+If:
+```python
+dp[2] += dp[0]
+```
+
+that means:
+> “Using this coin directly forms amount 2.”
+
+If `dp[0]` were `0`, nothing would ever start.
+
+_Pattern 2: Optimization Problems (min/max)_
+
+In problems like:
+* Coin Change (minimum coins)
+* Perfect Squares
+* Min Cost Climbing Stairs
+
+`dp[i]` means something like:
+> minimum operations/cost/items needed to reach i
+
+Then `dp[0]` is often:
+```python
+dp[0] = 0
+```
+
+because:
+> it takes 0 coins to make amount 0
+
+Example:
+
+```python
+dp[x] = min(dp[x], dp[x-coin] + 1)
+```
+
+If:
+
+```python
+x == coin
+```
+
+then:
+
+```python
+dp[coin] = dp[0] + 1 = 1
+```
+
+which is correct.
+
+_Pattern 3: Boolean Reachability Problems_
+
+In problems like:
+
+* Word Break
+* Partition Equal Subset Sum
+* Can Sum
+
+`dp[i]` means:
+
+> “Is state i reachable?”
+
+Then:
+
+```python
+dp[0] = True
+```
+
+because:
+
+> empty state is achievable trivially
+
+
+
+_Quick Mental Rule_
+
+Before writing base case, ask:
+
+> “What does dp[i] represent?”
+
+Then plug in:
+
+```text
+What should dp[0] mean under that definition?
+```
+
+That automatically gives the correct base case.
+
 ---
 🔄 5. Decide iteration order
 
