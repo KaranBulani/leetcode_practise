@@ -251,7 +251,19 @@ Space Complexity	O(1)
 '''
 class Solution:
     def deleteAndEarn(self, nums: list[int]) -> int:
-        pass
+        max_num = max(nums)
+        points = [0] * (max_num + 1)
+        for num in nums:
+            points[num] += num
+
+        prev2 = 0
+        prev1 = points[1]
+        for value in range(2, max_num + 1):
+            current = max(prev1, points[value] + prev2)
+            prev2 = prev1
+            prev1 = current
+
+        return prev1
 
 
 if __name__ == "__main__":
