@@ -1299,6 +1299,7 @@ Whenever you see recursion:
    4. Maximum Product Subarray [LC 152](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20152%20Maximum%20Product%20Subarray/Solution.py).
    5. Trie/Set + DP, Word Break. [LC 139](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20139%20Word%20Break/Solution.py).
    6. Partition Equal Subset Sum [LC 416](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20416%20Partition%20Equal%20Subset%20Sum/Solution.py).
+   7. Stock buying + selling with states, State-machine DP. est Time to Buy and Sell Stock with Cooldown [LC 309](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20309%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown/Solution.py).
 ---
 ## 2D DP
 
