@@ -1283,7 +1283,149 @@ Whenever you see recursion:
 3. Replace return → assignment
 4. Replace call stack → loop order
 
+
 ---
+## Converting Recursion to Top-Down DP (Memoization)
+
+---
+
+### Problem with Plain Recursion
+
+In normal recursion, the same states are computed repeatedly.
+
+For this problem, a recursive state is:
+dfs(i, curr_target)
+
+Meaning:
+* i → current index
+* curr_target → remaining target we still need to form
+
+Without memoization, many identical (i, curr_target) states are recalculated.
+
+---
+
+### Step-by-Step Conversion Process
+
+---
+
+#### Step 1: Identify the Recursive State
+
+Look for the variables changing between recursive calls.
+
+In this recursion:
+```python
+dfs(i + 1, curr_target - nums[i])
+dfs(i + 1, curr_target + nums[i])
+```
+
+the changing variables are:
+* i
+* curr_target
+
+So the DP state becomes:
+(i, curr_target)
+
+---
+
+#### Step 2: Convert Side-Effect Recursion into Return-Based Recursion
+
+_Original Approach_
+
+The original recursion uses a global variable: `res += 1`
+
+This is harder to memoize cleanly.
+
+_DP-Friendly Approach_
+
+Instead of modifying a global variable:
+> Let the recursive function RETURN the number of ways.
+
+So: `dfs(state)`
+
+should mean:
+> "How many valid ways exist from this state?"
+
+#### Step 3: Rewrite the Base Case
+
+_Original Base Case_
+```python
+if i == len(nums) and curr_target == 0:
+    res += 1
+```
+
+_DP Base Case_
+```python
+if i == len(nums):
+    return 1 if curr_target == 0 else 0
+```
+
+Meaning:
+* If all numbers are used and target becomes 0
+  → one valid expression found
+* Otherwise
+  → no valid expression
+---
+#### Step 4: Return Recursive Answers
+
+_Original Recursion_
+```python
+dfs(i+1, curr_target - nums[i])
+dfs(i+1, curr_target + nums[i])
+```
+
+_DP Recursion_
+
+Each recursive call returns number of valid ways:
+
+```python
+return (
+    dfs(i+1, curr_target - nums[i]) +
+    dfs(i+1, curr_target + nums[i])
+)
+```
+---
+#### Step 5: Add Memoization
+
+Store already computed states:
+```python
+memo[(i, curr_target)] = answer
+```
+
+Before computing:
+
+```python
+if (i, curr_target) in memo:
+    return memo[(i, curr_target)]
+
+```
+This avoids recomputation.
+
+---
+
+#### Core Mindset Shift
+
+_Plain Recursion_
+> “Do some work globally”
+
+Uses: `res += 1`
+
+_Top-Down DP_
+
+> “This function RETURNS the answer for this state”
+
+That is the key idea behind memoization.
+
+---
+
+#### General Recipe: Recursion → Top-Down DP
+
+Whenever converting recursion into DP:
+
+1. Find changing variables. These become DP state variables.
+2. Make recursion return answers. Avoid global variables whenever possible.
+3. Cache computed states `memo[state] = answer`
+---
+
 ## 1D DP
 
 ---
@@ -1312,4 +1454,5 @@ Whenever you see recursion:
       * Longest Palindromic Substring [LC 5](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%205%20Longest%20Palindromic%20Substring/Solution.py), Palindromic Substrings [LC 647](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20647%20Palindromic%20Substrings/Solution.py)
    2. Where DP is represented with `int` values. 
       * [LC 516](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20516%20Longest%20Palindromic%20Subsequence/Solution.py)
-   3. 
+2. Mixed:
+   1. Top Down is 2D, Bottom Up is 1D [LC 494](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20494%20Target%20Sum/Solution.py)
