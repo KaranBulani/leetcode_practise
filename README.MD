@@ -1436,6 +1436,7 @@ Whenever converting recursion into DP:
    1. House Robber I [LC 198](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20198%20House%20Robber/Solution.py), House Robber II [LC 213](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20213%20House%20Robber%20II/Solution.py).
       1. Another Variant of House Robber. Delete and Earn [LC 740](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20740%20Delete%20and%20Earn/Solution.py).
    2. Min Cost Climbing Stairs [LC 746](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20746%20Min%20Cost%20Climbing%20Stairs/Solution.py).
+      1. Another Min, Minimum Cost For Tickets [LC 983](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20983%20Minimum%20Cost%20For%20Tickets/Solution.py).
    3. Coin Change [LC 322](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20322%20Coin%20Change/Solution.py). Similar Problem, Perfect Squares [LC 279](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20279%20Perfect%20Squares/Solution.py), 
       1. Similar like above, But here rather than taking min(of dp states) we take sum(of dp states) Combination Sum IV [LC 377](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20377%20Combination%20Sum%20IV/Solution.py)
    4. Maximum Product Subarray [LC 152](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20152%20Maximum%20Product%20Subarray/Solution.py).
