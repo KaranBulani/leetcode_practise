@@ -1445,6 +1445,9 @@ Whenever converting recursion into DP:
 3. DP where we consider State and then go `Top Down, Bottom Up`.
    1. Stock buying + selling with states, State-machine DP. est Time to Buy and Sell Stock with Cooldown [LC 309](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20309%20Best%20Time%20to%20Buy%20and%20Sell%20Stock%20with%20Cooldown/Solution.py).
    2. Take Skip states, Maximum Profit in Job Scheduling [LC 1235](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%201235%20Maximum%20Profit%20in%20Job%20Scheduling/Solution.py).
+4. Longest Increasing sequence type sums (Bottom Up):
+   1. DP - Number of Longest Increasing Subsequence. [LC 673](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20673%20Number%20of%20Longest%20Increasing%20Subsequence/Solution.py).
+   2. Binary Search or DP - Longest Increasing Subsequence [LC 300](https://github.com/KaranBulani/leetcode_practise/blob/python/BinarySearch%20300%20Longest%20Increasing%20Subsequence/Solution.py).
 ---
 ## 2D DP
 
