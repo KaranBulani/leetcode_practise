@@ -1448,6 +1448,8 @@ Whenever converting recursion into DP:
 4. Longest Increasing sequence type sums (Bottom Up):
    1. DP - Number of Longest Increasing Subsequence. [LC 673](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20673%20Number%20of%20Longest%20Increasing%20Subsequence/Solution.py).
    2. Binary Search or DP - Longest Increasing Subsequence [LC 300](https://github.com/KaranBulani/leetcode_practise/blob/python/BinarySearch%20300%20Longest%20Increasing%20Subsequence/Solution.py).
+5. Top Down:
+   1. Longest Increasing Path in a Matrix [LC 329](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20329%20Longest%20Increasing%20Path%20in%20a%20Matrix/Solution.py)
 ---
 ## 2D DP
 
