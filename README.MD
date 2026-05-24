@@ -688,6 +688,17 @@ _Examples:_
 4. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation. 
 
 ---
+# Graphs:
+
+---
+Matrix Examples - 
+1. Flood Fill [LC 733](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20733%20Flood%20Fill/Solution.py).
+2. Max Area of Island [LC 695](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20695%20Max%20Area%20of%20Island/Solution.py).
+
+Edge Examples -
+1. Tree Diameter [LC 1245](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201245%20Tree%20Diameter/Solution.py).
+
+---
 # Backtracking:
 
 ---
