@@ -109,9 +109,7 @@ So effectively: O(m×n)
 Space Complexity
 O(m×n) for parent + rank arrays/maps.
 '''
-
 from typing import List
-
 
 class UnionFind:
     def __init__(self, grid):
@@ -166,7 +164,22 @@ class Solution:
         uf = UnionFind(grid)
 
         directions = [(1, 0), (0, 1)]
-
+        '''
+        Why only (1,0) and (0,1) in Union Find?
+        dirs = [(1,0), (0,1)]   # down, right
+        
+        In Union Find, each neighboring pair needs to be connected only once.
+        
+        While traversing row-wise:
+        * up and left cells are already processed
+        * checking them again causes redundant unions
+        
+        So:
+        * DFS/BFS → need all 4 directions for traversal
+        * Union Find → only 2 directions needed for connectivity
+        
+        This avoids duplicate union operations while keeping complexity: O(m . n)
+        '''
         for r in range(rows):
             for c in range(cols):
 
