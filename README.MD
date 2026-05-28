@@ -59,30 +59,72 @@
 ---
 1. Binary Search can be used to search value in a sorted array. 
 2. Or to test a range of solutions where all values less than equal a number works but greater than number doesn't work or vice-versa. 
+
 3. Follow Either Pattern and don't mix it.
-    ```python
-    # Exact Element Search
+   
+    #### CASE 1
+   ```python
+    # Exact target search
+    # Last occurrence
+    # First occurrence
+    # Last valid / first invalid problems
+    
     L, R = 0, n - 1 # Both are valid indices
-    # If R is a real index → use <=
+    
+    # Use <= because R is a real index, will run even for a single value
     while L <= R:
         mid = (L + R) // 2
         
         if condition:
-            L = mid + 1   # mid already checked
+            L = mid + 1   # mid already checked, so discard it
         else:
-            R = mid - 1 # Note: Mid - 1
+            R = mid - 1 # Note: Mid - 1, discard mid as mid already checked.
+   
+    # ---------------------------------------------------------
+    # Loop Ends
+    # ---------------------------------------------------------
+    # R | L   (Pointers Cross)
+    # R = last thing on left side (eg: Find last element <= target)
+    # L = first thing on right side ((eg: Find first element > target)
     
-    # Most Prefer This
-    # Insertion position / lower bound / first true
-    L, R = 0, n # R is not a valid indices
-    # If R is outside → use <
+    return L or R or mid # depending on 
+    # | Need          | Return |
+    # | ------------- | ------ |
+    # | last valid    | `R`    |
+    # | first invalid | `L`    |
+    # | exact match   | `mid`  | Generally returned inside loop
+    ```
+    #### CASE 2
+   ```python
+    # Lower bound
+    # Upper bound
+    # First true
+    # Insertion position
+    # Monotonic predicate problems
+   
+    # Search Space: [L, R)  -> R is OUTSIDE array, not a valid indice
+    L, R = 0, n
+    # Use < because R is outside
     while L < R:
         mid = (L + R) // 2
         
         if condition:
             L = mid + 1
         else:
-            R = mid # Note: Just Mid, if Mid was valid it would've ended earlier but as it didn't, we make it mid and not mid-1 as mid-1 can still be valid and R is not considered going forward
+            R = mid 
+        # Here, R is exclusive, so if we do R = mid - 1, that value will go out of scope due to while L < R:       
+        # if Mid was valid, it would've ended earlier
+   
+    # ---------------------------------------------------------
+    # Loop Ends
+    # ---------------------------------------------------------
+    # L == R   (Boundary Found) 
+    # Single boundary point:
+    # first true
+    # lower bound
+    # insertion position
+    
+    return L or R # doesnt matter as both are equal
     ```
     Problems with Mixing
     ```python
