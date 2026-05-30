@@ -548,7 +548,8 @@ _DP + DFS + String manipulation_
 
 Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fenwick-tree-2/) or [YT](https://youtu.be/CWDQJGaN1gY?si=YV3ObHkfWAcKXONh)
 1. Good for Prefix Sum with regular updates. [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/FenwickTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py) For Notes checkout comment
-2. Each node of tree stores sum of values, `get_parent` `x - (x & -x)` for calculating sum and `get_next` `x + (x & -x)` for building array.
+2. [LC 315](https://github.com/KaranBulani/leetcode_practise/blob/python/FenwickTree%20SegmentTree%20315%20Count%20of%20Smaller%20Numbers%20After%20Self/Solution.py) Count of Smaller Numbers after self.
+3. Each node of tree stores sum of values, `get_parent` `x - (x & -x)` for calculating sum and `get_next` `x + (x & -x)` for building array.
 ```python
     Segment Tree → needs associative 
     Fenwick Tree → needs associative + invertible
@@ -571,7 +572,8 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 
 ---
 1. Segment Tree explanation: [LC 307](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20307%20Range%20Sum%20Query%20Mutable/Solution.py)
-2. Lazy Segment Tree [LC 729](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20729%20My%20Calendar%20I/Solution.py)
+2. [LC 315](https://github.com/KaranBulani/leetcode_practise/blob/python/FenwickTree%20SegmentTree%20315%20Count%20of%20Smaller%20Numbers%20After%20Self/Solution.py) Count of Smaller Numbers after self.
+3. Lazy Segment Tree [LC 729](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20729%20My%20Calendar%20I/Solution.py)
 ```python
 Left = 2i + 1
 Right = 2i + 2
