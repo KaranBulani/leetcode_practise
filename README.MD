@@ -738,6 +738,7 @@ _Examples:_
 Matrix Examples - 
 1. Flood Fill [LC 733](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20733%20Flood%20Fill/Solution.py).
 2. Max Area of Island [LC 695](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20695%20Max%20Area%20of%20Island/Solution.py).
+3. BFS - Shortest Path in Binary Matrix [LC 1091](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201091%20Shortest%20Path%20in%20Binary%20Matrix/Solution.py).
 
 Edge Examples -
 1. Tree Diameter [LC 1245](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201245%20Tree%20Diameter/Solution.py).
