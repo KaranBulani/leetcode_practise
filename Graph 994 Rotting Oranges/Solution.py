@@ -59,6 +59,7 @@ Complexity
   * Queue may contain all cells in the worst case.
 This is the optimal solution and the standard interview approach for Rotting Oranges.
 '''
+
 from collections import deque
 from typing import List
 
