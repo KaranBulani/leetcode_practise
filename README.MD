@@ -746,7 +746,7 @@ Edge Examples -
 
 Adjacent List Examples - 
 1. We use old_to_new dictionary to Clone Graph [LC 133](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20133%20Clone%20Graph/Solution.py).
-2. Topological Sort - https://neetcode.io/courses/advanced-algorithms/17 or https://leetcode.com/discuss/post/1078072/introduction-to-topological-sort-by-sinc-i0ii/
+2. Topological Sort (DFS Easy) - https://neetcode.io/courses/advanced-algorithms/17 or https://leetcode.com/discuss/post/1078072/introduction-to-topological-sort-by-sinc-i0ii/
    1. Topological Sort with cycle detection, Course Schedule [LC 207](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20207%20Course%20Schedule/Solution.py).
 ---
 # Backtracking:
