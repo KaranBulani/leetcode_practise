@@ -575,9 +575,15 @@ Refer: [GFG Article](https://www.geeksforgeeks.org/dsa/binary-indexed-tree-or-fe
 2. [LC 315](https://github.com/KaranBulani/leetcode_practise/blob/python/FenwickTree%20SegmentTree%20315%20Count%20of%20Smaller%20Numbers%20After%20Self/Solution.py) Count of Smaller Numbers after self.
 3. Lazy Segment Tree [LC 729](https://github.com/KaranBulani/leetcode_practise/blob/python/SegmentTree%20729%20My%20Calendar%20I/Solution.py)
 ```python
+0 indexed
 Left = 2i + 1
 Right = 2i + 2
 Parent = (i-1)//2
+
+1 indexed
+Left =  2i
+Right = 2i + 1
+Parent = i//2
 ```
 ---
 
@@ -742,6 +748,7 @@ Matrix Examples -
 4. BFS (From multiple Start) - Rotting Oranges [LC 994](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20994%20Rotting%20Oranges/Solution.py)
 5. BFS (From multiple Start) - Islands and Treasure [LC 268](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20268%20Islands%20and%20Treasure/Solution.py). Neetcode.io problem.
 6. BFS (From Multiple Start) - Pacific Atlantic Water flow [LC 417](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20417%20Pacific%20Atlantic%20Water%20Flow/Solution.py).
+7. DFS/BFS - Surrounded Region [LC 130](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20130%20Surrounded%20Regions/Solution.py).
 
 Edge Examples -
 1. Tree Diameter [LC 1245](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201245%20Tree%20Diameter/Solution.py).
