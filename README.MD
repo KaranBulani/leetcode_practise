@@ -736,6 +736,8 @@ _Examples:_
 2. Return an edge that can be removed so that the resulting graph is a tree of n nodes. [LC 684](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20684%20Redundant%20Connection/Solution.py) If an edge while addition has same parents then that edge is the result.
 3. Custom UnionFind via size, not via rank. [LC 128](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20128%20Longest%20Consecutive%20Sequence/Solution.py)
 4. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation. 
+5. Graph Valid Tree [LC 261](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20261%20Graph%20Valid%20Tree/Solution.py). Neetcode.io problem.
+
 
 ---
 # Graphs:
@@ -757,6 +759,8 @@ Adjacent List Examples -
 1. We use old_to_new dictionary to Clone Graph [LC 133](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20133%20Clone%20Graph/Solution.py).
 2. Topological Sort (DFS Easy) - https://neetcode.io/courses/advanced-algorithms/17 or https://leetcode.com/discuss/post/1078072/introduction-to-topological-sort-by-sinc-i0ii/
    1. Topological Sort with cycle detection, Course Schedule [LC 207](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20207%20Course%20Schedule/Solution.py).
+   2. Course Schedule II [LC 210](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20210%20Course%20Schedule%20II/Solution.py).
+
 ---
 # Backtracking:
 
