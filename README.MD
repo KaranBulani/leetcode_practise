@@ -738,7 +738,6 @@ _Examples:_
 4. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation. 
 5. Graph Valid Tree [LC 261](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20261%20Graph%20Valid%20Tree/Solution.py). Neetcode.io problem.
 
-
 ---
 # Graphs:
 
