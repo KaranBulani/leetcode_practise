@@ -233,6 +233,13 @@ Sums:
 
 8. Unique way to solve [LC 160](https://github.com/KaranBulani/leetcode_practise/blob/python/LinkedList%20160%20Intersection%20of%20Two%20Linked%20Lists/Solution.py).
 
+---
+
+# Heap:
+
+---
+1. Heap Nodes. [Heap.md](Heap.md)
+2. Heap Implementation with Heapify. Kth Largest Element in a Stream [LC 703](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20703%20Kth%20Largest%20Element%20in%20a%20Stream/Solution.py).
 
 ---
 
