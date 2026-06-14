@@ -767,6 +767,10 @@ Adjacent List Examples -
    1. Topological Sort with cycle detection, Course Schedule [LC 207](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20207%20Course%20Schedule/Solution.py).
    2. Course Schedule II [LC 210](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20210%20Course%20Schedule%20II/Solution.py).
 
+Generating Graphs -
+1. Word Ladder [LC 127](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20127%20Word%20Ladder/Solution.py).
+
+
 ---
 # Backtracking:
 
