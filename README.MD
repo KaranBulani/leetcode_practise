@@ -240,7 +240,7 @@ Sums:
 ---
 1. Heap Nodes. [Heap.md](Heap.md)
 2. Heap Implementation with Heapify. Kth Largest Element in a Stream [LC 703](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20703%20Kth%20Largest%20Element%20in%20a%20Stream/Solution.py).
-
+3. Last Stone weight. [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
 ---
 
 # Tree Notes:
