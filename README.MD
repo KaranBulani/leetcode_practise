@@ -239,8 +239,14 @@ Sums:
 
 ---
 1. Heap Nodes. [Heap.md](Heap.md)
-2. Heap Implementation with Heapify. Kth Largest Element in a Stream [LC 703](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20703%20Kth%20Largest%20Element%20in%20a%20Stream/Solution.py).
-3. Last Stone weight. [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
+
+Examples
+1. Heap Implementation with Heapify. Kth Largest Element in a Stream [LC 703](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20703%20Kth%20Largest%20Element%20in%20a%20Stream/Solution.py).
+2. Last Stone weight. [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
+3. Kth Largest Element in an Array [LC 215](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20215%20Kth%20Largest%20Element%20in%20an%20Array/Solution.py).
+4. K Closest Points to Origin [LC 973](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20973%20K%20Closest%20Points%20to%20Origin/Solution.py).
+5. Last Stone Weight [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
+
 ---
 
 # Tree Notes:
