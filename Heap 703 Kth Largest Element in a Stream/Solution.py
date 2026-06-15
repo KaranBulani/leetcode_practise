@@ -43,8 +43,10 @@ class KthLargest:
         n = len(self.heap)
         # we want to skip leaf nodes from heapify
         # so we start from last node's parent which would be the 1st node which is not leaf
-        # last node's index is n-1, parent would be (i - 1) // 2
+        # last node's index is n-1 where n = len(nums), parent would be (i - 1) // 2
         # (n-1 - 1) // 2    ->      n//2 - 1
+        # this n//2 - 1 assumes n = len(nums) not len(nums) - 1
+
         for i in range((n // 2) - 1, -1, -1):
             self.sift_down(i)
 
