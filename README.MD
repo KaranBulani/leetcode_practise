@@ -246,6 +246,7 @@ Examples
 3. Kth Largest Element in an Array [LC 215](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20215%20Kth%20Largest%20Element%20in%20an%20Array/Solution.py).
 4. K Closest Points to Origin [LC 973](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20973%20K%20Closest%20Points%20to%20Origin/Solution.py).
 5. Last Stone Weight [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
+6. Task Scheduler [LC 621](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20621%20Task%20Scheduler/Solution.py).
 
 ---
 
