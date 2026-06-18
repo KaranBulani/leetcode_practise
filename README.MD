@@ -248,6 +248,7 @@ Examples
 5. Last Stone Weight [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
 6. Task Scheduler [LC 621](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20621%20Task%20Scheduler/Solution.py).
 7. Design Twitter [LC 355](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20355%20Design%20Twitter/Solution.py). Good trick to utilize heap.
+8. Find Median From Data Stream [LC 295](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20295%20Find%20Median%20from%20Data%20Stream/Solution.py). Maintaining two heaps.
 
 ---
 
