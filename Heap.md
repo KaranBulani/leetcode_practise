@@ -331,10 +331,7 @@ class MinHeap:
             parent = (idx - 1) // 2
 
             if self.heap[idx] < self.heap[parent]:
-                self.heap[idx], self.heap[parent] = (
-                    self.heap[parent],
-                    self.heap[idx]
-                )
+                self.heap[idx], self.heap[parent] = self.heap[parent], self.heap[idx]
                 idx = parent
             else:
                 break
