@@ -251,6 +251,7 @@ Examples
 8. Find Median From Data Stream [LC 295](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20295%20Find%20Median%20from%20Data%20Stream/Solution.py). Maintaining two heaps.
 9. Reorganize String [LC 767](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20767%20Reorganize%20String/Solution.py). Good edge case handling.
 10. Kth Smallest Element in a Sorted Matrix [LC 378](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20378%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix/Solution.py). Heap with multiple element together at once.
+11. IPO [LC 502](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20502%20IPO/Solution.py). Build heap in stages.
 
 ---
 
