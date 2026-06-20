@@ -1,4 +1,100 @@
 '''
+Key Idea
+
+At any moment, you only need the smallest current node among the k lists.
+So:
+1. Put the first node of every non-empty list into a min-heap.
+2. Pop the smallest node.
+3. Append it to the answer.
+4. Push its next node (if it exists) into the heap.
+5. Repeat until the heap is empty.
+
+####################################################################################################
+Example
+
+Input:
+	1 -> 4 -> 5
+	1 -> 3 -> 4
+	2 -> 6
+
+Initial heap:		[(1,list1), (1,list2), (2,list3)]
+
+Pop 1 (list1)
+	result: 1
+	push 4
+	heap: [1,2,4]
+
+Pop 1 (list2)
+	result: 1 -> 1
+	push 3
+	heap: [2,4,3]
+
+Continue until heap is empty.
+
+####################################################################################################
+Since heap elements must be comparable, we add a unique index.
+
+import heapq
+
+class Solution:
+    def mergeKLists(self, lists):
+        min_heap = []
+
+        for i, node in enumerate(lists):
+            if node:
+                heapq.heappush(min_heap, (node.val, i, node))
+
+        dummy = ListNode(0)
+        tail = dummy
+
+        while min_heap:
+            val, idx, node = heapq.heappop(min_heap)
+
+            tail.next = node
+            tail = tail.next
+
+            if node.next:
+                heapq.heappush(min_heap, (node.next.val, idx, node.next) )
+
+        return dummy.next
+
+####################################################################################################
+Why do we need idx?
+
+If two nodes have the same value:
+	(node1.val, node1)
+	(node2.val, node2)
+
+Python tries to compare:	node1 < node2
+
+which raises:
+	TypeError: '<' not supported between instances of 'ListNode'
+
+Adding a unique integer:
+	(val, idx, node)
+
+ensures tuples remain comparable.
+
+####################################################################################################
+Complexity
+
+Let:
+* N = total number of nodes across all lists
+* k = number of lists
+
+Time
+	Each node:
+	* pushed once
+	* popped once
+
+	Heap size is at most k.
+	O(N log k)
+
+Space
+	Heap stores at most one node from each list. O(k)
+
+####################################################################################################
+####################################################################################################
 For more solution visit: https://neetcode.io/solutions/merge-k-sorted-lists
 
 Time Complexity:  O(1)               (for get, put as its just pointer manipulation)
