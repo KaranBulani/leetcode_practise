@@ -1559,6 +1559,8 @@ Whenever converting recursion into DP:
       * Longest Palindromic Substring [LC 5](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%205%20Longest%20Palindromic%20Substring/Solution.py), Palindromic Substrings [LC 647](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20647%20Palindromic%20Substrings/Solution.py)
    2. Where DP is represented with `int` values. 
       * [LC 516](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20516%20Longest%20Palindromic%20Subsequence/Solution.py)
-      * Minimum Path Sum [LC 64](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2064%20Minimum%20Path%20Sum/Solution.py).
-2. Mixed:
+2. Tabular
+   1. Minimum Path Sum [LC 64](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%2064%20Minimum%20Path%20Sum/Solution.py).
+   2. Longest Common Subsequence [LC 1143](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%201143%20Longest%20Common%20Subsequence/Solution.py).
+3. Mixed:
    1. Top Down is 2D, Bottom Up is 1D [LC 494](https://github.com/KaranBulani/leetcode_practise/blob/python/DP%20494%20Target%20Sum/Solution.py)
