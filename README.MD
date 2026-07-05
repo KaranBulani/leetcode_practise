@@ -253,6 +253,7 @@ Examples
 10. Reorganize String [LC 767](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20767%20Reorganize%20String/Solution.py). Good edge case handling.
 10. Kth Smallest Element in a Sorted Matrix [LC 378](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20378%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix/Solution.py). Heap with multiple element together at once.
 11. IPO [LC 502](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20502%20IPO/Solution.py). Build heap in stages.
+12. Mind fuck sum. The Skyline Problem [LC 218](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20218%20The%20Skyline%20Problem/Solution.py).
 
 ---
 
