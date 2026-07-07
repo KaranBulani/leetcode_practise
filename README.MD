@@ -54,6 +54,13 @@
    * For sums with constant space constraints / For sums where we need to use matrix itself for storage, Try introducing more states like [LC 289](https://leetcode.com/problems/game-of-life/description/) or introduce some temp variables [LC 73](https://leetcode.com/problems/set-matrix-zeroes/description/).
 ---
 
+# Greedy Notes:
+
+---
+1. In Greedy `You commit to a decision immediately because you can prove that you'll never have to regret it later`.
+2. 
+---
+
 # Binary Search Notes:
 
 ---
