@@ -162,6 +162,8 @@
    * Now as loop won't run when both low high are equal. 
    * We should increment decrement low high such that no value gets skipped.
    * So it would be `low = mid + 1` and `high = mid`, rather than `low = mid + 1` and `high = mid - 1`.
+
+4. Staircase Search, Unique sum Binary Search type [LC 240](https://github.com/KaranBulani/leetcode_practise/blob/python/BinarySearch%20240%20Search%20a%202D%20Matrix%20II/Solution.py).
 ---
 # 2 pointer/Sliding window:
 
