@@ -86,7 +86,6 @@ Another [
 ####################################################################################################
 # 6. Python Code (DFS)
 
-python
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         visited = set()
@@ -105,7 +104,6 @@ class Solution:
 ####################################################################################################
 Python Code (BFS)
 
-python
 from collections import deque
 
 class Solution:
