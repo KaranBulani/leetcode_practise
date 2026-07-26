@@ -656,6 +656,7 @@ parent = [i for i in range(n)]
 def find(x):
     while parent[x] != x:
         x = parent[x]
+        # x continues to have same parent
     return x
 
 def union(x, y):
@@ -677,6 +678,7 @@ Two optimizations make it **almost O(1)**:
 def find(x):
     if parent[x] != x:
         parent[x] = find(parent[x])
+        # In process of finding parent we change current parent as well, which is the optimization.
     return parent[x]
 ```
 🔹 2. Union by Rank / Size Attach - the **smaller tree under the larger tree**.
@@ -768,6 +770,9 @@ _Examples:_
 3. Custom UnionFind via size, not via rank. [LC 128](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20128%20Longest%20Consecutive%20Sequence/Solution.py)
 4. Each email uniquely identifies a person. Accounts are merged if they share at least one email. Name is just metadata; emails drive the merge [LC 721](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20721%20Accounts%20Merge/Solution.py) UnionFind + Heavy Implementation. 
 5. Graph Valid Tree [LC 261](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20261%20Graph%20Valid%20Tree/Solution.py). Neetcode.io problem.
+
+Boring Example:
+6. Number of Provinces [LC 547](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20547%20Number%20of%20Provinces/Solution.py) . 
 
 ---
 # Graphs:
