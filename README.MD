@@ -772,7 +772,8 @@ _Examples:_
 5. Graph Valid Tree [LC 261](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20261%20Graph%20Valid%20Tree/Solution.py). Neetcode.io problem.
 
 Boring Example:
-6. Number of Provinces [LC 547](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20547%20Number%20of%20Provinces/Solution.py) . 
+
+6. Number of Provinces [LC 547](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20547%20Number%20of%20Provinces/Solution.py) with Unique DFS example. 
 
 ---
 # Graphs:
