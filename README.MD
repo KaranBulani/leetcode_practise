@@ -792,6 +792,7 @@ Edge Examples -
 1. Tree Diameter [LC 1245](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201245%20Tree%20Diameter/Solution.py)
 2. Unique DFS [LC 547](https://github.com/KaranBulani/leetcode_practise/blob/python/UnionFind%20547%20Number%20of%20Provinces/Solution.py).
 3. Unique way to generate graph dictonary. [LC 1466](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201466%20Reorder%20Routes%20to%20Make%20All%20Paths%20Lead%20to%20the%20City%20Zero/Solution.py).
+4. How algebra can be Graph. [LC 399](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20399%20Evaluate%20Division/Solution.py).
 
 Adjacent List Examples - 
 1. We use old_to_new dictionary to Clone Graph [LC 133](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20133%20Clone%20Graph/Solution.py).
