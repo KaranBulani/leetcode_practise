@@ -787,6 +787,7 @@ Matrix Examples -
 5. BFS (From multiple Start) - Islands and Treasure [LC 268](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20268%20Islands%20and%20Treasure/Solution.py). Neetcode.io problem.
 6. BFS (From Multiple Start) - Pacific Atlantic Water flow [LC 417](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20417%20Pacific%20Atlantic%20Water%20Flow/Solution.py).
 7. DFS/BFS - Surrounded Region [LC 130](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%20130%20Surrounded%20Regions/Solution.py).
+8. BFS - Nearest Exit [LC 1926](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201926%20Nearest%20Exit%20from%20Entrance%20in%20Maze/Solution.py).
 
 Edge Examples -
 1. Tree Diameter [LC 1245](https://github.com/KaranBulani/leetcode_practise/blob/python/Graph%201245%20Tree%20Diameter/Solution.py)
