@@ -263,6 +263,7 @@ Examples
 10. Kth Smallest Element in a Sorted Matrix [LC 378](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20378%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix/Solution.py). Heap with multiple element together at once.
 11. IPO [LC 502](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20502%20IPO/Solution.py). Build heap in stages.
 12. Mind fuck sum. The Skyline Problem [LC 218](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20218%20The%20Skyline%20Problem/Solution.py).
+13. Heap with Variable. Smallest Number in Infinite Set [LC 2336](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%202336%20Smallest%20Number%20in%20Infinite%20Set/Solution.py).
 
 ---
 
