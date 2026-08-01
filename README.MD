@@ -256,7 +256,7 @@ Examples
 4. K Closest Points to Origin [LC 973](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20973%20K%20Closest%20Points%20to%20Origin/Solution.py).
 5. Last Stone Weight [LC 1046](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%201046%20Last%20Stone%20Weight/Solution.py).
 6. Task Scheduler [LC 621](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20621%20Task%20Scheduler/Solution.py).
-7. Design Twitter [LC 355](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20355%20Design%20Twitter/Solution.py). Good trick to utilize heap.
+7. Design Twitter [LC 355](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20355%20Design%20Twitter/Solution.py). Maximum Subsequence Score [LC 2542](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%202542%20Maximum%20Subsequence%20Score/Solution.py) Good trick to utilize heap.
 8. Find Median From Data Stream [LC 295](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20295%20Find%20Median%20from%20Data%20Stream/Solution.py). Maintaining two heaps.
 9. Also Dual heap but insane. "Lazy Deletion" Sliding Window Median [LC 480](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20480%20Sliding%20Window%20Median/Solution.py). 
 10. Reorganize String [LC 767](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20767%20Reorganize%20String/Solution.py). Good edge case handling.
