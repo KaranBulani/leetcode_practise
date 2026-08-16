@@ -82,6 +82,7 @@ class Solution:
 
 class Solution:
     def minFlips(self, a: int, b: int, c: int) -> int:
+        pass
 
 if __name__ == "__main__":
     solution = Solution()
