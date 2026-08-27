@@ -147,6 +147,27 @@ n    = 1011000
 -n   = 0101000   # two's-complement concept
 ----------------
 n & -n = 0001000
+
+============================================================
+2's Complement (negative numbers)
+============================================================
+
+To get -n:
+    1. Flip all bits: ~n
+    2. Add 1:         ~n + 1
+
+Therefore:
+    -n = ~n + 1
+
+Example:
+    n  = 0010  (2)
+    ~n = 1101
+    +1 = 1110  (-2)
+
+Key trick:
+    n & -n
+    → isolates the lowest set bit
+    
 ```
 
 Useful for:
