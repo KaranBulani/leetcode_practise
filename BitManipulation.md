@@ -163,11 +163,6 @@ Example:
     n  = 0010  (2)
     ~n = 1101
     +1 = 1110  (-2)
-
-Key trick:
-    n & -n
-    → isolates the lowest set bit
-    
 ```
 
 Useful for:
