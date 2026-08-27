@@ -185,6 +185,7 @@ Sums:
    * Rule 2 fails. For`nums = [1,2,1,2,3], k = 3` This`1,2,1,2` is invalid but `1,2,1,2,3` is valid.
    * Reframe sum as: `exactly K distinct = at most K distinct − at most(K-1) distinct` and both follow 2 rules.
    * [LC 1248](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201248%20Count%20Number%20of%20Nice%20Subarrays/Solution.py). `Count Number of Nice Subarrays` can also be same sum.
+2. Interesting way of keeping 2 arrays, `earliest` & `latest`. [LC 4026](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%204026%20Maximum%20Gap%20Between%20Stations/Solution.py). 
 ---
 # Linked List Notes:
 
