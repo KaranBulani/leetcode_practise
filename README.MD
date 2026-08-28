@@ -37,6 +37,8 @@
    * For each number `i` from 2 to √n:
       * If `is_prime[i]` is `True`, mark **all multiples of `i`** (i.e., `i*i`, `i*i+i`, `i*i+2i`, ...) as `False`.
    * After the loop, all indexes `i` such that `is_prime[i]` is `True` are prime numbers.
+   * Another Sum [LC 4032](https://github.com/KaranBulani/leetcode_practise/blob/python/2pointer%204032%20Longest%20Subarray%20With%20at%20Most%20K%20Distinct%20Prime%20Factors/Solution.py) where we also get factors of a number using **Sieve of Eratosthenes** .
+
 
 5. **PrefixSums**: Draw the solution to understand if prefix sums would work or not
    * Like [304. Range Sum Query 2D - Immutable](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20304%20Range%20Sum%20Query%202D%20-%20Immutable/Solution.py), [LC 4016](https://github.com/KaranBulani/leetcode_practise/blob/python/BinarySearch%204016%20Maximum%20Area%20of%20Two%20Non-Overlapping%20Square%20Submatrices/Solution.py).
