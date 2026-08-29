@@ -650,7 +650,7 @@ Parent = i//2
     
     then Fenwick Tree / Segment Tree is usually better.
     ```
-* [mos_algorithm.md](mos_algorithm.md)
+* Instead of answering every [L, R] query from scratch, reorder the queries so that the current range changes only a little between consecutive queries. [mos_algorithm.md](mos_algorithm.md)
 ---
 
 ## Union Find (Disjoint sets):
