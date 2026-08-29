@@ -143,9 +143,9 @@ class Solution:
             else:
                 ans.append(
                     seg_tree.query(
-                        1,              # node
-                        0,              # left
-                        size - 1,       # right
+                        1,              # node, curr_node, parent
+                        0,              # left, left_end_range
+                        size - 1,       # right, right_end_range
                         0,              # query left
                         rank - 1        # query right
                     )
@@ -153,10 +153,10 @@ class Solution:
 
             # insert current number
             seg_tree.update(
-                1,
-                0,
-                size - 1,
-                rank
+                1,                      # node, curr_node, parent
+                0,                      # left, left_end_range
+                size - 1,               # right, right_end_range
+                rank                    # at what rank should addition take place
             )
 
         return ans[::-1]

@@ -14,8 +14,9 @@ class SegmentTree:
     def __init__(self, nums):
         self.n = len(nums)
         self.Tree = [0] * 4 * self.n
-        self._build(nums, 0, 0, self.n - 1)
+        self._build(nums, 0, 0, self.n - 1) # array, curr_node, left_range, right_range
 
+    # array, curr_node, left_range, right_range
     def _build(self, nums: List[int], index: int, left: int, right: int) -> None:
         if left == right:
             self.Tree[index] = nums[left]
@@ -26,6 +27,7 @@ class SegmentTree:
 
         self.Tree[index] = self.Tree[2 * index + 1] + self.Tree[2 * index + 2]
 
+    # current_node, lower_range, upper_range, index, value
     def _update(self, index: int, left: int, right: int, pos: int, value: int) -> None:
         if left == right:
             self.Tree[index] = value
@@ -38,6 +40,7 @@ class SegmentTree:
 
         self.Tree[index] = self.Tree[2 * index + 1] + self.Tree[2 * index + 2]
 
+    # current_node, lower_range, upper_range, left_range_val, right_range_val
     def _query(self, index: int, left: int, right: int, ql: int, qr: int) -> int:
         # section of [left, right] fully outside [ql, qr] hence return nothing
         # Points would be like [left, right, ql, qr] or [ql, qr, left, right]
@@ -64,10 +67,10 @@ class NumArray:
         self.obj = SegmentTree(nums)
 
     def update(self, index: int, val: int) -> None:
-        self.obj._update(0, 0, len(self.nums) - 1, index, val)
+        self.obj._update(0, 0, len(self.nums) - 1, index, val) # current_node, lower_range, upper_range, index, value
 
     def sumRange(self, left: int, right: int) -> int:
-        return self.obj._query(0, 0, len(self.nums) - 1, left, right)
+        return self.obj._query(0, 0, len(self.nums) - 1, left, right) # current_node, lower_range, upper_range, left_range_val, right_range_val
 
 if __name__ == "__main__":
     # Example 1: From problem statement
