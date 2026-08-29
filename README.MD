@@ -623,6 +623,36 @@ Parent = i//2
 ```
 ---
 
+## Mo's Algorithm:
+
+---
+* When should you think of Mo's Algorithm? 
+    ```python
+    Static array
+    +
+    Many range queries
+    +
+    Each query can be maintained using add/remove
+    +
+    No updates to the array
+    ```
+
+* When NOT to use it?
+    ```python
+    If you have:
+        range sum
+    
+    then prefix sums are much simpler:
+        prefix[R + 1] - prefix[L]
+    
+    If you have:
+        range sum + point updates
+    
+    then Fenwick Tree / Segment Tree is usually better.
+    ```
+* [mos_algorithm.md](mos_algorithm.md)
+---
+
 ## Union Find (Disjoint sets):
 
 ---
