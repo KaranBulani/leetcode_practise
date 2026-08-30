@@ -651,6 +651,8 @@ Parent = i//2
     then Fenwick Tree / Segment Tree is usually better.
     ```
 * Instead of answering every [L, R] query from scratch, reorder the queries so that the current range changes only a little between consecutive queries. [mos_algorithm.md](mos_algorithm.md)
+* Example:
+  * [LC 4033 Valid K-Unique Subarrays I](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%204033%20Valid%20K-Unique%20Subarrays%20I/Solution.py).
 ---
 
 ## Union Find (Disjoint sets):
