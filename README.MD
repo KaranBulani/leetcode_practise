@@ -4,29 +4,9 @@
 
 1. **Euclid's Algorithm for GCD** [LC 1071](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%201071%20Greatest%20Common%20Divisor%20of%20Strings/Solution.py#L7)
    * The **GCD** of two integers is the largest number that divides both of them without leaving a remainder.
-   * Suppose you want the GCD of two numbers `a` and `b` (with `a > b`):
-     1. Divide `a` by `b`, and get the remainder `r`.
-        That is: 
-        `a = b * q + r  where  0 <= r < b`
-        
-     2. Replace `a` with `b`, and `b` with `r`.
-     3. Repeat until `r = 0`.
-     4. When `r = 0`, the GCD is the last nonzero divisor (the current `b`). 
-   * Find GCD(48, 18):
-      * Step 1: $48 ÷ 18 = 2$ remainder **12**
-      * Step 2: Now find GCD(18, 12)
-      * Step 3: $18 ÷ 12 = 1$ remainder **6**
-      * Step 4: Now find GCD(12, 6)
-      * Step 5: $12 ÷ 6 = 2$ remainder **0**
-        
-      ✅ Last nonzero divisor is 6 → **GCD(48, 18) = 6**
+   * GCD & LCM Notes. [gcd_lcm.md](gcd_lcm.md)
 2. **Lowest Common Multiple**:
    * `LCM(a,b) * GCD(a,b) = a * b`
-   * Example:`a = 12, b = 18`
-   * `GCD(12, 18) = 6, LCM(12, 18) = 36`
-   * `GCD(12, 18) * LCM(12, 18) = a*b`
-   * `6 * 36 = 12 * 18`
-   * `216 = 216`
 3. **Kadane's Algorithm**: find the maximum sum of a contiguous subarray in an array of integers (which can contain both positive and negative numbers).
    * [LC 53](https://github.com/KaranBulani/leetcode_practise/blob/python/DivideAndConquer%2053%20Maximum%20Subarray/Solution.py) Normal Kadane's.
    * [LC 918](https://github.com/KaranBulani/leetcode_practise/blob/python/ArrHash%20918%20Maximum%20Sum%20Circular%20Subarray/Solution.py) Circular Kadane's Algorithm.
