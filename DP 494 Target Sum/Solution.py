@@ -118,7 +118,7 @@ Time Complexity - O(n * totalSum)
 Space Complexity - O(n * totalSum)
 
 n - number of elements in nums
-totalSum - number we are trying to reach
+totalSum - is sum of all numbers in nums array & number we are trying to process
 
 For each n elements in nums, we can have any value till totalSum
 So for nums[1] we can have nums[1] * totalSum
