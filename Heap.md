@@ -427,27 +427,6 @@ Now heapify from the bottom upward.
 3. Move upward toward the root.
 
 ---
-### Detailed Explanation
-
-Instead of inserting one by one, start with the entire array:
-
-```python
-[5, 2, 8, 1, 7]
-```
-
-Treat it as a binary tree:
-
-```text
-        5
-      /   \
-     2     8
-    / \
-   1   7
-```
-
-Now heapify from the bottom upward.
-
----
 #### Key Observation
 
 * Most nodes are already near the bottom of the tree. 
