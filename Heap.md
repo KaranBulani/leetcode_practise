@@ -339,7 +339,7 @@ class MinHeap:
     def _bubble_down(self, idx):
         n = len(self.heap)
 
-        while True:
+        while True: # 2 * idx + 1 < n: we basically want to keep looking for child till its possible so this also works
             smallest = idx
 
             left = 2 * idx + 1
