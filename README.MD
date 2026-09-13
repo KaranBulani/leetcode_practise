@@ -828,6 +828,7 @@ Generating Graphs -
 ---
 1. [Dijkstra's.md](Dijkstra%27s.md): shortest-path algorithm from one source node to every other node in a +ve weighted graph.
    1. [LC 1514](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%201514%20Path%20with%20Maximum%20Probability/Solution.py) Plain Dijkstras with multiplication rather than addition. 
+   2. [LC 778](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%20778%20Swim%20in%20Rising%20Water/Solution.py) Plain Dijkstras with max() rather than addition.
 2. [Bellman-Ford.md](Bellman-Ford.md): shortest-path algorithm which can handle negative edge weights.
 3. [Floyd–Warshall.md](Floyd%E2%80%93Warshall.md):shortest paths between every pair of nodes.
 
