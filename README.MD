@@ -126,6 +126,8 @@
     left, right = 0, len(arr) - 1
     while left < right:
     ```
+4. [bisect_module_python.md](bisect_module_python.md) Bisect module in python.
+
 ### 🔑 Notes for **162. Find Peak Element**
 
 1. **Binary search intuition**
