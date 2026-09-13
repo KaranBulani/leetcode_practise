@@ -344,6 +344,44 @@ for i in range(n):
         print("Negative cycle exists")
 ```
 
+Complete Code
+```python
+def floyd_warshall(n, edges):
+    INF = float("inf")
+
+    # dist[i][j] = shortest distance from i to j
+    dist = [[INF] * n for _ in range(n)]
+
+    # Distance from a node to itself is 0
+    for i in range(n):
+        dist[i][i] = 0
+
+    # Add edges
+    for u, v, weight in edges:
+        dist[u][v] = weight
+
+    # Floyd-Warshall
+    for k in range(n):
+        for i in range(n):
+            for j in range(n):
+
+                # If i -> k or k -> j is impossible,
+                # don't try to use this path.
+                if dist[i][k] == INF or dist[k][j] == INF:
+                    continue
+
+                dist[i][j] = min(
+                    dist[i][j],
+                    dist[i][k] + dist[k][j]
+                )
+
+    # Negative cycle detection
+    for i in range(n):
+        if dist[i][i] < 0:
+            return None, True
+
+    return dist, False
+```
 Why?
 
 Normally:
