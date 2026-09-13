@@ -1,4 +1,4 @@
-## `bisect` in Python — LeetCode Cheat Sheet
+## `bisect` in Python 
 
 Python's `bisect` module is mainly useful for **binary search on a sorted array**.
 
