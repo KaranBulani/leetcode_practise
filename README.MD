@@ -830,6 +830,7 @@ Generating Graphs -
    1. [LC 1514](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%201514%20Path%20with%20Maximum%20Probability/Solution.py) Plain Dijkstras with multiplication rather than addition. 
    2. [LC 778](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%20778%20Swim%20in%20Rising%20Water/Solution.py) Plain Dijkstras with max() rather than addition.
    3. [LC 743](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%20743%20Network%20Delay%20Time/Solution.py) Plain Dijkstras
+   4. [LC 4046](https://github.com/KaranBulani/leetcode_practise/blob/python/AdvancedGraphs%204046%20Minimum%20Cost%20Path%20With%20At%20Most%20K%20Turns/Solution.py) Expanding original grid into 4d and doing dijkstras on expanded state.
 2. [Bellman-Ford.md](Bellman-Ford.md): shortest-path algorithm which can handle negative edge weights.
 3. [Floyd–Warshall.md](Floyd%E2%80%93Warshall.md):shortest paths between every pair of nodes.
 
