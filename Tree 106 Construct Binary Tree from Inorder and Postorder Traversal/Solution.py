@@ -1,5 +1,62 @@
 '''
+The key observation is:
+
+* Postorder: [left, right, root] → the last element is the root
+* Inorder: [left, root, right] → root's position splits left and right subtrees
+
 ####################################################################################################
+
+Approach
+
+For:
+	inorder   = [9, 3, 15, 20, 7]
+	postorder = [9, 15, 7, 20, 3]
+
+The last postorder element is 3, so:
+        3
+       / \
+      9   20
+         /  \
+        15   7
+We can recursively construct the tree using indices rather than slicing arrays.
+
+####################################################################################################
+
+Why right subtree first?
+
+This is the most important detail.
+
+Postorder is:
+	LEFT → RIGHT → ROOT
+
+We're traversing postorder backwards:
+	ROOT → RIGHT → LEFT
+
+So after taking the root, the next elements belong to the right subtree.
+
+For the example:
+	postorder = [9, 15, 7, 20, 3]
+							 ↑
+						   root
+
+	backwards:
+	3 → 20 → 7 → 15 → 9
+
+Therefore:
+	root.right = dfs(mid + 1, right)
+	root.left = dfs(left, mid - 1)
+
+####################################################################################################
+
+Complexity
+
+Let n = len(inorder):
+* Time: O(n) — each node is processed once, and the hashmap gives O(1) root lookup.
+* Space: O(n) — hashmap + recursion stack.
+
+Pattern to remember:
+> Inorder + Postorder → take root from the END of postorder, split using inorder, and build RIGHT before LEFT.
+
 '''
 from collections import deque
 
