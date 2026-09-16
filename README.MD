@@ -284,7 +284,7 @@ class TreeNode:
 
     <img src="z_images/img.png" alt="description of your image" width="400" height="325">
 
-   * ###### **Inorder** - [2,3,4,5,6,7]
+   * ###### **Inorder** - [2,3,4,5,6,7] [LEFT, ROOT, RIGHT]
        ```python
        def inorder(root):
            if not root:
@@ -315,7 +315,7 @@ class TreeNode:
 
            return res
        ```
-   * ###### **Preorder** - [4,3,2,6,5,7]
+   * ###### **Preorder** - [4,3,2,6,5,7] [ROOT, LEFT, RIGHT]
        ```python
        def preorder(root):
            if not root:
@@ -344,7 +344,7 @@ class TreeNode:
        
            return res
        ```
-   * ###### **Postorder** - [2,3,5,7,6,4]
+   * ###### **Postorder** - [2,3,5,7,6,4] [LEFT, RIGHT, ROOT]
        ```python
        def postorder(root):
            if not root:
@@ -437,6 +437,7 @@ class TreeNode:
 		```
 **DFS SUMS**
 1. How inorder and preorder list relate with each other. [LC 105](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20105%20Construct%20Binary%20Tree%20from%20Preorder%20and%20Inorder%20Traversal/Solution.py)
+   2. Inorder and Postorder [LC 106](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20106%20Construct%20Binary%20Tree%20from%20Inorder%20and%20Postorder%20Traversal/Solution.py).
 2. Iterate over a tree (not all at once) [LC 173](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20173%20Binary%20Search%20Tree%20Iterator/Solution.py)
 3. With DFS two separate things can be calculated `Depth` vs `Res` & how both are different. Usage of `self` vs `nonlocal`. [LC 543](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%20543%20Diameter%20of%20Binary%20Tree/Solution.py)
    1. Again two separate things can be calculated `Good Node` vs `newMax`.[LC 1448](https://github.com/KaranBulani/leetcode_practise/blob/python/Tree%201448%20Count%20Good%20Nodes%20in%20Binary%20Tree/Solution.py)
