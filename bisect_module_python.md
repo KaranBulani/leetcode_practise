@@ -130,3 +130,18 @@ bisect_right → >
 ```
 
 If you remember just that, you can solve a large number of LeetCode binary-search problems.
+
+---
+
+### List [ List ] comparison
+
+```python
+print([1, 7] < [2, 5])          # True
+print([1, 7] < [1, 9])          # True
+print([1, 7] < [1, 7])          # False
+print([1, 7] < [1, 6])          # False
+print([1] < [1, 2])             # True
+print([1, 2] < [1, 2, 3])       # True
+print([1, 2, 3] < [1, 2])       # False
+```
+
