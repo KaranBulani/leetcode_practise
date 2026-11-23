@@ -244,7 +244,7 @@ Examples
 8. Find Median From Data Stream [LC 295](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20295%20Find%20Median%20from%20Data%20Stream/Solution.py). Maintaining two heaps.
 9. Also Dual heap but insane. "Lazy Deletion" Sliding Window Median [LC 480](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20480%20Sliding%20Window%20Median/Solution.py). 
 10. Reorganize String [LC 767](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20767%20Reorganize%20String/Solution.py). Good edge case handling.
-10. Kth Smallest Element in a Sorted Matrix [LC 378](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20378%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix/Solution.py). Heap with multiple element together at once.
+10. Kth Smallest Element in a Sorted Matrix [LC 378](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20378%20Kth%20Smallest%20Element%20in%20a%20Sorted%20Matrix/Solution.py), Find K Pairs with Smallest Sums[LC 373](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20373%20Find%20K%20Pairs%20with%20Smallest%20Sums/Solution.py). Heap with multiple element together at once.
 11. Also Heap with multiple elements. But it could've also been 2 heaps [LC 2462](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%202462%20Total%20Cost%20to%20Hire%20K%20Workers/Solution.py).
 11. IPO [LC 502](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20502%20IPO/Solution.py). Build heap in stages.
 12. Mind fuck sum. The Skyline Problem [LC 218](https://github.com/KaranBulani/leetcode_practise/blob/python/Heap%20218%20The%20Skyline%20Problem/Solution.py).
