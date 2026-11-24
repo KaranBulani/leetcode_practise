@@ -51,8 +51,11 @@ To make your binary representation a fixed length (e.g., 8 bits for a byte), add
 ```python
 number = 10
 
-# Zero-pad to 8 characters
+# 0-padding upto 8 characters
 print(f"{number:08b}")  # Output: '00001010'
+
+# space-padding upto 8 characters
+print(f"{number:8b}")  # Output: '    1010'
 ```
 
 ---
