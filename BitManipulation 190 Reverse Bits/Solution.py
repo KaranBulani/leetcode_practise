@@ -59,7 +59,8 @@ For the actual LeetCode problem, we perform exactly 32 iterations, not 4.
 
 A. Left shift (<<)
 
-    result = 5       # 0101result <<= 1
+    result = 5       # 0101
+    result <<= 1
 
     Result:
     1010 = 10
@@ -68,7 +69,8 @@ A. Left shift (<<)
 
 B. Bitwise AND (&)
 
-    n = 13           # 1101n & 1
+    n = 13           # 1101
+    n & 1
 
     1101
     & 0001
@@ -80,7 +82,8 @@ B. Bitwise AND (&)
 
 C. Right shift (>>)
 
-    n = 13           # 1101n >>= 1
+    n = 13           # 1101
+    n >>= 1
 
     Result:
     110
@@ -89,7 +92,8 @@ C. Right shift (>>)
 
 D. Bitwise OR (|)
 
-    result = 4       # 100bit = 1          # 001
+    result = 4       # 100
+    bit = 1          # 001
     result |= bit
 
     100 | 001
@@ -141,7 +145,13 @@ Remember these operations for future bit manipulation problems:
 |  n & 1           | Extract last bit                 |
 |  n >> 1          | Remove last bit                  |
 |  result << 1     | Shift result left                |
-|  result \\| bit  | Append a bit                     |
+|  result | bit   | Append a bit                      |
+
+    result = 5       # Binary: 0101
+    bit = 1          # Binary: 0001
+    result = result | bit
+    print(result)    # 5
+
 |  f"{n:032b}"     | Convert to 32-bit binary string  |
 |  int(binary, 2)  | Convert binary string to integer |
 
