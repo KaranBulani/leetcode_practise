@@ -337,6 +337,52 @@ a ^ a = 0
 a ^ 0 = a
 a ^ b = b ^ a
 (a ^ b) ^ c = a ^ (b ^ c)
+a ^ b ^ b = a
+a ^ b ^ a = b
+```
+
+### AND / OR Properties
+
+These identities are useful for simplifying masks and reasoning about bitwise expressions:
+
+```text
+AND:
+a & 0 = 0
+a & a = a
+a & ~a = 0
+
+OR:
+a | 0 = a
+a | a = a
+a | ~a = ~0
+
+Shared:
+a & b = b & a                 # commutative
+a | b = b | a
+(a & b) & c = a & (b & c)     # associative
+(a | b) | c = a | (b | c)
+
+Absorption:
+a & (a | b) = a
+a | (a & b) = a
+
+De Morgan:
+~(a & b) = ~a | ~b
+~(a | b) = ~a & ~b
+```
+
+### Python Note: Bitwise NOT
+
+Python integers have arbitrary precision rather than a fixed bit width, so:
+
+```python
+~a == -a - 1
+```
+
+When you need a fixed-width complement (for example, 32-bit), apply a mask:
+
+```python
+(~a) & 0xFFFFFFFF
 ```
 
 ### Find the single number
